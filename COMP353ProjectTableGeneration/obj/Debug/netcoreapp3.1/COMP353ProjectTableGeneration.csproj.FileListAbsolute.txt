@@ -1,16 +1,3 @@
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.exe
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.deps.json
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.runtimeconfig.json
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.runtimeconfig.dev.json
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.dll
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.pdb
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.AssemblyInfoInputs.cache
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.AssemblyInfo.cs
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.csproj.CoreCompileInputs.cache
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.dll
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.pdb
-C:\Users\chief\OneDrive\Desktop\COMP 353 Extras\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.genruntimeconfig.cache
 c:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.exe
 c:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.deps.json
 c:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.runtimeconfig.json

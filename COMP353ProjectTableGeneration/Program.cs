@@ -90,21 +90,22 @@ namespace COMP353ProjectTableGeneration
             Polish(ref builder);
             Export(ref builder, ref mainBuilder, "Vaccine");
 
-            Export(ref mainBuilder, ref mainBuilder, "All");
+            Export(ref mainBuilder, ref mainBuilder, "All", ".sql");
         }
-        public static void Export(ref StringBuilder builder, ref StringBuilder mainBuilder, string name)
+        public static void Export(ref StringBuilder builder, ref StringBuilder mainBuilder, string name, string extension = ".txt")
         {
             string appPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             int tableLocation = appPath.IndexOf("COMP353ProjectTableGeneration");
             appPath = appPath.Remove(tableLocation, appPath.Length - tableLocation);
-            appPath += "Inserts";
+            appPath += (extension == ".sql") ? "SQL" : "Insert";
 
             bool exists = Directory.Exists(appPath);
 
             if (!exists)
                 Directory.CreateDirectory(appPath);
 
-            using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + ".txt"));
+            if (extension == ".sql") name = "Inserts";
+            using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
             outputFile.WriteLine(builder);
             mainBuilder.Append(builder.ToString());
             builder.Clear();

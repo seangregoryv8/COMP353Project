@@ -69,24 +69,26 @@ namespace COMP353ProjectTableGeneration
             builder.Append(PrintLivesWith() + "\n\n");
             builder.Append(PrintInfection() + "\n\n");
             builder.Append(PrintVaccine());
-            return Export(ref builder, MethodBase.GetCurrentMethod().Name);
+            return Export(ref builder, MethodBase.GetCurrentMethod().Name, ".sql");
         }
-        public static string Export(ref StringBuilder builder, string sentence)
+        public static string Export(ref StringBuilder builder, string name, string extension = ".txt")
         {
-            sentence = sentence.Replace("Print", "");
-            builder.Replace(sentence + "(", sentence + "\n(");
+            name = name.Replace("Print", "");
+            builder.Replace(name + "(", name + "\n(");
             builder.Replace(",", ",\n");
             builder.Replace(");", "\n);");
             //builder.Replace(")\n;", ");");
-            string appPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            string appPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             int tableLocation = appPath.IndexOf("COMP353ProjectTableGeneration");
             appPath = appPath.Remove(tableLocation, appPath.Length - tableLocation);
-            appPath += "Create";
+            appPath += (extension == ".sql") ? "SQL" : "Create";
             bool exists = Directory.Exists(appPath);
 
             if (!exists)
                 Directory.CreateDirectory(appPath);
-            using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, sentence + ".txt"));
+
+            if (extension == ".sql") name = "Creates";
+            using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
             outputFile.WriteLine(builder);
             return builder.ToString();
         }
