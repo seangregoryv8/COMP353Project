@@ -1,0 +1,3 @@
+c:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353\obj\Debug\COMP353.sqlproj.AssemblyReference.cache
+c:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353\obj\Debug\COMP353.dll
+c:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353\obj\Debug\COMP353.pdb

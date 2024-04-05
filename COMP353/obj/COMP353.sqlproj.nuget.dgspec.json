@@ -1,0 +1,56 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353\\COMP353.sqlproj": {}
+  },
+  "projects": {
+    "c:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353\\COMP353.sqlproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353\\COMP353.sqlproj",
+        "projectName": "COMP353",
+        "projectPath": "c:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353\\COMP353.sqlproj",
+        "packagesPath": "C:\\Users\\chief\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\chief\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net46"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net46": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU5128"
+          ]
+        }
+      },
+      "frameworks": {
+        "net46": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

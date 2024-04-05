@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mODAfa/YWKYBLXoBga15U47C4IOd75jor2ZA+WnVeYDqwKo9KV0cT/1B6CB96yb0ELDRe2jyLcq9urxNYgwVZA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353\\COMP353.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chief\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\chief\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.0\\microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

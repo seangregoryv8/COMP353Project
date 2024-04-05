@@ -1,7 +1,5 @@
 DROP DATABASE HFESTS;
-CREATE DATABASE HFESTS;
-USE HFESTS;
-    
+CREATE DATABASE "HFESTS";
 CREATE TABLE Residence(
     Address VARCHAR(255) PRIMARY KEY,
     City VARCHAR(255),
@@ -23,6 +21,7 @@ CREATE TABLE Person(
     Lives_in VARCHAR(255) NOT NULL,
     FOREIGN KEY (Lives_in) REFERENCES Residence(Address)
 );
+
 CREATE TABLE Employee(
     SIN VARCHAR(255) PRIMARY KEY,
     Role VARCHAR(255) CHECK ( Role IN ('Nurse', 'Doctor', 'Cashier', 'Pharmacist', 'Receptionist','Administrative Personnel', 'Security Personnel', 'Regular Employee') ),
@@ -50,6 +49,7 @@ CREATE TABLE Works_at(
     FOREIGN KEY (Facility) REFERENCES Facility(Name),
     primary key (Employee, Facility, Start_date)
 );
+
 CREATE TABLE lives_with(
     Employee VARCHAR(255),
     Person VARCHAR(255),
@@ -76,6 +76,141 @@ CREATE TABLE Vaccination(
     FOREIGN KEY (Taken_at) REFERENCES Facility(Name),
     PRIMARY KEY (Person, Dose)
 );
+
+
+
+SELECT Name, Province, Capacity, count( DISTINCT Works_at.Employee) AS number_of_employees, count(DISTINCT lives_with.Person) AS number_of_people_living_with
+FROM Facility
+LEFT JOIN Works_at ON Facility.Name = Works_at.Facility
+    AND (Works_at.End_date IS NULL OR Works_at.End_date > CURRENT_DATE)
+LEFT JOIN lives_with on Works_at.Employee = lives_with.Employee
+
+GROUP BY Name, Province, Capacity;
+
+SELECT 
+    E.employee, 
+    COUNT(Distinct R.person)as roommate, 
+    COUNT(Distinct D.person)as dependant, 
+    COUNT(Distinct P.person) as parent, 
+    COUNT(Distinct R.person) + COUNT(Distinct D.person) + COUNT(Distinct P.person) as total
+FROM
+    works_at E
+    LEFT JOIN lives_with R ON E.employee = R.employee AND R.relationship = 'Roommate'
+    LEFT JOIN lives_with D ON E.employee = D.employee AND D.relationship = 'Dependent'
+    LEFT JOIN lives_with P ON E.employee = P.employee AND P.relationship = 'Parent'
+WHERE E.facility = 'Hospital Maisonneuve Rosemont'
+        AND E.end_date IS NULL
+GROUP BY E.employee
+
+
+SELECT p.FirstName, p.LastName, r.Address, r.City, r.Province, COUNT(lw.Person) as LivingWith
+FROM Works_at w1, Works_at w2, lives_with lw, Person p, Residence r, Infection i
+WHERE w1.facility = 'Montreal General'
+   AND w2.facility = 'Montreal General'
+   AND w1.End_date IS NULL
+   AND lw.Employee = w1.Employee
+   AND lw.Person = w2.Employee
+   AND (p.SIN = lw.Employee OR p.SIN = lw.Person)
+   AND p.lives_in = r.address
+   AND (i.person = w1.Employee OR i.person = w2.Employee)
+   AND i.type = 'COVID-19'
+   AND CURRENT_DATE <= (i.date + i.quarantine_period)
+
+GROUP BY p.FirstName, p.LastName, r.Address, r.City, r.Province
+ORDER BY r.Province, r.city, r.address;
+
+SELECT f.Province, COUNT(distinct w.employee) AS TotalEmployeesWorking , count(distinct I.person) AS TotalInfectedEmployeesWorking
+FROM Facility f
+
+LEFT JOIN Works_at w ON w.Facility = f.Name
+   AND (w.End_date IS NULL OR w.End_date > CURRENT_DATE)
+
+LEFT JOIN Infection I ON I.Person = w.Employee
+   AND I.type = 'COVID-19'
+   AND CURRENT_DATE <= (I.date + I.quarantine_period)
+
+GROUP BY f.Province
+ORDER BY TotalInfectedEmployeesWorking;
+
+SELECT
+   person.FirstName, person.LastName, employee.role, person.MedicareCardNumber, person.SIN, person.TelephoneNumber, person.EmailAddress,
+   infection.date as infectionDate,
+   COUNT(lives_with.employee) AS TotalPeopleLivingWith
+FROM person
+INNER JOIN Infection ON infection.person = person.sin
+INNER JOIN Employee ON employee.sin = person.sin
+INNER JOIN Works_At ON works_at.employee = employee.sin
+LEFT JOIN Lives_With ON lives_with.employee = employee.sin
+
+WHERE works_at.facility = 'Hospital Maisonneuve Rosemont'
+   AND (employee.role = 'Nurse' OR employee.role = 'Doctor')
+   AND infection.type = 'COVID-19'
+   And works_at.end_date is null
+   AND CURRENT_DATE <= (infection.date + infection.quarantine_period)
+
+GROUP BY person.FirstName, person.LastName, employee.role, person.MedicareCardNumber, person.SIN, person.TelephoneNumber, person.EmailAddress, infection.date
+Order by infection.date DESC, person.FirstName ASC, person.LastName ASC;
+
+
+
+
+
+SELECT
+    person.FirstName, 
+    person.LastName, 
+    employee.role, 
+    person.MedicareCardNumber, 
+    person.SIN, 
+    person.TelephoneNumber, 
+    person.EmailAddress,
+    Count(lives_with.person)
+FROM 
+    person
+INNER JOIN 
+    Employee ON employee.sin = person.sin
+INNER JOIN 
+    Works_At ON works_at.employee = employee.sin
+LEFT JOIN 
+    Lives_With ON lives_with.employee = employee.sin
+WHERE 
+    person.SIN not in(select vaccination.person from vaccination)
+    AND person.SIN not in(select infection.person from infection)
+    AND works_at.facility = 'Hospital Maisonneuve Rosemont' 
+    AND (works_at.end_date IS NULL OR works_at.end_date > CURRENT_DATE)
+GROUP BY 
+    Employee.sin,
+	person.FirstName, 
+    person.LastName, 
+    employee.role, 
+    person.MedicareCardNumber, 
+    person.SIN, 
+    person.TelephoneNumber, 
+    person.EmailAddress
+Order by 
+    employee.role ASC,
+    person.FirstName ASC,
+    person.LastName ASC;
+
+
+SELECT v.Type, count(*) AS TotalNumberOfDoses
+FROM Vaccination v
+GROUP BY v.Type
+ORDER BY TotalNumberOfDoses DESC;
+
+SELECT p.FirstName, p.LastName, w.Start_date, w.Facility, e.Role, p.MedicareCardNumber, p.SIN, p.TelephoneNumber, p.EmailAddress,
+   Inf.TotalInfections,
+   COUNT(DISTINCT lw.Person) AS TotalPeopleLivingWith,
+   r.Type AS ResidenceType,
+   r.Bedrooms
+FROM Employee e
+JOIN Works_at w ON e.SIN = w.Employee AND (w.End_date IS NULL OR w.End_date > CURRENT_DATE)
+JOIN Person p ON e.SIN = p.SIN
+JOIN Residence r ON p.Lives_in = r.Address
+LEFT JOIN Lives_with lw ON e.SIN = lw.Employee
+JOIN (SELECT Person, COUNT(*) AS TotalInfections FROM Infection GROUP BY Person HAVING COUNT(*) >= 3) Inf ON e.SIN = Inf.Person
+
+GROUP BY p.FirstName, p.LastName, w.Start_date, w.Facility, e.Role, p.MedicareCardNumber, p.SIN, p.TelephoneNumber, p.EmailAddress, Inf.TotalInfections, r.Type, r.Bedrooms
+ORDER BY Inf.TotalInfections ASC, p.FirstName ASC, p.LastName ASC;
 
 INSERT INTO Residence VALUES
 ('101 Main St', 'Montreal', 'Quebec', 'H1A 1A1', '5145551010', 3, 'House'),
@@ -219,16 +354,3 @@ INSERT INTO Vaccination VALUES
 (2, 'Johnson & Johnson', '2021-03-04', '823456789', 'Healthcare Unit'),
 (3, 'Pfizer', '2021-04-01', '923456789', 'Westend Hospital'),
 (3, 'Moderna', '2021-04-02', '1023456789', 'Suburban Clinic');
-
-SELECT person.FirstName, person.LastName, Count(lives_with.Person), residence.Address, residence.City, residence.Province
-FROM employee, lives_with, residence, person, works_at works_at1, works_at works_at2
-WHERE person.SIN= employee.SIN
-and employee.SIN = lives_with.Employee 
-and lives_with.Person In (SELECT employee.SIN FROM employee)
-and employee.SIN = works_at1.Employee 
-and lives_with.Person = works_at2.Employee
-and works_at1.Facility = works_at2.Facility
-and person.Lives_In = residence.Address 
--- and works_at.Facility = 'Facility Name'
-GROUP BY employee.SIN
-ORDER BY residence.province ASC, residence.City ASC, residence.Address ASC;
