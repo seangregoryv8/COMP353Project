@@ -1,0 +1,12 @@
+CREATE TABLE Employee
+( SIN VARCHAR(255) PRIMARY KEY,
+ Role VARCHAR(255) CHECK ( Role IN ('Nurse',
+ 'Doctor',
+ 'Cashier',
+ 'Pharmacist',
+ 'Receptionist',
+'Administrative Personnel',
+ 'Security Personnel',
+ 'Regular Employee') ),
+ FOREIGN KEY (SIN) REFERENCES Person(SIN) 
+);

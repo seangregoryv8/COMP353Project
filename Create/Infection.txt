@@ -1,0 +1,11 @@
+CREATE TABLE Infection
+( Date DATE,
+ Type VARCHAR(255) CHECK ( Type IN ('COVID-19',
+ 'SARS-Cov-2 Variant',
+ 'other') ),
+ Quarantine_Period INT,
+ Person VARCHAR(255) NOT NULL ,
+ FOREIGN KEY (Person) REFERENCES Person(SIN),
+ PRIMARY KEY (Date,
+ Person) 
+);

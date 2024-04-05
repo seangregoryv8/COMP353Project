@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace COMP353ProjectTableGeneration
+﻿namespace COMP353ProjectTableGeneration
 {
     public class LivesIn
     {

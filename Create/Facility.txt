@@ -1,0 +1,17 @@
+CREATE TABLE Facility
+( Name VARCHAR(255) PRIMARY KEY ,
+ Address VARCHAR(255),
+ City VARCHAR(255),
+ Province VARCHAR(255),
+ Postal_code VARCHAR(255),
+ Phone VARCHAR(255),
+ Web_address VARCHAR(255),
+ Type VARCHAR(255) CHECK ( Type IN ('Hospital',
+ 'CLSC',
+ 'Clinic',
+ 'Pharmacy',
+ 'Special Instalment') ),
+ Capacity INT,
+ Managed_by VARCHAR(255),
+ FOREIGN KEY (Managed_by) REFERENCES Employee(SIN) 
+);

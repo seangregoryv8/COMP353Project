@@ -1,0 +1,12 @@
+CREATE TABLE Residence
+( Address VARCHAR(255) PRIMARY KEY,
+ City VARCHAR(255),
+ Province VARCHAR(255),
+ Postal_code VARCHAR(255),
+ Phone VARCHAR(255),
+ Bedrooms INT,
+ Type VARCHAR(255) CHECK ( Type IN ('Apartment',
+ 'Condominium',
+ 'Semi-Detached House',
+ 'House') ) 
+);

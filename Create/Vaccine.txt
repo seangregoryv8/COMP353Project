@@ -1,0 +1,13 @@
+CREATE TABLE Vaccination( Dose INT,
+ Type VARCHAR(255) CHECK ( Type IN ( 'Pfizer',
+ 'Moderna',
+ 'AstraZeneca',
+ 'Johnson & Johnson') ),
+ Date DATE,
+ Person VARCHAR(255) NOT NULL,
+ Taken_at VARCHAR(255),
+ FOREIGN KEY (Person) REFERENCES Person(SIN),
+ FOREIGN KEY (Taken_at) REFERENCES Facility(Name),
+ PRIMARY KEY (Person,
+ Dose) 
+);

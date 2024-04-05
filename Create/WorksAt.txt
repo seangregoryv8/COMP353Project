@@ -1,0 +1,10 @@
+CREATE TABLE Works_at( Employee VARCHAR(255),
+ Facility VARCHAR(255),
+ Start_date DATE,
+ End_date DATE,
+ FOREIGN KEY (Employee) REFERENCES Employee(SIN),
+ FOREIGN KEY (Facility) REFERENCES Facility(Name),
+ primary key (Employee,
+ Facility,
+ Start_date) 
+);

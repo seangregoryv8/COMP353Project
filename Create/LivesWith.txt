@@ -1,0 +1,11 @@
+CREATE TABLE lives_with( Employee VARCHAR(255),
+ Person VARCHAR(255),
+ Relationship VARCHAR(255) CHECK ( Relationship IN ('Roommate',
+ 'Partner',
+ 'Parent',
+ 'Dependent') ),
+ FOREIGN KEY (Employee) REFERENCES Employee(SIN),
+ FOREIGN KEY (Person) REFERENCES Person(SIN),
+ PRIMARY KEY (Employee,
+ Person) 
+);

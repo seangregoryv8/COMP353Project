@@ -1,0 +1,8 @@
+CREATE TABLE lives_in( Residence VARCHAR(255),
+ Person VARCHAR(255),
+ Address_start_date DATE,
+ FOREIGN KEY (Residence) REFERENCES Residence(Address),
+ FOREIGN KEY (Person) REFERENCES Person(SIN),
+ PRIMARY KEY (Residence,
+ Person) 
+);
