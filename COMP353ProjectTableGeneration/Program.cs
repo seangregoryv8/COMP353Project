@@ -119,7 +119,7 @@ namespace COMP353ProjectTableGeneration
             StringBuilder builder = new StringBuilder();
             Vaccine[] vaccines = Vaccine.MakeVaccines(amount, people, facilities);
             vaccines = vaccines.Distinct().ToArray();
-            builder.Append("INSERT INTO Vaccine VALUES\n");
+            builder.Append("INSERT INTO Vaccination VALUES\n");
             foreach (Vaccine vaccine in vaccines)
                 builder.Append(vaccine.ToString() + ",\n");
             Polish(ref builder);
