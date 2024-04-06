@@ -55,7 +55,7 @@ namespace COMP353ProjectTableGeneration
                 case TypesOfResidences.Apartment: type = "Apartment"; break;
                 case TypesOfResidences.Condominium: type = "Conduminium"; break;
                 case TypesOfResidences.Semidetached: type = "Semi-Detached House"; break;
-                case TypesOfResidences.House: type = "Detached House"; break;
+                case TypesOfResidences.House: type = "House"; break;
             }
             return "('" + Address + "', '" + City + "', '" + Province + "', '" + Postal_code + "', '" + Phone + "', " + Bedrooms + ", '" + type + "')";
         }

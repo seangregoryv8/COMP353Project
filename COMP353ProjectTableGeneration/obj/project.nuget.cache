@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U5cZtyJSW/wdoTUgMimU7HCnaWPSaEYSxKoHP2PATQVy7DZ5rZ3MJtCTn0I5mFw7gUh6rECIVbP/hzPj3fz9og==",
+  "dgSpecHash": "EMrQyPnzWvVUcRgFGhsPdpAoQa2MHvTd9b4hwB40r8LSQSV87l9xNvq3w427953Xr4eTm9CUiKWtUhd9j8cYvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353ProjectTableGeneration\\COMP353ProjectTableGeneration.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\chief\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\chief\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\chief\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\chief\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.28\\microsoft.netcore.app.host.win-x64.3.1.28.nupkg.sha512"
-  ],
+  "projectFilePath": "c:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353ProjectTableGeneration\\COMP353ProjectTableGeneration.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
