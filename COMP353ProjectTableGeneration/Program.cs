@@ -149,20 +149,15 @@ namespace COMP353ProjectTableGeneration
             Employee[] employees = Employees(   35, ref mainBuilder, people);
             Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
             WorksAt[] works = Works(            40, ref mainBuilder, employees, facilities);
-            LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences.ToArray());
+            LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences);
             LivesWith[] livesWith = Lives_With( 40, ref mainBuilder, people, employees);
             Infection[] infections = Infections(50, ref mainBuilder, people);
             Vaccine[] vaccines = Vaccines(      45, ref mainBuilder, people, facilities);
             Schedule[] schedules = Schedules(   30, ref mainBuilder, facilities, employees);
 
-            //List<Residence> res = residences.OfType<Residence>().ToList();
-            //string json = System.Text.Json.JsonSerializer.Serialize(res);
-            //
-
             stopwatch.Stop();
             Console.WriteLine($"Elapsed time for creating all: {stopwatch.ElapsedMilliseconds} ms");
             Export(mainBuilder, ref mainBuilder, "All", ".sql");
-            Console.Read();
         }
         public static void Export(StringBuilder builder, ref StringBuilder mainBuilder, string name, string extension = ".txt")
         {
@@ -171,10 +166,7 @@ namespace COMP353ProjectTableGeneration
             appPath = appPath.Remove(tableLocation, appPath.Length - tableLocation);
             appPath += (extension == ".sql") ? "SQL" : "Insert";
 
-            bool exists = Directory.Exists(appPath);
-
-            if (!exists)
-                Directory.CreateDirectory(appPath);
+            if (!Directory.Exists(appPath))Directory.CreateDirectory(appPath);
 
             if (extension == ".sql") name = "Inserts";
             using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
