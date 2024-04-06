@@ -53,7 +53,7 @@ namespace COMP353ProjectTableGeneration
             switch(Type)
             {
                 case TypesOfResidences.Apartment: type = "Apartment"; break;
-                case TypesOfResidences.Condominium: type = "Conduminium"; break;
+                case TypesOfResidences.Condominium: type = "Condominium"; break;
                 case TypesOfResidences.Semidetached: type = "Semi-Detached House"; break;
                 case TypesOfResidences.House: type = "House"; break;
             }
