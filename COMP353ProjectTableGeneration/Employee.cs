@@ -24,7 +24,7 @@ namespace COMP353ProjectTableGeneration
         {
             Employee[] employees = new Employee[amount];
             var rnd = new Random();
-            var randomNumbers = Enumerable.Range(1, people.Length - 1).OrderBy(x => rnd.Next()).Take(amount).ToList();
+            var randomNumbers = Enumerable.Range(1, people.Length).OrderBy(x => rnd.Next()).Take(amount).ToList();
 
             for (int i = 0; i < employees.Length; i++)
             {
@@ -32,8 +32,8 @@ namespace COMP353ProjectTableGeneration
                 Random random = new Random();
                 TypesOfEmployee randomBar = (TypesOfEmployee)values.GetValue(random.Next(values.Length));
 
-                int randomNumber = randomNumbers[(people.Length < i) ? Functions.RandomNumber(0, randomNumbers.Count) : i];
-                Person person = people[randomNumber];
+                int randomNumber = randomNumbers[(people.Length - 1 < i) ? Functions.RandomNumber(0, randomNumbers.Count) : i];
+                Person person = people[randomNumber - 1];
 
                 employees[i] = new Employee(person, randomBar);
             }

@@ -104,6 +104,77 @@ namespace COMP353ProjectTableGeneration
 
             return facilities;
         }
+        public static List<string> GenerateRandomOccupations(int count)
+        {
+            List<string> occupations = new List<string>();
+            Random random = new Random();
+
+            // List of possible occupations
+            string[] occupationList = {
+            "Software Developer",
+            "Nurse",
+            "Teacher",
+            "Doctor",
+            "Engineer",
+            "Accountant",
+            "Marketing Manager",
+            "Sales Representative",
+            "Graphic Designer",
+            "Lawyer",
+            "Electrician",
+            "Chef",
+            "Plumber",
+            "Writer",
+            "Dentist",
+            "Police Officer",
+            "Financial Analyst",
+            "HR Manager",
+            "Mechanic",
+            "Artist",
+            "Architect",
+            "Pharmacist",
+            "Veterinarian",
+            "Social Worker",
+            "Real Estate Agent",
+            "Pilot",
+            "Journalist",
+            "Construction Worker",
+            "Fitness Trainer",
+            "Psychologist",
+            "Web Designer",
+            "Interior Designer",
+            "Biologist",
+            "Librarian",
+            "Flight Attendant",
+            "Electrician",
+            "Actor",
+            "Economist",
+            "Photographer",
+            "Chemist",
+            "Waiter/Waitress",
+            "Bartender",
+            "Geologist",
+            "Translator",
+            "Paramedic",
+            "Marine Biologist",
+            "Fashion Designer",
+            "Meteorologist",
+            "Carpenter"
+        };
+
+            while (occupations.Count < count)
+            {
+                string occupation = occupationList[random.Next(occupationList.Length)];
+
+                // Adding the occupation if it's not already in the list
+                if (!occupations.Contains(occupation))
+                {
+                    occupations.Add(occupation);
+                }
+            }
+
+            return occupations;
+        }
         public static List<string> GenerateRandomCanadianPostalCodes(int count)
         {
             List<string> postalCodes = new List<string>();
@@ -190,5 +261,11 @@ namespace COMP353ProjectTableGeneration
             if (!audience.Contains(target))
                 audience.Add(target);
         }
+        public static int RandomYear(int start) => RandomNumber(start, 2024);
+        public static int RandomMonth() => RandomNumber(1, 12);
+        public static int RandomDay() => RandomNumber(1, 28);
+        public static int RandomHour() => RandomNumber(1, 24);
+        public static int RandomMinute() => RandomNumber(1, 60);
+        public static int RandomSecond() => RandomNumber(1, 60);
     }
 }

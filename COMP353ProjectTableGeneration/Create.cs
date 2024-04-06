@@ -18,7 +18,7 @@ namespace COMP353ProjectTableGeneration
         }
         public static string PrintPerson()
         {
-            StringBuilder builder = new StringBuilder("CREATE TABLE Person( SIN VARCHAR(255) PRIMARY KEY, FirstName VARCHAR(255), LastName VARCHAR(255), DateOfBirth DATE, MedicareCardNumber VARCHAR(255) NOT NULL UNIQUE, TelephoneNumber VARCHAR(255), Citizenship VARCHAR(255), EmailAddress VARCHAR(255), PrimaryResidence VARCHAR(255), FOREIGN KEY (PrimaryResidence) REFERENCES Residence(Address) );");
+            StringBuilder builder = new StringBuilder("CREATE TABLE Person( SIN VARCHAR(255) PRIMARY KEY, FirstName VARCHAR(255), LastName VARCHAR(255), DateOfBirth DATE, MedicareCardNumber VARCHAR(255) NOT NULL UNIQUE, TelephoneNumber VARCHAR(255), Citizenship VARCHAR(255), EmailAddress VARCHAR(255), Occupation VARCHAR(255), PrimaryResidence VARCHAR(255), FOREIGN KEY (PrimaryResidence) REFERENCES Residence(Address) );");
             return Export(ref builder, MethodBase.GetCurrentMethod().Name);
         }
         public static string PrintEmployee()
@@ -43,7 +43,7 @@ namespace COMP353ProjectTableGeneration
         }
         public static string PrintLivesWith()
         {
-            StringBuilder builder = new StringBuilder("CREATE TABLE lives_with( Employee VARCHAR(255), Person VARCHAR(255), Relationship VARCHAR(255) CHECK ( Relationship IN ('Roommate', 'Partner', 'Parent', 'Dependent') ), FOREIGN KEY (Employee) REFERENCES Employee(SIN), FOREIGN KEY (Person) REFERENCES Person(SIN), PRIMARY KEY (Employee, Person) );");
+            StringBuilder builder = new StringBuilder("CREATE TABLE lives_with( Employee VARCHAR(255), Person VARCHAR(255), Relationship VARCHAR(255) CHECK ( Relationship IN ('Roommate', 'Partner', 'Parent', 'Non-Parent Dependent', 'Children') ), FOREIGN KEY (Employee) REFERENCES Employee(SIN), FOREIGN KEY (Person) REFERENCES Person(SIN), PRIMARY KEY (Employee, Person) );");
             return Export(ref builder, MethodBase.GetCurrentMethod().Name);
         }
         public static string PrintInfection()
@@ -54,6 +54,11 @@ namespace COMP353ProjectTableGeneration
         public static string PrintVaccine()
         {
             StringBuilder builder = new StringBuilder("CREATE TABLE Vaccination( Dose INT, Type VARCHAR(255) CHECK ( Type IN ( 'Pfizer', 'Moderna', 'AstraZeneca', 'Johnson & Johnson') ), Date DATE, Person VARCHAR(255) NOT NULL, Taken_at VARCHAR(255), FOREIGN KEY (Person) REFERENCES Person(SIN), FOREIGN KEY (Taken_at) REFERENCES Facility(Name), PRIMARY KEY (Person, Dose) );");
+            return Export(ref builder, MethodBase.GetCurrentMethod().Name);
+        }
+        public static string PrintSchedule()
+        {
+            StringBuilder builder = new StringBuilder("CREATE TABLE Schedule( Date DATE, Start_time TIMESTAMP, End_time TIMESTAMP, Scheduled_at VARCHAR(255), Scheduled_for VARCHAR(255), FOREIGN KEY (Scheduled_at) REFERENCES Facility(Name), FOREIGN KEY (Scheduled_for) REFERENCES Employee(SIN), PRIMARY KEY (Scheduled_at, Scheduled_for, Date, Start_time), CHECK ( Start_time < End_time ) );");
             return Export(ref builder, MethodBase.GetCurrentMethod().Name);
         }
         public static string PrintAll(bool start)
@@ -68,7 +73,8 @@ namespace COMP353ProjectTableGeneration
             builder.Append(PrintLivesIn() + "\n\n");
             builder.Append(PrintLivesWith() + "\n\n");
             builder.Append(PrintInfection() + "\n\n");
-            builder.Append(PrintVaccine());
+            builder.Append(PrintVaccine() + "\n\n");
+            builder.Append(PrintSchedule() + "\n\n");
             return Export(ref builder, MethodBase.GetCurrentMethod().Name, ".sql");
         }
         public static string Export(ref StringBuilder builder, string name, string extension = ".txt")

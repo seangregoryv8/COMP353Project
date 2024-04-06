@@ -12,6 +12,7 @@ namespace COMP353ProjectTableGeneration
         public string TelephoneNumber { get; set; }
         public string Citizenship { get; set; }
         public string EmailAddress { get; set; }
+        public string Occupation { get; set; }
         public Residence PrimaryResidence { get; set; }
         // SIN = 0
         // Medicare = 4
@@ -21,6 +22,7 @@ namespace COMP353ProjectTableGeneration
             Person[] people = new Person[amount];
             var names = Functions.GenerateRandomNames(amount);
             var phones = Functions.GenerateRandomCanadianPhoneNumbers(amount);
+            var occupations = Functions.GenerateRandomOccupations(amount);
             for (int i = 0; i < people.Length; i++)
             {
                 string sin = Functions.RandomDigits(10).ToString();
@@ -35,12 +37,12 @@ namespace COMP353ProjectTableGeneration
                 string med = char.ToString(Functions.GetLetter()) + Functions.RandomDigits(9);
                 Residence residence = residences[Functions.RandomNumber(0, residences.Length - 1)];
 
-                people[i] = new Person(sin, first, last, start, med, phones[i], "Canadian", residence);
+                people[i] = new Person(sin, first, last, start, med, phones[i], "Canadian", residence, occupations[i]);
             }
 
             return people;
         }
-        public Person(string sin, string f, string l, DateTime date, string medicare, string telephone, string citi, Residence residence)
+        public Person(string sin, string f, string l, DateTime date, string medicare, string telephone, string citi, Residence residence, string occupation)
         {
             SIN = sin;
             FirstName = f;
@@ -51,12 +53,14 @@ namespace COMP353ProjectTableGeneration
             Citizenship = citi;
             EmailAddress = (f + l).ToLower() + Functions.RandomDigits(2) + "@gmail.com";
             PrimaryResidence = residence;
+            Occupation = occupation;
         }
+        public string FormatDate(DateTime date) => date.Year + "-" + date.Month + "-" + date.Day;
         public override string ToString()
         {
             return "('" + SIN + "', '" + FirstName + "', '" + LastName + "', '" +
-                DateOfBirth.Year + "-" + DateOfBirth.Month + "-" + DateOfBirth.Day +
-                "', '" + MedicareCardNumber + "', '" + TelephoneNumber + "', '" + Citizenship + "', '" + EmailAddress + "', '" + PrimaryResidence.Address + "')";
+                FormatDate(DateOfBirth) + "', '" + MedicareCardNumber + "', '" + TelephoneNumber + "', '" + Citizenship + "', '" +
+                EmailAddress + "', '" + Occupation + "', '" + PrimaryResidence.Address + "')";
         }
     }
 }

@@ -42,6 +42,8 @@ CREATE TABLE Person
 
  EmailAddress VARCHAR(255),
 
+ Occupation VARCHAR(255),
+
  PrimaryResidence VARCHAR(255),
 
  FOREIGN KEY (PrimaryResidence) REFERENCES Residence(Address) 
@@ -150,7 +152,9 @@ CREATE TABLE lives_with( Employee VARCHAR(255),
 
  'Parent',
 
- 'Dependent') ),
+ 'Non-Parent Dependent',
+
+ 'Children') ),
 
  FOREIGN KEY (Employee) REFERENCES Employee(SIN),
 
@@ -208,3 +212,32 @@ CREATE TABLE Vaccination( Dose INT,
  Dose) 
 
 );
+
+CREATE TABLE Schedule
+( Date DATE,
+
+ Start_time TIMESTAMP,
+
+ End_time TIMESTAMP,
+
+ Scheduled_at VARCHAR(255),
+
+ Scheduled_for VARCHAR(255),
+
+ FOREIGN KEY (Scheduled_at) REFERENCES Facility(Name),
+
+ FOREIGN KEY (Scheduled_for) REFERENCES Employee(SIN),
+
+ PRIMARY KEY (Scheduled_at,
+
+ Scheduled_for,
+
+ Date,
+
+ Start_time),
+
+ CHECK ( Start_time < End_time ) 
+
+);
+
+

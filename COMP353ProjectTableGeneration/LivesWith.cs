@@ -11,7 +11,8 @@ namespace COMP353ProjectTableGeneration
             Roommate,
             Partner,
             Parent,
-            Descendent
+            Dependant,
+            Children
         }
         public Person Person { get; set; }
         public Employee Employee { get; set; }
@@ -45,7 +46,13 @@ namespace COMP353ProjectTableGeneration
 
         public override string ToString()
         {
-            return "('" + Employee.SIN.SIN + "', '" + Person.SIN + "', '" + Relationship.ToString() + "')";
+            string relationship = string.Empty;
+            switch (Relationship)
+            {
+                case TypesOfRelationships.Dependant: relationship = "Non-Parent Dependent"; break;
+                default: relationship = Relationship.ToString(); break;
+            }
+            return "('" + Employee.SIN.SIN + "', '" + Person.SIN + "', '" + relationship + "')";
         }
     }
 }
