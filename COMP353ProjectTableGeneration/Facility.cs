@@ -43,7 +43,7 @@ namespace COMP353ProjectTableGeneration
                 Array values = Enum.GetValues(typeof(TypesOfFacilities));
                 TypesOfFacilities randomBar = (TypesOfFacilities)values.GetValue(rnd.Next(values.Length));
 
-                facilities[i] = new Facility(names[i], addresses[i], cities[i], Functions.GetProvince(), postals[i], phones[i], randomBar, Functions.RandomNumber(10, 1000), employee);
+                facilities[i] = new Facility(names[i] + " " + Functions.RandomDigits(4), addresses[i], cities[i], Functions.GetProvince(), postals[i], phones[i], randomBar, Functions.RandomNumber(10, 1000), employee);
             }
             return facilities;
         }
