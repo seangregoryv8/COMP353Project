@@ -10,7 +10,7 @@ namespace COMP353ProjectTableGeneration
             var random = new Random();
             string s = string.Empty;
             for (int i = 0; i < length; i++)
-                s = String.Concat(s, random.Next(10).ToString());
+                s = string.Concat(s, random.Next(10).ToString());
             return s;
         }
         public static char GetLetter()
@@ -43,16 +43,12 @@ namespace COMP353ProjectTableGeneration
             "Yukon"
         };
         public static string GetProvince() => canadianProvinces[RandomNumber(0, canadianProvinces.Count - 1)];
+        public static string[] streetTypes = { "Street", "Avenue", "Lane", "Drive", "Court", "Circle", "Road", "Way", "Boulevard", "Terrace" };
+        public static string[] streetNames = { "Elm", "Maple", "Oak", "Cedar", "Pine", "Birch", "Willow", "Spruce", "Hickory", "Magnolia" };
         public static List<string> GenerateRandomAddresses(int count)
         {
             List<string> addresses = new List<string>();
             Random random = new Random();
-
-            // List of possible street names
-            string[] streetNames = { "Elm", "Maple", "Oak", "Cedar", "Pine", "Birch", "Willow", "Spruce", "Hickory", "Magnolia" };
-
-            // List of possible street types
-            string[] streetTypes = { "Street", "Avenue", "Lane", "Drive", "Court", "Circle", "Road", "Way", "Boulevard", "Terrace" };
 
             while (addresses.Count < count)
             {
@@ -64,6 +60,7 @@ namespace COMP353ProjectTableGeneration
 
             return addresses;
         }
+        public static string[] canadianCityNames = { "Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec City", "Hamilton", "Kitchener", "London", "Victoria", "Halifax", "Oshawa", "Windsor", "Saskatoon", "Regina", "St. Johns", "Barrie", "Kelowna", "Sherbrooke", "Guelph", "Abbotsford", "Kingston", "Kanata", "Trois-Rivieres", "Moncton", "Chicoutimi", "Saint John", "Peterborough", "Red Deer", "Saint-Jérôme", "Lethbridge", "White Rock", "Prince George", "Medicine Hat", "Norfolk County", "Drummondville", "Newmarket", "Saint-Hyacinthe", "Fredericton", "St. Albert", "Aurora", "North Bay", "Belleville", "Mirabel", "Brandon", "Cornwall", "Victoriaville" };
         // Method to generate random Canadian cities
         public static List<string> GenerateRandomCities(int count)
         {
@@ -71,7 +68,6 @@ namespace COMP353ProjectTableGeneration
             Random random = new Random();
 
             // List of possible Canadian city names
-            string[] canadianCityNames = {"Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec City", "Hamilton", "Kitchener", "London", "Victoria", "Halifax", "Oshawa", "Windsor", "Saskatoon", "Regina", "St. Johns", "Barrie", "Kelowna", "Sherbrooke", "Guelph", "Abbotsford", "Kingston", "Kanata", "Trois-Rivières", "Moncton", "Chicoutimi", "Saint John", "Peterborough", "Red Deer", "Saint-Jérôme", "Lethbridge", "White Rock", "Prince George", "Medicine Hat", "Norfolk County", "Drummondville", "Newmarket", "Saint-Hyacinthe", "Fredericton", "St. Albert", "Aurora", "North Bay", "Belleville", "Mirabel", "Brandon", "Cornwall", "Victoriaville" };
 
             while (canadianCities.Count < count)
             {
@@ -104,13 +100,7 @@ namespace COMP353ProjectTableGeneration
 
             return facilities;
         }
-        public static List<string> GenerateRandomOccupations(int count)
-        {
-            List<string> occupations = new List<string>();
-            Random random = new Random();
-
-            // List of possible occupations
-            string[] occupationList = {
+        public static string[] occupationList = {
             "Software Developer",
             "Nurse",
             "Teacher",
@@ -161,6 +151,10 @@ namespace COMP353ProjectTableGeneration
             "Meteorologist",
             "Carpenter"
         };
+        public static List<string> GenerateRandomOccupations(int count)
+        {
+            List<string> occupations = new List<string>();
+            Random random = new Random();
 
             while (occupations.Count < count)
             {
@@ -168,9 +162,7 @@ namespace COMP353ProjectTableGeneration
 
                 // Adding the occupation if it's not already in the list
                 if (!occupations.Contains(occupation))
-                {
                     occupations.Add(occupation);
-                }
             }
 
             return occupations;

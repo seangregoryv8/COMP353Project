@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wUkfR0ryUMSGEuXJhQAKYODVdwS8j15X05Thhddit7WeNjHVC65Q3laM75MGLTR0PiWl8psgeUEikCQaWpmsBg==",
+  "dgSpecHash": "5WdIgSVMMkrfK+1PtQi6THVo3Jv9YkBSqEdN9OyBTYVur7TfLIgCWVvEMcEA46x0+O617cquR4mh2xHa+FjIwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\chief\\OneDrive\\Documents\\GitHub\\COMP353Project\\COMP353ProjectTableGeneration\\COMP353ProjectTableGeneration.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\chief\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

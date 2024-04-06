@@ -1,18 +1,18 @@
 INSERT INTO Facility VALUES
-('VitaTech', 'Willow Terrace', 'Kitchener', 'N47 0B1', '2070647105', 'www.vitatech031.org', 'Clinic', 664, '2776436157'),
-('CurePharmaCare', 'Hickory Lane', 'Regina', 'D92 9N5', '4579359242', 'www.curepharmacare125.org', 'Hospital', 440, '5719439499'),
-('BioBioTech', 'Magnolia Street', 'Red Deer', 'M72 0Q8', '2521621209', 'www.biobiotech325.org', 'CLSC', 977, '5719439499'),
-('HealthMed', 'Elm Court', 'Medicine Hat', 'Y73 0V6', '5969180626', 'www.healthmed972.org', 'Pharmacy', 482, '5474967599'),
-('GenResearch', 'Maple Terrace', 'Kingston', 'X95 8O9', '2643477388', 'www.genresearch207.org', 'CLSC', 121, '5984957291'),
-('CureTech', 'Spruce Lane', 'Mirabel', 'J49 0J6', '9137377991', 'www.curetech490.org', 'Hospital', 761, '4731337734'),
-('CurePharmaTech', 'Spruce Boulevard', 'Vancouver', 'U74 7O4', '5953425645', 'www.curepharmatech820.org', 'Pharmacy', 798, '5474967599'),
-('MediHealthcare', 'Hickory Drive', 'Victoria', 'N60 9F8', '3164953929', 'www.medihealthcare530.org', 'Clinic', 270, '0821100659'),
-('HealthTech', 'Pine Street', 'Montreal', 'D17 5L0', '4902614374', 'www.healthtech131.org', 'Pharmacy', 726, '5474967599'),
-('MediSolutions', 'Elm Way', 'Halifax', 'P47 5Q4', '9423918937', 'www.medisolutions986.org', 'Hospital', 28, '4731337734'),
-('HealthBioTech', 'Cedar Boulevard', 'Barrie', 'P52 5L9', '6184275192', 'www.healthbiotech913.org', 'Clinic', 790, '0821100659'),
-('TheraMed', 'Spruce Court', 'Kanata', 'E90 9G5', '7808838246', 'www.theramed901.org', 'Pharmacy', 97, '4731337734'),
-('HealthPharmaCare', 'Pine Circle', 'Peterborough', 'G31 2P9', '7931634930', 'www.healthpharmacare606.org', 'Special Instalment', 67, '4997847200'),
-('VitaPharm', 'Magnolia Circle', 'Newmarket', 'K62 7Q1', '2931232962', 'www.vitapharm069.org', 'Hospital', 863, '5474967599'),
-('HealthSolutions', 'Magnolia Boulevard', 'Moncton', 'N32 8L2', '3380109246', 'www.healthsolutions087.org', 'Clinic', 572, '2776436157');
+('BioPharm', 'Willow Lane', 'Edmonton', 'Z98 1O5', '9141287212', 'www.biopharm128.org', 'Hospital', 434, '0045276197'),
+('TheraMed', 'Pine Lane', 'Calgary', 'J61 9R2', '6078192400', 'www.theramed236.org', 'Pharmacy', 501, '0832708295'),
+('LifeBioTech', 'Spruce Drive', 'Mirabel', 'Y81 1H8', '2452012272', 'www.lifebiotech874.org', 'Hospital', 356, '8207311936'),
+('GenTech', 'Magnolia Court', 'Kitchener', 'S66 9T0', '3917824612', 'www.gentech279.org', 'Special Instalment', 61, '4473215930'),
+('VitaPharmaTech', 'Hickory Drive', 'Hamilton', 'I31 7P5', '2725220745', 'www.vitapharmatech433.org', 'CLSC', 278, '8403885587'),
+('VitaPharm', 'Pine Circle', 'Medicine Hat', 'L73 4R4', '4126675365', 'www.vitapharm179.org', 'CLSC', 479, '1022723805'),
+('CarePharm', 'Maple Avenue', 'Quebec City', 'R41 6M7', '5954829839', 'www.carepharm727.org', 'CLSC', 895, '4389697245'),
+('PharmaPharmaTech', 'Hickory Circle', 'Drummondville', 'T24 5G3', '4258508521', 'www.pharmapharmatech340.org', 'Pharmacy', 732, '4389697245'),
+('LifeResearch', 'Oak Drive', 'Peterborough', 'P71 4D8', '7889630281', 'www.liferesearch212.org', 'Special Instalment', 933, '8207311936'),
+('LifePharmaTech', 'Spruce Street', 'Fredericton', 'Z42 6Z9', '2609341245', 'www.lifepharmatech839.org', 'Special Instalment', 378, '8472150075'),
+('MediResearch', 'Elm Circle', 'Saint-Hyacinthe', 'X09 1I6', '2874336861', 'www.mediresearch558.org', 'Hospital', 268, '3903589944'),
+('PharmaLab', 'Oak Terrace', 'Brandon', 'N71 2S0', '9890189078', 'www.pharmalab041.org', 'CLSC', 102, '8472150075'),
+('PharmaTech', 'Maple Circle', 'Winnipeg', 'J92 9A4', '7141252345', 'www.pharmatech577.org', 'Hospital', 230, '3903589944'),
+('CureLab', 'Magnolia Terrace', 'Toronto', 'V21 8P5', '4190923896', 'www.curelab219.org', 'CLSC', 819, '4473215930'),
+('CareResearch', 'Cedar Way', 'Newmarket', 'L77 7V1', '2318027011', 'www.careresearch358.org', 'CLSC', 92, '9256810635');
 
 

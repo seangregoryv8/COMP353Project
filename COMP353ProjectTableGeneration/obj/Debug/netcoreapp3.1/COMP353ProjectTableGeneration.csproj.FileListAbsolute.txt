@@ -12,3 +12,5 @@ C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGener
 C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.pdb
 C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.genruntimeconfig.cache
 C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.csproj.AssemblyReference.cache
+C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.csproj.CopyComplete

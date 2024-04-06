@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace COMP353ProjectTableGeneration
 {
@@ -26,10 +27,10 @@ namespace COMP353ProjectTableGeneration
             var cities = Functions.GenerateRandomCities(amount);
             var postals = Functions.GenerateRandomCanadianPostalCodes(amount);
             var phones = Functions.GenerateRandomCanadianPhoneNumbers(amount);
+            var rnd = new Random();
 
             for (int i = 0; i < residences.Length; i++)
             {
-                var rnd = new Random();
                 Array values = Enum.GetValues(typeof(TypesOfResidences));
                 TypesOfResidences randomBar = (TypesOfResidences)values.GetValue(rnd.Next(values.Length));
 

@@ -1,18 +1,18 @@
 INSERT INTO Employee VALUES
-('5719439499', 'Security Personnel'),
-('0821100659', 'Administrative Personnel'),
-('5474967599', 'Pharmacist'),
-('4997847200', 'Doctor'),
-('5984957291', 'Security Personnel'),
-('2778577753', 'Administrative Personnel'),
-('4731337734', 'Doctor'),
-('9155759002', 'Pharmacist'),
-('2776436157', 'Doctor'),
-('1603035101', 'Cashier'),
-('2776436157', 'Administrative Personnel'),
-('5719439499', 'Pharmacist'),
-('4731337734', 'Administrative Personnel'),
-('5474967599', 'Nurse'),
-('5719439499', 'Regular Employee');
+('8276636467', 'Regular Employee'),
+('8472150075', 'Regular Employee'),
+('8403885587', 'Security Personnel'),
+('1022723805', 'Receptionist'),
+('6561685648', 'Cashier'),
+('7634052651', 'Pharmacist'),
+('4473215930', 'Cashier'),
+('3903589944', 'Nurse'),
+('9256810635', 'Receptionist'),
+('1631160135', 'Doctor'),
+('0832708295', 'Administrative Personnel'),
+('0045276197', 'Security Personnel'),
+('4389697245', 'Security Personnel'),
+('6940575221', 'Regular Employee'),
+('8207311936', 'Security Personnel');
 
 

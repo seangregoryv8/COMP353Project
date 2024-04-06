@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace COMP353ProjectTableGeneration
 {
@@ -135,21 +140,29 @@ namespace COMP353ProjectTableGeneration
         }
         static void Main()
         {
+            var stopwatch = Stopwatch.StartNew();
             Create.PrintAll(true);
             StringBuilder mainBuilder = new StringBuilder();
 
-            Residence[] residences = Residences(10, ref mainBuilder);
-            Person[] people =   People(         10, ref mainBuilder, residences);
+            Residence[] residences = Residences(40, ref mainBuilder);
+            Person[] people = People(           40, ref mainBuilder, residences);
             Employee[] employees = Employees(   15, ref mainBuilder, people);
             Facility[] facilities = Facilities( 15, ref mainBuilder, employees);
             WorksAt[] works = Works(            15, ref mainBuilder, employees, facilities);
-            LivesIn[] livesIn = Lives_In(       10, ref mainBuilder, people, residences);
+            LivesIn[] livesIn = Lives_In(       10, ref mainBuilder, people, residences.ToArray());
             LivesWith[] livesWith = Lives_With( 10, ref mainBuilder, people, employees);
             Infection[] infections = Infections(10, ref mainBuilder, people);
             Vaccine[] vaccines = Vaccines(      10, ref mainBuilder, people, facilities);
-            Schedule[] schedules = Schedules(10, ref mainBuilder, facilities, employees);
+            Schedule[] schedules = Schedules(   10, ref mainBuilder, facilities, employees);
 
+            //List<Residence> res = residences.OfType<Residence>().ToList();
+            //string json = System.Text.Json.JsonSerializer.Serialize(res);
+            //
+
+            stopwatch.Stop();
+            Console.WriteLine($"Elapsed time for creating all: {stopwatch.ElapsedMilliseconds} ms");
             Export(mainBuilder, ref mainBuilder, "All", ".sql");
+            Console.Read();
         }
         public static void Export(StringBuilder builder, ref StringBuilder mainBuilder, string name, string extension = ".txt")
         {
