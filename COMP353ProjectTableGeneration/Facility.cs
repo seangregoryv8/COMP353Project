@@ -65,7 +65,7 @@ namespace COMP353ProjectTableGeneration
         {
             string type = Type.ToString();
             if (type == "Special") type += " Instalment";
-            return "('" + Name + "', '" + Address + "', '" + City + "', '" + Postal_Code + "', '" + Phone + "', '" + Web_Address + "', '" + type + "', " + Capacity + ", '" + Managed_By.SIN.SIN + "')";
+            return "('" + Name + "', '" + Address + "', '" + City + "', '" + Province + "', '" + Postal_Code + "', '" + Phone + "', '" + Web_Address + "', '" + type + "', " + Capacity + ", '" + Managed_By.SIN.SIN + "')";
         }
     }
 }
