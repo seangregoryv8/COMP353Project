@@ -8,7 +8,7 @@ namespace COMP353ProjectTableGeneration
     {
         public static string PrintStart()
         {
-            StringBuilder builder = new StringBuilder("DROP DATABASE HFESTS;\nCREATE DATABASE HFESTS \nWITH OWNER = postgres \nENCODING = 'UTF8' \nLC_COLLATE = 'en_US.UTF-8' \nLC_CTYPE = 'en_US.UTF-8' \nTABLESPACE = pg_default \nONNECTION LIMIT = -1 \nTEMPLATE = False;\n\nUSE HFESTS;");
+            StringBuilder builder = new StringBuilder("DROP DATABASE HFESTS;\nCREATE DATABASE HFESTS;\nUSE HFESTS;");
             return Export(ref builder, MethodBase.GetCurrentMethod().Name);
         }
         public static string PrintResidence()

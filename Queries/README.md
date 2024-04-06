@@ -1,0 +1,1 @@
+Please upload the queries as "Query[Number].sql", as well as in a .txt format if you wish

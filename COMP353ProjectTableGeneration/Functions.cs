@@ -71,7 +71,7 @@ namespace COMP353ProjectTableGeneration
             Random random = new Random();
 
             // List of possible Canadian city names
-            string[] canadianCityNames = { "Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec City", "Hamilton", "Kitchener", "London", "Victoria", "Halifax", "Oshawa", "Windsor", "Saskatoon", "Regina", "St. John's", "Barrie", "Kelowna", "Sherbrooke", "Guelph", "Abbotsford", "Kingston", "Kanata", "Trois-Rivières", "Moncton", "Chicoutimi", "Saint John", "Peterborough", "Red Deer", "Saint-Jérôme", "Lethbridge", "White Rock", "Prince George", "Medicine Hat", "Norfolk County", "Drummondville", "Newmarket", "Saint-Hyacinthe", "Fredericton", "St. Albert", "Aurora", "North Bay", "Belleville", "Mirabel", "Brandon", "Cornwall", "Victoriaville" };
+            string[] canadianCityNames = {"Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec City", "Hamilton", "Kitchener", "London", "Victoria", "Halifax", "Oshawa", "Windsor", "Saskatoon", "Regina", "St. Johns", "Barrie", "Kelowna", "Sherbrooke", "Guelph", "Abbotsford", "Kingston", "Kanata", "Trois-Rivières", "Moncton", "Chicoutimi", "Saint John", "Peterborough", "Red Deer", "Saint-Jérôme", "Lethbridge", "White Rock", "Prince George", "Medicine Hat", "Norfolk County", "Drummondville", "Newmarket", "Saint-Hyacinthe", "Fredericton", "St. Albert", "Aurora", "North Bay", "Belleville", "Mirabel", "Brandon", "Cornwall", "Victoriaville" };
 
             while (canadianCities.Count < count)
             {
