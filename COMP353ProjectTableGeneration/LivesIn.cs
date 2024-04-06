@@ -1,4 +1,6 @@
-﻿namespace COMP353ProjectTableGeneration
+﻿using System;
+
+namespace COMP353ProjectTableGeneration
 {
     public class LivesIn
     {
@@ -8,7 +10,7 @@
 
         public static LivesIn[] MakeLivesIn(int amount, Person[] people, Residence[] residences)
         {
-            LivesIn[] lives = new LivesIn[amount];
+            LivesIn[] lives = new LivesIn[amount + people.Length];
 
             for (int i = 0; i < lives.Length; i++)
             {
@@ -18,6 +20,12 @@
                 int startMonth = Functions.RandomNumber(1, 12);
                 int startDay = Functions.RandomNumber(1, 28);
                 lives[i] = new LivesIn(person, residence, Format(startYear, startMonth, startDay));
+            }
+
+            for (int i = 0; i < people.Length; i++)
+            {
+                Residence residence = Array.Find(residences, residence => residence.Equals(people[i].PrimaryResidence));
+                lives[i] = new LivesIn(people[i], residence, Format(Functions.RandomYear(1970), Functions.RandomMonth(), Functions.RandomDay()));
             }
             return lives;
         }
