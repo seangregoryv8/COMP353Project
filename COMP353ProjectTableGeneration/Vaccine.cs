@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace COMP353ProjectTableGeneration
@@ -37,7 +38,8 @@ namespace COMP353ProjectTableGeneration
                 Person person = people[Functions.RandomNumber(0, people.Length)];
                 Facility facility = facilities[Functions.RandomNumber(0, facilities.Length)];
 
-                vaccines[i] = new Vaccine(Functions.RandomNumber(1, 4), randomBar, start, person, facility);
+                
+                vaccines[i] = new Vaccine(Functions.RandomNumber(1, 9), randomBar, start, person, facility);
             }
 
             return vaccines;
