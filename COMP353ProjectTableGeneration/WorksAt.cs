@@ -55,7 +55,7 @@ namespace COMP353ProjectTableGeneration
 
         public override string ToString()
         {
-            return "('" + Employee.SIN.SIN + "', '" + Facility.Name + "', '" + StartDate + "', '" + EndDate + "')";
+            return "('" + Employee.SIN.SIN + "', '" + Facility.Name + "', '" + StartDate + "', " + (EndDate == "NULL" ? EndDate : ("'" + EndDate + "'")) + ")";
         }
     }
 }
