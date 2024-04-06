@@ -14,7 +14,7 @@ namespace COMP353ProjectTableGeneration
 
         public static WorksAt[] MakeWorksAt(int amount, Employee[] employees, Facility[] facilities)
         {
-            WorksAt[] works = new WorksAt[amount];
+            WorksAt[] works = new WorksAt[amount + facilities.Length];
 
             for (int i = 0; i < works.Length; i++)
             {
@@ -42,7 +42,24 @@ namespace COMP353ProjectTableGeneration
                     works[i] = new WorksAt(employee, facility, Format(startYear, startMonth, startDay), Format(endYear, endMonth, endDay));
                 }
             }
-            return works;
+
+            for (int i = 0; i < facilities.Length; i++)
+            {
+                Employee employee = Array.Find(employees, residence => residence.Equals(facilities[i].Managed_By));
+                works[i] = new WorksAt(employee, facilities[i], Format(Functions.RandomYear(2015), Functions.RandomMonth(), Functions.RandomDay()), "NULL");
+            }
+
+            List<WorksAt> WorksAt1 = works.OfType<WorksAt>().ToList();
+
+            for (int i = WorksAt1.Count() - 1; i >= 0; i--)
+            {
+                for (int j = 0; j < WorksAt1.Count; j++)
+                {
+                    if (i != j && WorksAt1[i].Employee == WorksAt1[j].Employee && WorksAt1[i].Facility == WorksAt1[j].Facility && WorksAt1[i].StartDate == WorksAt1[j].StartDate)
+                        WorksAt1.RemoveAt(j);
+                }
+            }
+            return WorksAt1.ToArray();
         }
         private static string Format(int year, int month, int day) => year + "-" + month + "-" + day;
         public WorksAt(Employee employee, Facility facility, string start, string end)

@@ -42,7 +42,17 @@ namespace COMP353ProjectTableGeneration
                 vaccines[i] = new Vaccine(Functions.RandomNumber(1, 9), randomBar, start, person, facility);
             }
 
-            return vaccines;
+            List<Vaccine> Vaccines1 = vaccines.OfType<Vaccine>().ToList();
+
+            for (int i = Vaccines1.Count() - 1; i >= 0; i--)
+            {
+                for (int j = 0; j < Vaccines1.Count; j++)
+                {
+                    if (i != j && Vaccines1[i].Person == Vaccines1[j].Person && Vaccines1[i].Dose == Vaccines1[j].Dose)
+                        Vaccines1.RemoveAt(j);
+                }
+            }
+            return Vaccines1.ToArray();
         }
         public Vaccine(int dose, TypesOfVaccines vaccine, DateTime date, Person person, Facility facility)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace COMP353ProjectTableGeneration
@@ -36,7 +37,18 @@ namespace COMP353ProjectTableGeneration
                 infections[i] = new Infection(start, randomBar, Functions.RandomNumber(1, 14), person);
             }
 
-            return infections;
+            List<Infection> Infections1 = infections.OfType<Infection>().ToList();
+
+            for (int i = Infections1.Count() - 1; i >= 0; i--)
+            {
+                for (int j = 0; j < Infections1.Count; j++)
+                {
+                    if (i != j && Infections1[i].Date == Infections1[j].Date && Infections1[i].Person == Infections1[j].Person)
+                        Infections1.RemoveAt(j);
+                }
+            }
+
+            return Infections1.ToArray();
         }
         public Infection(DateTime date, TypesOfInfection type, int period, Person person)
         {

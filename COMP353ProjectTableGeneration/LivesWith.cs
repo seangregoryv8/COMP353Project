@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace COMP353ProjectTableGeneration
@@ -35,7 +36,18 @@ namespace COMP353ProjectTableGeneration
                 TypesOfRelationships randomBar = (TypesOfRelationships)values.GetValue(rnd.Next(values.Length));
                 lives[i] = new LivesWith(person, employee, randomBar);
             }
-            return lives;
+
+            List<LivesWith> LivesWith1 = lives.OfType<LivesWith>().ToList();
+
+            for (int i = LivesWith1.Count() - 1; i >= 0; i--)
+            {
+                for (int j = 0; j < LivesWith1.Count; j++)
+                {
+                    if (i != j && LivesWith1[i].Employee == LivesWith1[j].Employee && LivesWith1[i].Person == LivesWith1[j].Person)
+                        LivesWith1.RemoveAt(j);
+                }
+            }
+            return LivesWith1.ToArray();
         }
         public LivesWith(Person person, Employee employee, TypesOfRelationships relationship)
         {

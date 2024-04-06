@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace COMP353ProjectTableGeneration
@@ -29,7 +30,18 @@ namespace COMP353ProjectTableGeneration
 
                 schedules[i] = new Schedule(date, start, end, facility, employee);
             }
-            return schedules;
+
+            List<Schedule> Schedule1 = schedules.OfType<Schedule>().ToList();
+
+            for (int i = Schedule1.Count() - 1; i >= 0; i--)
+            {
+                for (int j = 0; j < Schedule1.Count; j++)
+                {
+                    if (i != j && Schedule1[i].SDate == Schedule1[j].SDate && Schedule1[i].Start_Time == Schedule1[j].Start_Time && Schedule1[i].Scheduled_At == Schedule1[j].Scheduled_At && Schedule1[i].Scheduled_For == Schedule1[j].Scheduled_For)
+                        Schedule1.RemoveAt(j);
+                }
+            }
+            return Schedule1.ToArray();
         }
         public Schedule(DateTime sdate, DateTime start, DateTime end, Facility at, Employee emp)
         {

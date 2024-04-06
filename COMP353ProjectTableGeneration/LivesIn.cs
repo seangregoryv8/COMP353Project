@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace COMP353ProjectTableGeneration
 {
@@ -27,7 +29,18 @@ namespace COMP353ProjectTableGeneration
                 Residence residence = Array.Find(residences, residence => residence.Equals(people[i].PrimaryResidence));
                 lives[i] = new LivesIn(people[i], residence, Format(Functions.RandomYear(1970), Functions.RandomMonth(), Functions.RandomDay()));
             }
-            return lives;
+
+            List<LivesIn> LivesIn1 = lives.OfType<LivesIn>().ToList();
+
+            for (int i = LivesIn1.Count() - 1; i >= 0; i--)
+            {
+                for (int j = 0; j < LivesIn1.Count; j++)
+                {
+                    if (i != j && LivesIn1[i].Person == LivesIn1[j].Person && LivesIn1[i].Residence == LivesIn1[j].Residence)
+                        LivesIn1.RemoveAt(j);
+                }
+            }
+            return LivesIn1.ToArray();
         }
         private static string Format(int year, int month, int day) => year + "-" + month + "-" + day;
         public LivesIn(Person person, Residence residence, string start)
