@@ -26,7 +26,7 @@ namespace COMP353ProjectTableGeneration
         public static Facility[] MakeFacilities(int amount, Employee[] employees)
         {
             Facility[] facilities = new Facility[amount];
-            var names = Functions.GenerateRandomFacilities(amount);
+            var names = Functions.GenerateRandomFacilities(amount + 10).Distinct();
             var addresses = Functions.GenerateRandomAddresses(amount);
             var cities = Functions.GenerateRandomCities(amount);
             var postals = Functions.GenerateRandomCanadianPostalCodes(amount);
