@@ -244,7 +244,7 @@ INSERT INTO lives_with VALUES
 ('7710793534', '7639575613', 'Non-Parent Dependent'),
 ('4568528541', '7174975604', 'Roommate'),
 ('3537725448', '1380754292', 'Roommate'),
-('7639575613', '2923417540', 'Partner'),
+('7639575613', '0696325227', 'Partner'),
 ('3822068309', '8460544772', 'Parent'),
 ('9058626803', '2336350227', 'Roommate'),
 ('7174975604', '3537725448', 'Parent'),
@@ -341,8 +341,8 @@ INSERT INTO Vaccination VALUES
 (7, 'AstraZeneca', '2020-10-10', '8460544772', 'CareMed 6317'),
 (3, 'Johnson & Johnson', '2023-10-23', '0140055367', 'LifeHealthcare 6138'),
 (4, 'AstraZeneca', '2022-1-18', '3077533119', 'VitaSolutions 8611'),
-(8, 'Johnson & Johnson', '2021-7-10', '3537725448', 'LifeResearch 9642'),
-(2, 'AstraZeneca', '2023-10-18', '8718016176', 'CureMed 6918'),
+(8, 'Johnson & Johnson', '2021-7-10', '8460544772', 'LifeResearch 9642'),
+(2, 'AstraZeneca', '2023-10-18', '3585488326', 'CureMed 6918'),
 (1, 'Moderna', '2021-1-27', '7639575613', 'VitaSolutions 8611'),
 (2, 'Johnson & Johnson', '2020-11-18', '8718016176', 'HealthSolutions 8051'),
 (5, 'Moderna', '2021-9-12', '8460544772', 'BioBioTech 0283'),
@@ -351,7 +351,7 @@ INSERT INTO Vaccination VALUES
 (8, 'AstraZeneca', '2023-5-26', '4787458252', 'LifePharm 7665'),
 (2, 'Moderna', '2021-5-16', '1852566618', 'CureResearch 9816'),
 (1, 'Johnson & Johnson', '2023-11-27', '9058626803', 'TheraSolutions 4614'),
-(2, 'Moderna', '2020-2-4', '3585488326', 'LifePharm 7665'),
+(2, 'Moderna', '2020-2-4', '4787458252', 'LifePharm 7665'),
 (4, 'Johnson & Johnson', '2023-5-19', '4987566633', 'PharmaSolutions 8141'),
 (3, 'AstraZeneca', '2020-3-12', '3105382670', 'HealthSolutions 8051'),
 (6, 'Johnson & Johnson', '2020-9-12', '8882175609', 'HealthSolutions 8051'),
@@ -364,7 +364,7 @@ INSERT INTO Vaccination VALUES
 (8, 'Johnson & Johnson', '2021-3-21', '3381965171', 'PharmaLab 7240'),
 (8, 'Pfizer', '2023-1-16', '4442477172', 'HealthPharmaTech 0193'),
 (6, 'Pfizer', '2020-6-3', '4987566633', 'GenPharmaCare 8361'),
-(1, 'Johnson & Johnson', '2023-4-15', '8413215057', 'CureHealthcare 7062'),
+(1, 'Johnson & Johnson', '2023-4-15', '1385234217', 'CureHealthcare 7062'),
 (6, 'Pfizer', '2022-2-7', '9058626803', 'TheraSolutions 4614'),
 (8, 'Pfizer', '2023-11-10', '3537725448', 'BioLab 4064'),
 (1, 'AstraZeneca', '2020-6-16', '8413215057', 'VitaMed 3125'),
@@ -402,5 +402,3 @@ INSERT INTO Schedule VALUES
 ('2022-4-22', '2021-10-13 19:23:46', '2023-7-11 3:18:19', 'GenPharm 8151', '7639575613'),
 ('2022-1-2', '2019-9-11 15:52:3', '2023-6-12 9:12:17', 'PharmaSolutions 8141', '3105382670'),
 ('2018-3-14', '2021-2-19 14:58:33', '2022-8-24 18:19:8', 'VitaMed 3125', '4832179933');
-
-
