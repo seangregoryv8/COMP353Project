@@ -1,0 +1,2 @@
+DELETE FROM Employee
+WHERE SIN = ?;

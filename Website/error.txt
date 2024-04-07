@@ -1,0 +1,505 @@
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/Key: Type, Value: Condominium, Value: sKey: Bedrooms, Value: 2, Value: sKey: Address, Value: 123 abc Street, Value: sKey: City, Value: Monteal, Value: sKey: Province, Value: Quebec, Value: sKey: PostalCode, Value: 123456, Value: sKey: Phone, Value: 5146568954, Value: sOriginal: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Bedrooms, Value: 2, Value: s
+Key: Address, Value: 123 abc Street, Value: s
+Key: City, Value: Monteal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123456, Value: s
+Key: Phone, Value: 5146568954, Value: s
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Bedrooms, Value: 2, Value: s
+Key: Address, Value: 123 abc Street, Value: s
+Key: City, Value: Monteal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123456, Value: s
+Key: Phone, Value: 5146568954, Value: s
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: Insert into Residence (Type,Address,City,Province,Postal_code,Phone,Bedrooms) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Type, Value: Condominium, Value: s
+Key: Address, Value: 123 abc street, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: 123 456, Value: s
+Key: Phone, Value: 514153654, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Original: insert into works_at(Employee, Facility, Start_date, End_date) values(?,?,?,?);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 1023456789, Value: s
+Key: Facility, Value: Westend Hospital, Value: s
+Key: StartDate, Value: 1990-12-12, Value: s
+Key: EndDate, Value: 2012-12-12, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 10 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select * from residence where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select * from residence where residence.address = '101 Main St';
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select * from residence where residence.address = '101 Main St';
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select * from residence where residence.address = '101 Main St';
+
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 102 Main St, Value: s
+Original: select *
+from employee
+where employee.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 102 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 102 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 102 Main St, Value: s
+Original: select *
+from vaccination
+where vaccination.dose = ? AND vaccination.person = ?;
+
+Key: Dose_isInt, Value: 1, Value: i
+Key: Person, Value: 123456789, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: Sin100, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: UPDATE Person
+SET SIN = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: 123456789, Value: 
+Key: SIN, Value: 123456789abc, Value: 
+Original: UPDATE Person
+SET SIN = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: 123456789
+Key: SIN, Value: 123456789abc
+Original: UPDATE Person
+SET SIN = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: 123456789
+Key: SIN, Value: 123456789abc
+Original: UPDATE Person
+SET SIN = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: 123456789
+Key: SIN, Value: 123456789abc
+Original: UPDATE Person
+SET SIN = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: 123456789abc
+Key: SIN, Value: 123456789
+Original: UPDATE Person
+SET FirstName = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: JohnyB
+Key: SIN, Value: 123456789
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 123456789, Value: s
+Original: select *
+from facility
+where facility.name = ?;
+
+Key: Name, Value: Westend Hospital, Value: s
+Original: UPDATE Facility
+SET City = ?
+WHERE Name = ?;
+
+Key: NewValue, Value: Montreal
+Key: Name, Value: Westend Hospital
+Original: select *
+from facility
+where facility.name = ?;
+
+Key: Name, Value: Westend Hospital, Value: s
