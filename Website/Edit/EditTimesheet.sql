@@ -1,3 +1,3 @@
 UPDATE works_at
 SET colValue = ?
-WHERE Person = ? AND Facility = ? AND Start_date = ?;
+WHERE Employee = ? AND Facility = ? AND Start_date = ?;

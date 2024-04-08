@@ -1,1 +1,1 @@
-insert into infections (Date, Type, Quarantine_Period, Person) values (?, ?, ?, ?);
+insert into infection (Date, Type, Quarantine_Period, Person) values (?, ?, ?, ?);

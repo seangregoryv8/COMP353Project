@@ -1,2 +1,2 @@
 DELETE FROM Vaccination
-WHERE Person = ? AND Facility = ?;
+WHERE Dose = ? AND Person = ?;

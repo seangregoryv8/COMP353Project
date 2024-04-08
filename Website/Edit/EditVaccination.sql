@@ -1,3 +1,3 @@
 UPDATE Vaccination
 SET colValue = ?
-WHERE Person = ? AND Facility = ?;
+WHERE Dose = ? AND Person = ?;

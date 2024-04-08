@@ -16,7 +16,7 @@
             display: flex;
             justify-content: space-between;
             padding: 20px;
-			height: 90vh;
+			min-height: 95vh;
         }
 
         #form-container {
@@ -25,11 +25,23 @@
         }
 
         #table-container {
-            flex: 3;
+            flex: 10;
             background-color: #fff;
             padding: 20px;
-            border-radius: 5px;
+            border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		
+		#buttonSwitch {
+			text-align: left;
+			padding: 0px;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
         }
 
         h2 {
@@ -75,6 +87,7 @@
 
         table {
             width: 100%;
+			height: 100%
             border-collapse: collapse;
         }
 		.table-selects {
@@ -179,48 +192,60 @@
 					<tr>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertResidence.sql','Insert')">
-								Input Residence
+								Insert Residence
 							</div>
 						</td>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertPerson.sql','Insert')">
-								Input Person
+								Insert Person
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertEmployee.sql','Insert')">
-								Input Employee
+								Insert Employee
 							</div>
 						</td>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertHousemate.sql','Insert')">
-								Input Housemate
+								Insert Housemate
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertTimesheet.sql','Insert')">
-								Input TimeSheet
+								Insert TimeSheet
 							</div>
 						</td>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertVaccination.sql','Insert')">
-								Input Vaccination
+								Insert Vaccination
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertInfection.sql','Insert')">
-								Input Infection
+								Insert Infection
 							</div>
 						</td>
 						<td>
 							<div class="radio-block" onclick="showForm('InsertFacility.sql','Insert')">
 								Insert Facility
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('InsertSchedule.sql','Insert')">
+								Insert Schedule
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('InsertHome.sql','Insert')">
+								Insert Home
 							</div>
 						</td>
 					</tr>
@@ -230,20 +255,68 @@
 				<table class = "table-selects">
 					<tr>
 						<td>
-							<div class="radio-block" onclick="showForm('ViewTimesheets.sql','View')">
-								View Timesheets
+							<div class="radio-block" onclick="showForm('ViewQuery8.sql','View')">
+								View Query 8
 							</div>
 						</td>
 						<td>
-							<div class="radio-block" onclick="showForm('ViewResidences.sql','View')">
-								View Residences
+							<div class="radio-block" onclick="showForm('ViewQuery9.sql','View')">
+								View Query 9
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<div class="radio-block" onclick="showForm('ViewTimesheet.sql','View')">
-								View Timesheet
+							<div class="radio-block" onclick="showForm('ViewQuery10.sql','View')">
+								View Query 10
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery11.sql','View')">
+								View Query 11
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery12.sql','View')">
+								View Query 12
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery13.sql','View')">
+								View Query 13
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery14.sql','View')">
+								View Query 14
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery15.sql','View')">
+								View Query 15
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery16.sql','View')">
+								View Query 16
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery17.sql','View')">
+								View Query 17
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('ViewQuery18.sql','View')">
+								View Query 18
 							</div>
 						</td>
 					</tr>
@@ -299,6 +372,18 @@
 							</div>
 						</td>
 					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('DisplaySchedule.sql','Display')">
+								Display Schedule
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('DisplayHome.sql','Display')">
+								Display Home
+							</div>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<div id="radio-container-deleteoptions">
@@ -348,6 +433,18 @@
 						<td>
 							<div class="radio-block" onclick="showForm('DeleteFacility.sql','Delete')">
 								Delete Facility
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('DeleteSchedule.sql','Delete')">
+								Delete Schedule
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('DeleteHome.sql','Delete')">
+								Delete Home
 							</div>
 						</td>
 					</tr>
@@ -403,12 +500,25 @@
 							</div>
 						</td>
 					</tr>
+					<tr>
+						<td>
+							<div class="radio-block" onclick="showForm('EditSchedule.sql','Edit')">
+								Edit Schedule
+							</div>
+						</td>
+						<td>
+							<div class="radio-block" onclick="showForm('EditHome.sql','Edit')">
+								Edit Home
+							</div>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<div id="inputs"></div>
 			<!-- Button to execute the chosen SQL file -->
 			<button type="button" onclick="submitChosenForm()">Run</button>
         </div>
+		<button type="button" id = "buttonSwitch" onclick="switchButtons()">&#9668;</button>
         <div id="table-container">
             <h2>Table</h2>
             <div id="table"></div>
@@ -505,7 +615,8 @@
 				addLabelAndTextBox(form, "TelehoneNumber", "Enter text");
 				addLabelAndTextBox(form, "Citizenship", "Enter text");
 				addLabelAndTextBox(form, "EmailAddress", "Enter text");
-				addLabelAndTextBox(form, "Lives_In", "Enter text");
+				addLabelAndTextBox(form, "Occupation", "Enter text");
+				addLabelAndTextBox(form, "PrimaryResidence", "Enter text");
 
 				// You can add more input fields here as needed for each SQL file
 
@@ -529,8 +640,7 @@
 				} else if (sqlFile == 'InsertHousemate.sql') {
 				addLabelAndTextBox(form, "Employee", "Enter text");
 				addLabelAndTextBox(form, "Person", "Enter text");
-				addLabelAndTextBox(form, "StartDate", "Enter text");
-				addLabelAndTextBox(form, "EndDate", "Enter text");
+				addLabelAndTextBox(form, "Relationship", "Enter text");
 
 				// You can add more input fields here as needed for each SQL file
 
@@ -582,6 +692,63 @@
 
 				return form;
 				
+				}else if (sqlFile == 'InsertVaccination.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "Dose", "Enter number");
+				addLabelAndTextBox(form, "Type", "Enter text");
+				addLabelAndTextBox(form, "Date", "yyyy-mm-dd");
+				addLabelAndTextBox(form, "Person", "Enter text");
+				addLabelAndTextBox(form, "TakenAt", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
+				} else if (sqlFile == 'InsertInfection.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "Date", "yyyy-mm-dd");
+				addLabelAndTextBox(form, "Type", "Enter text");
+				addLabelAndNumberBox(form, "Quarantine_Period", "Enter number");
+				addLabelAndTextBox(form, "Person", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
+				}else if (sqlFile == 'InsertHome.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "Residence", "Enter text");
+				addLabelAndTextBox(form, "Person", "Enter text");
+				addLabelAndTextBox(form, "StartDate", "yyyy-mm-dd");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
+				} else if (sqlFile == 'InsertSchedule.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "Date", "yyyy-mm-dd");
+				addLabelAndTextBox(form, "StartTime", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "EndTime", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "ScheduleAt", "Enter text");
+				addLabelAndTextBox(form, "ScheduleFor", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
 				}
 			}
 			else if (type == "View"){
@@ -601,6 +768,29 @@
 				inputFileName.setAttribute("name", "sqlFile");
 				inputFileName.setAttribute("value", sqlFile);
 				form.appendChild(inputFileName);
+				
+				if (sqlFile == 'ViewQuery10.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "After", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "Before", "yyyy-mm-dd hh:mm:ss");
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+				
+				return form;
+				
+				}else if (sqlFile == 'ViewQuery11.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndNumberBox(form, "EmployeeSIN", "EnterNumber");
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+				
+				return form;
+				
+				}
 				
 				place.appendChild(form);
 				submitChosenForm();
@@ -716,6 +906,31 @@
 
 				return form;
 				
+				}else if (sqlFile == 'DisplayHome.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "Residence", "Enter text");
+				addLabelAndTextBox(form, "Person", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
+				} else if (sqlFile == 'DisplaySchedule.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "StartTime", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "ScheduleAt", "Enter text");
+				addLabelAndTextBox(form, "ScheduleFor", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
 				}
 			}
 			else if(type ==  "Delete"){
@@ -821,6 +1036,31 @@
 				// Add labels and text boxes to the form
 				addLabelAndTextBox(form, "Date", "yyyy-mm-dd");
 				addLabelAndTextBox(form, "Person", "Enter text");
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
+				}else if (sqlFile == 'DeleteHome.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "Residence", "Enter text");
+				addLabelAndTextBox(form, "Person", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
+				} else if (sqlFile == 'DeleteSchedule.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "StartTime", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "ScheduleAt", "Enter text");
+				addLabelAndTextBox(form, "ScheduleFor", "Enter text");
+
 				// You can add more input fields here as needed for each SQL file
 
 				// Append the form to the body
@@ -956,6 +1196,35 @@
 
 				return form;
 				
+				}else if (sqlFile == 'EditHome.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "EditValue", "Enter the attribute you want to edit");
+				addLabelAndTextBox(form, "NewValue", "Enter the new value");
+				addLabelAndTextBox(form, "Residence", "Enter text");
+				addLabelAndTextBox(form, "Person", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
+				} else if (sqlFile == 'EditSchedule.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "EditValue", "Enter the attribute you want to edit");
+				addLabelAndTextBox(form, "NewValue", "Enter the new value");
+				addLabelAndTextBox(form, "StartTime", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "ScheduleAt", "Enter text");
+				addLabelAndTextBox(form, "ScheduleFor", "Enter text");
+
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+
+				return form;
+				
 				}
 			}
 			function addLabelAndTextBox(form, name, placeholder) {
@@ -1076,7 +1345,20 @@
 				form.remove();
 			});
 		}
-    </script>
+		function switchButtons(){
+			var buttonContainer = document.getElementById('form-container');
+			if(buttonContainer.style.display != 'none'){
+				buttonContainer.style.display = 'none';
+				var buttonSwitch = document.getElementById('buttonSwitch');
+				buttonSwitch.innerHTML = '&#9658;'
+			}
+			else{
+				buttonContainer.style.display = 'block';
+				var buttonSwitch = document.getElementById('buttonSwitch');
+				buttonSwitch.innerHTML = '&#9668;'
+			}
+		}
+	</script>
 	<?php
 		$initRelations = file_get_contents('HFEST_Init.sql');
 		$initInserts = file_get_contents('Insert/InsertValues.sql');

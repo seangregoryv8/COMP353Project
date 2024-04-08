@@ -1,4 +1,4 @@
-insert into employees (SIN ,ROLE) values (?, ?);
+insert into employee (SIN ,ROLE) values (?, ?);
 /*
 Alter Table employees
 Add Constraint check_EResidence 

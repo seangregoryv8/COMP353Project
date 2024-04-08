@@ -1,0 +1,1 @@
+insert into lives_in (Residence, Person, Address_Start_Date) values (?, ?, ?);

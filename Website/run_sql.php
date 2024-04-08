@@ -18,21 +18,70 @@ if (isset($file)) {
 	{
 		// Read the contents of the uploaded SQL file
 		$sqlContent = file_get_contents("View/" . $file);
-		$result = $conn->query($sqlContent);
-		$data = [];
 		
-		if ($result->num_rows > 0) {
-			// Fetch column names
-			$columns = [];
-			while ($column = $result->fetch_field()) {
-				$columns[] = $column->name;
-			}
-			$data[] = $columns;
-			// Fetch rows and add them to the data array
-			while ($row = $result->fetch_assoc()) {
-				$data[] = $row;
+		// Prepare the statement
+		$stmt = $conn->prepare($sqlContent);
+		error_log("Original: " . $sqlContent . "\n" . "\n", 3, "error.txt");
+		// Define your parameters dynamically
+		$params = array();
+		// Find your param types
+		$types = "";
+		
+		$numParams = 0;
+		// Iterate over $_POST array to get the values dynamically
+		foreach ($_POST as $key => $value) {
+			// Here, we're assuming that the keys in $_POST match the column names in your database
+			// You might want to add some validation and filtering here
+			if($key != "actionType" && $key != "sqlFile")
+			{
+				$params[$numParams] = trim($value);
+				if(preg_match('/_isInt$/', $key))
+					$types .= 'i';
+				else
+					$types .= 's';
+				error_log( "Key: " . $key . ", Value: " . $value . ", Value: " . $types[$numParams] . "\n", 3, "error.txt");
+				$numParams++;
 			}
 		}
+		
+		if($types != "")
+			$stmt->bind_param($types, ...$params);
+		
+		$data = [];
+		
+		try {
+			// Execute the statement
+			$stmt->execute();
+			
+			// Get the result set
+			$result = $stmt->get_result();
+
+			// Check if rows were returned
+			if ($result->num_rows > 0) {
+				// Fetch column names
+				$columns = [];
+				while ($column = $result->fetch_field()) {
+					$columns[] = $column->name;
+				}
+				$data[] = $columns;
+				// Fetch the results
+				while ($row = $result->fetch_assoc()) {
+							$data[] = $row;
+				}
+			} else {
+				// Fetch column names
+				$columns = [];
+				while ($column = $result->fetch_field()) {
+					$columns[] = $column->name;
+				}
+			}
+		} catch (Exception $e) {
+			// An error occurred during execution, retrieve and echo the error message
+			$data[0][0] = "Query failed: " . $stmt->error;
+		}
+		
+		// Close the statement
+		$stmt->close();
 
 		// Close the connection
 		$conn->close();
@@ -256,6 +305,8 @@ if (isset($file)) {
 				{
 					$types .= 'i';
 					$numParams++;
+					error_log( "Key: " . $key . ", Value: " . $value . "\n", 3, "error.txt");
+					continue;
 				}
 			}
 			// Here, we're assuming that the keys in $_POST match the column names in your database

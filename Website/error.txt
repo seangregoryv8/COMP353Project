@@ -503,3 +503,4368 @@ from facility
 where facility.name = ?;
 
 Key: Name, Value: Westend Hospital, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 101 Main St, Value: s
+Original: Insert into Residence (Address,City,Province,Postal_code,Phone,Bedrooms,Type) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Key: Type, Value: Condominium, Value: s
+Original: insert into employee (SIN ,ROLE) values (?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: Role, Value: Doctor, Value: s
+Original: insert into employee (SIN ,ROLE) values (?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123456789, Value: s
+Key: Role, Value: Doctor, Value: s
+Original: insert into person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation,PrimaryResidence)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Marcus, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 123, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Doctor, Value: s
+Key: PrimaryResidence, Value: 101 Main St, Value: s
+Original: Insert into Residence (Address,City,Province,Postal_code,Phone,Bedrooms,Type) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: Bedrooms_isInt, Value: 3, Value: i
+Key: Type, Value: Condominium, Value: s
+Original: insert into person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation,PrimaryResidence)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Marcus, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 123, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Doctor, Value: s
+Key: PrimaryResidence, Value: 101 Main St, Value: s
+Original: insert into person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation,PrimaryResidence)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Marcus, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 123, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Doctor, Value: s
+Key: PrimaryResidence, Value: 12190 Henri Beau, Value: s
+Original: insert into person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation,PrimaryResidence)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Marcus, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 123, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Doctor, Value: s
+Key: PrimaryResidence, Value: 12190 Henri-Beau, Value: s
+Original: insert into employee (SIN ,ROLE) values (?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: Role, Value: Doctor, Value: s
+Original: insert into employee (SIN ,ROLE) values (?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: Role, Value: Doctor, Value: s
+Original: insert into lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+/*
+Alter Table housemates
+Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));
+
+Alter Table housemates
+Add Constraint check_HSsn Check(HSsn IN (select employees.ESsn from employees where employees.ESsn = HSsn));
+
+Alter Table housemates
+Add Constraint check_HRelationship Check(Upper(HRelationship) IN ('ROOMATE', 'PARTNER', 'PARENT', 'DEPENDENT'));
+
+Alter Table housemates
+Add Constraint check_HHouseMate 
+    Check(housemates.HAddress IN 
+    (select employees.EAddress
+    From employees, housemates
+    Where housemates.HAddress = employees.EAddress 
+    and housemates.HCity = employees.ECity 
+    and housemates.HProvince = employees.EProvince 
+    and housemates.HPostalCode = employees.EPostalCode));
+    */
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: StartDate, Value: 1990-12-12, Value: s
+Key: EndDate, Value: 2012-12-12, Value: s
+Original: insert into lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+/*
+Alter Table housemates
+Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));
+
+Alter Table housemates
+Add Constraint check_HSsn Check(HSsn IN (select employees.ESsn from employees where employees.ESsn = HSsn));
+
+Alter Table housemates
+Add Constraint check_HRelationship Check(Upper(HRelationship) IN ('ROOMATE', 'PARTNER', 'PARENT', 'DEPENDENT'));
+
+Alter Table housemates
+Add Constraint check_HHouseMate 
+    Check(housemates.HAddress IN 
+    (select employees.EAddress
+    From employees, housemates
+    Where housemates.HAddress = employees.EAddress 
+    and housemates.HCity = employees.ECity 
+    and housemates.HProvince = employees.EProvince 
+    and housemates.HPostalCode = employees.EPostalCode));
+    */
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: StartDate, Value: 1990-12-12, Value: s
+Key: EndDate, Value: 2012-12-12, Value: s
+Original: insert into lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+/*
+Alter Table housemates
+Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));
+
+Alter Table housemates
+Add Constraint check_HSsn Check(HSsn IN (select employees.ESsn from employees where employees.ESsn = HSsn));
+
+Alter Table housemates
+Add Constraint check_HRelationship Check(Upper(HRelationship) IN ('ROOMATE', 'PARTNER', 'PARENT', 'DEPENDENT'));
+
+Alter Table housemates
+Add Constraint check_HHouseMate 
+    Check(housemates.HAddress IN 
+    (select employees.EAddress
+    From employees, housemates
+    Where housemates.HAddress = employees.EAddress 
+    and housemates.HCity = employees.ECity 
+    and housemates.HProvince = employees.EProvince 
+    and housemates.HPostalCode = employees.EPostalCode));
+    */
+
+Key: Employee, Value: 2458587138, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: Relationship, Value: Dependent, Value: s
+Original: insert into lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+/*
+Alter Table housemates
+Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));
+
+Alter Table housemates
+Add Constraint check_HSsn Check(HSsn IN (select employees.ESsn from employees where employees.ESsn = HSsn));
+
+Alter Table housemates
+Add Constraint check_HRelationship Check(Upper(HRelationship) IN ('ROOMATE', 'PARTNER', 'PARENT', 'DEPENDENT'));
+
+Alter Table housemates
+Add Constraint check_HHouseMate 
+    Check(housemates.HAddress IN 
+    (select employees.EAddress
+    From employees, housemates
+    Where housemates.HAddress = employees.EAddress 
+    and housemates.HCity = employees.ECity 
+    and housemates.HProvince = employees.EProvince 
+    and housemates.HPostalCode = employees.EPostalCode));
+    */
+
+Key: Employee, Value: 2458587138, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: Relationship, Value: Parent, Value: s
+Original: insert into facility(Name,Address,City,Province,Postal_code,Phone,Web_address,Capacity,Managed_by) values (?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table facilities
+Add Constraint check_FType Check (UPPER(FType) IN ('HOSPITAL', 'CLSC', 'CLINIC', 'PHARMACY', 'SPECIAL INSTALLMENT'));
+*/
+
+Key: Name, Value: Marcus Sharma, Value: s
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: WebAddress, Value: boopbeep, Value: s
+Key: Capacity_isInt, Value: 6, Value: i
+Key: Manager, Value: 2704879978, Value: s
+Original: insert into works_at(Employee, Facility, Start_date, End_date) values(?,?,?,?);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 2704879978, Value: s
+Key: Facility, Value: Marcus Sharma, Value: s
+Key: StartDate, Value: 1990-12-12, Value: s
+Key: EndDate, Value: 2012-12-12, Value: s
+Original: insert into vaccination (Dose, Type, Date, Person, Taken_at) values (?, ?, ?, ?, ?);
+
+Key: Dose, Value: 2, Value: s
+Key: Type, Value: COVID-19, Value: s
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: TakenAt, Value: Marcus Sharma, Value: s
+Original: insert into vaccination (Dose, Type, Date, Person, Taken_at) values (?, ?, ?, ?, ?);
+
+Key: Dose, Value: 2, Value: s
+Key: Type, Value: Moderna, Value: s
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: TakenAt, Value: Marcus Sharma, Value: s
+Original: insert into vaccination (Dose, Type, Date, Person, Taken_at) values (?, ?, ?, ?, ?);
+
+Key: Dose, Value: 3, Value: s
+Key: Type, Value: Moderna, Value: s
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: TakenAt, Value: Marcus Sharma, Value: s
+Original: insert into infection (Date, Type, Quarantine_Period, Person) values (?, ?, ?, ?);
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: Type, Value: COVID-19, Value: s
+Key: Quarantine_Period_isInt, Value: 3, Value: i
+Key: Person, Value: 8759603459, Value: s
+Original: insert into schedule (Date, Start_time, End_time, Scheduled_at, Scheduled_for) values (?, ?, ?, ?, ?);
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: StartTime, Value: 2020-02-02 11:11:11, Value: s
+Key: EndTime, Value: 2020-02-02 11:11:12, Value: s
+Key: ScheduleAt, Value: GenLab 5980, Value: s
+Key: ScheduleFor, Value: 5659327848, Value: s
+Original: insert into lives_in (Residence, Person, Address_Start_Date) values (?, ?, ?);
+
+Key: Residence, Value: 6621 Maple Drive, Value: s
+Key: Person, Value: 8759603459, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: select *
+from person
+where person.sin = ?;
+
+Key: SIN, Value: 8759603459, Value: s
+Original: select *
+from employee
+where employee.sin = ?;
+
+Key: SIN, Value: 6176529501, Value: s
+Original: select *
+from lives_with
+where lives_with.employee = ? AND lives_with.person = ?;
+
+Key: Employee, Value: 2265372969, Value: s
+Key: Person, Value: 9018891279, Value: s
+Original: select *
+from residence
+where residence.address = ?;
+
+Key: Address, Value: 6621 Maple Drive, Value: s
+Original: select *
+from works_at
+where works_at.employee = ? AND works_at.facility = ? AND works_at.Start_date = ?;
+
+Key: Employee, Value: 4576632368, Value: s
+Key: Facility, Value: PharmaLab 5755, Value: s
+Key: StartDate, Value: 2017-8-1, Value: s
+Original: select *
+from vaccination
+where vaccination.dose = ? AND vaccination.person = ?;
+
+Key: Dose_isInt, Value: 3, Value: i
+Key: Person, Value: 8759603459, Value: s
+Original: select *
+from vaccination
+where vaccination.dose = ? AND vaccination.person = ?;
+
+Key: Dose_isInt, Value: 2, Value: i
+Key: Person, Value: 8759603459, Value: s
+Original: select *
+from vaccination
+where vaccination.dose = ? AND vaccination.person = ?;
+
+Key: Dose_isInt, Value: 1, Value: i
+Key: Person, Value: 8759603459, Value: s
+Original: select *
+from infection
+where infection.date = ? AND infection.person = ?;
+
+Key: Date, Value: 2022-7-21, Value: s
+Key: Person, Value: 9448725198, Value: s
+Original: select *
+from facility
+where facility.name = ?;
+
+Key: Name, Value: MediPharmaCare 0115, Value: s
+Original: select *
+from schedule
+where schedule.start_time = ? AND schedule.scheduled_at = ? AND schedule.scheduled_for = ?;
+
+Key: StartTime, Value: 2020-4-17 9:21:29, Value: s
+Key: ScheduleAt, Value: TheraHealthcare 9573, Value: s
+Key: ScheduleFor, Value:  6451966285, Value: s
+Original: select *
+from lives_in
+where lives_in.residence = ? AND lives_in.person = ?;
+
+Key: Residence, Value: 6621 Maple Drive, Value: s
+Key: Person, Value: 8759603459, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 6621 Maple Drive, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 6621 Maple Drive, Value: s
+Original: DELETE FROM Person
+WHERE SIN = ?;
+
+Key: SIN, Value: 8759603459, Value: s
+Original: DELETE FROM Person
+WHERE SIN = ?;
+
+Key: SIN, Value: 8759603459, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 6621 Maple Drive, Value: s
+Original: DELETE FROM Person
+WHERE SIN = ?;
+
+Key: SIN, Value: 8759603459, Value: s
+Original: DELETE FROM Employee
+WHERE SIN = ?;
+
+Key: SIN, Value: 6176529501, Value: s
+Original: DELETE FROM lives_with
+WHERE Employee = ? AND Person = ?;
+
+Key: Employee, Value: 2265372969, Value: s
+Key: Person, Value: 9018891279, Value: s
+Original: DELETE FROM works_at
+WHERE Employee = ? AND Facility = ? AND Start_date = ?;
+
+Key: Employee, Value: 4576632368, Value: s
+Key: Facility, Value: PharmaLab 5755, Value: s
+Key: StartDate, Value: 2017-8-1, Value: s
+Original: DELETE FROM Vaccination
+WHERE Dose = ? AND Person = ?;
+
+Key: Dose_isInt, Value: 7, Value: i
+Key: Person, Value: 7353959524, Value: s
+Original: DELETE FROM Facility
+WHERE Name = ?;
+
+Key: Name, Value: MediPharmaCare 0115, Value: s
+Original: DELETE FROM Facility
+WHERE Name = ?;
+
+Key: Name, Value: MediPharmaCare 0115, Value: s
+Original: DELETE FROM schedule
+WHERE start_time = ? AND scheduled_at = ? AND scheduled_for = ?;
+
+Key: StartTime, Value: 2020-4-17 9:21:29, Value: s
+Key: ScheduleAt, Value: GenLab 5980, Value: s
+Key: ScheduleFor, Value: 5659327848, Value: s
+Original: DELETE FROM schedule
+WHERE start_time = ? AND scheduled_at = ? AND scheduled_for = ?;
+
+Key: StartTime, Value: 2020-4-17 9:21:29, Value: s
+Key: ScheduleAt, Value: GenLab 5980, Value: s
+Key: ScheduleFor, Value: 5659327848, Value: s
+Original: DELETE FROM schedule
+WHERE start_time = ? AND scheduled_at = ? AND scheduled_for = ?;
+
+Key: StartTime, Value: 2020-4-17 9:21:29, Value: s
+Key: ScheduleAt, Value: GenLab 5980, Value: s
+Key: ScheduleFor, Value:  6451966285, Value: s
+Original: DELETE FROM schedule
+WHERE start_time = ? AND scheduled_at = ? AND scheduled_for = ?;
+
+Key: StartTime, Value: 2020-4-17 9:21:29, Value: s
+Key: ScheduleAt, Value: TheraHealthcare 9573, Value: s
+Key: ScheduleFor, Value:  6451966285, Value: s
+Original: DELETE FROM lives_in
+where residence = ? AND person = ?;
+
+Key: Residence, Value: 6621 Maple Drive, Value: s
+Key: Person, Value: 8759603459, Value: s
+Original: DELETE FROM lives_in
+where residence = ? AND person = ?;
+
+Key: Residence, Value: 2994 Elm Avenue, Value: s
+Key: Person, Value: 2704879978, Value: s
+Original: UPDATE Residence
+SET City = ?
+WHERE Address = ?;
+
+Key: NewValue, Value: Montreal
+Key: Address, Value: 6621 Maple Drive
+Original: UPDATE Person
+SET FirstName = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: JohnyB
+Key: SIN, Value: 8759603459
+Original: UPDATE Employee
+SET FirstName = ?
+WHERE SIN = ?;
+
+Original: UPDATE Employee
+SET FirstName = ?
+WHERE SIN = ?;
+
+Original: UPDATE Employee
+SET FirstName = ?
+WHERE SIN = ?;
+
+Original: UPDATE Employee
+SET Role = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: Doctor
+Key: SIN, Value: 6176529501
+Original: UPDATE lives_with
+SET Relationship = ?
+WHERE Employee = ? AND Person = ?;
+
+Key: NewValue, Value: Parent
+Key: Employee, Value: 2265372969
+Key: Person, Value: 9018891279
+Original: UPDATE lives_with
+SET Relationship = ?
+WHERE Employee = ? AND Person = ?;
+
+Key: NewValue, Value: Parent
+Key: Employee, Value: 2265372969
+Key: Person, Value: 9018891279
+Original: UPDATE works_at
+SET End_date = ?
+WHERE Person = ? AND Facility = ? AND Start_date = ?;
+
+Original: UPDATE works_at
+SET End_date = ?
+WHERE Person = ? AND Facility = ? AND Start_date = ?;
+
+Original: UPDATE works_at
+SET End_date = ?
+WHERE Person = ? AND Facility = ? AND Start_date = ?;
+
+Original: UPDATE works_at
+SET End_date = ?
+WHERE Employee = ? AND Facility = ? AND Start_date = ?;
+
+Key: NewValue, Value: 2020-08-1
+Key: Employee, Value: 4576632368
+Key: Facility, Value: PharmaLab 5755
+Key: StartDate, Value: 2017-8-1
+Original: UPDATE Vaccination
+SET Dose = ?
+WHERE Person = ? AND Facility = ?;
+
+Original: UPDATE Vaccination
+SET Dose = ?
+WHERE Person = ? AND Facility = ?;
+
+Original: UPDATE Vaccination
+SET Dose = ?
+WHERE Dose = ? AND Person = ?;
+
+Key: NewValue, Value: 9
+Key: Dose_isInt, Value: 7
+Key: Person, Value: 2704879978
+Original: UPDATE Vaccination
+SET Dose = ?
+WHERE Dose = ? AND Person = ?;
+
+Key: NewValue, Value: 8
+Key: Dose_isInt, Value: 7
+Key: Person, Value: 2704879978
+Original: UPDATE Vaccination
+SET Dose = ?
+WHERE Dose = ? AND Person = ?;
+
+Key: NewValue, Value: 8
+Key: Dose_isInt, Value: 7
+Key: Person, Value: 2704879978
+Original: UPDATE Infection
+SET Type = ?
+WHERE Date = ? AND Person = ?;
+
+Key: NewValue, Value: COVID-19
+Key: Date, Value: 2023-8-23
+Key: Person, Value: 9296668905
+Original: UPDATE Facility
+SET City = ?
+WHERE Name = ?;
+
+Key: NewValue, Value: Laval
+Key: Name, Value: CarePharmaCare 4404
+Original: UPDATE schedule
+SET Date = ?
+where schedule.start_time = ? AND schedule.scheduled_at = ? AND schedule.scheduled_for = ?;
+
+Key: NewValue, Value: 2023-11-11
+Key: StartTime, Value: 2020-4-17 9:21:29
+Key: ScheduleAt, Value: TheraHealthcare 9573
+Key: ScheduleFor, Value: 6451966285
+Original: UPDATE lives_in
+SET Address_start_date = ?
+where residence = ? AND person = ?;
+
+Key: NewValue, Value: 2020-08-1
+Key: Residence, Value: 2994 Elm Avenue
+Key: Person, Value: 2704879978
+Original: UPDATE lives_in
+SET Address_start_date = ?
+where residence = ? AND person = ?;
+
+Key: NewValue, Value: 2020-08-1
+Key: Residence, Value: 2994 Elm Avenue
+Key: Person, Value: 2704879978
+Original: -- Query 10
+SELECT *
+FROM Schedule
+Where Schedule.start_time > ? AND Schedule.end_time < ?
+GROUP BY
+	Schedule.Scheduled_at,
+	Schedule.Scheduled_for,
+	Schedule.Date,
+	Schedule.Start_time
+ORDER BY
+	Schedule.scheduled_at ASC,
+    Schedule.date ASC,
+    Schedule.start_time ASC;
+
+Key: After, Value: 1990-11-11 11:11:11, Value: s
+Key: Before, Value: 2023-11-11 11:11:11, Value: s
+Original: -- Query 10
+SELECT *
+FROM Schedule
+Where Schedule.start_time > ? AND Schedule.end_time < ?
+GROUP BY
+	Schedule.Scheduled_at,
+	Schedule.Scheduled_for,
+	Schedule.Date,
+	Schedule.Start_time
+ORDER BY
+	Schedule.scheduled_at ASC,
+    Schedule.date ASC,
+    Schedule.start_time ASC;
+
+Key: After, Value: 1990-11-11 11:11:11, Value: s
+Key: Before, Value: 2023-11-11 11:11:11, Value: s
+Original: -- Query 10
+SELECT *
+FROM Schedule
+Where Schedule.start_time > ? AND Schedule.end_time < ?
+GROUP BY
+	Schedule.Scheduled_at,
+	Schedule.Scheduled_for,
+	Schedule.Date,
+	Schedule.Start_time
+ORDER BY
+	Schedule.scheduled_at ASC,
+    Schedule.date ASC,
+    Schedule.start_time ASC;
+
+Key: After, Value: 2020-11-11 11:11:11, Value: s
+Key: Before, Value: 2023-11-11 11:11:11, Value: s
+Original: -- Query 11
+SELECT person.PrimaryResidence, residence.Type, person.FirstName, person.LastName, person.Occupation, lives_with.Relationship  
+FROM Lives_With, Person, Employee, Residence
+Where Employee.SIN = ? 
+AND Lives_With.Employee = Employee.SIN 
+AND Person.SIN = Lives_With.Person
+AND Residence.Address = Person.PrimaryResidence;
+
+Key: EmployeeSIN_isInt, Value: 7847721351, Value: i
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.infDate, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as infDate, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as Date, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as Date, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as Date, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(doctorInfection.Date) as Date, Works_At.Facility, doctorInfection.Person
+From Employee,Person,Works_at,infection as doctorInfection
+Where doctorInfection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND doctorInfection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND doctorInfection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By doctorInfection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.Hours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.Hours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.Hours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.Hours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.Hours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.TotalHours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.TotalHours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.TotalHours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.Num, Infections.Num, TimeTable.TotalHours, numLivesIn.Num
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: -- Query 11
+SELECT person.PrimaryResidence, residence.Type, person.FirstName, person.LastName, person.Occupation, lives_with.Relationship  
+FROM Lives_With, Person, Employee, Residence
+Where Employee.SIN = ? 
+AND Lives_With.Employee = Employee.SIN 
+AND Person.SIN = Lives_With.Person
+AND Residence.Address = Person.PrimaryResidence;
+
+Original: -- Query 11
+SELECT person.PrimaryResidence, residence.Type, person.FirstName, person.LastName, person.Occupation, lives_with.Relationship  
+FROM Lives_With, Person, Employee, Residence
+Where Employee.SIN = ? 
+AND Lives_With.Employee = Employee.SIN 
+AND Person.SIN = Lives_With.Person
+AND Residence.Address = Person.PrimaryResidence;
+
+Key: EmployeeSIN_isInt, Value: 2458587138, Value: i
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: select *
+from facility
+where facility.name = ?;
+
+Key: Name, Value: MediPharmaCare 0115, Value: s
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: select *
+from works_at;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Works_At.Employee)-Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Works_At.Employee)-Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Works_At.Employee)-Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, Infections.NumInfections, TimeTable.TotalHours, numLivesIn.NumSecondary
+From
+((SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN)
+Join
+(Select Infection.Person, COUNT(Infection.Person) AS NumInfections
+From Infection
+Group By Infection.Person
+) AS Infections
+On 
+Info.SIN = Infections.Person
+Join
+(Select Vaccination.Person, Max(Vaccination.Dose) AS NumVaccinations
+From Vaccination
+Group By Vaccination.Person
+) AS Vaccinations
+On 
+Info.SIN = Vaccinations.Person
+Join
+(Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
+From Schedule
+Group By Schedule.Scheduled_For
+) AS TimeTable
+On 
+Info.SIN = TimeTable.Scheduled_For
+Group By Info.SIN
+Order By
+Info.FirstDay ASC,
+Info.FirstName ASC,
+Info.LastName ASC;
+
+
+/*
+Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Schedule,Works_At
+Where Employee.Role = 'Nurse'
+AND Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+And Works_At.employee = Person.SIN
+Group By Person.SIN;
+
+SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin;
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+
+Select Infection.Person, COUNT(Infection.Person) AS Num
+From Infection
+Group By Infection.Person;
+
+Select Vaccination.Person, Max(Vaccination.Dose) AS Num
+From Vaccination
+Group By Vaccination.Person; 
+
+Select Schedule.Scheduled_For, Sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS Hours
+From Schedule
+Group By Schedule.Scheduled_For;
+*/
+
+Original: Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin
+Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Join
+(Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
+From Employee,Person,Schedule
+Where Employee.SIN = Schedule.scheduled_for
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Employee.SIN = Person.SIN
+) AS Info
+On 
+Info.SIN = numLivesIn.SIN
+Group By Info.SIN;
+
+
+
+Original: -- Query 12
+Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num
+From
+(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+FROM employee
+LEFT JOIN lives_in ON employee.sin = lives_in.Person
+GROUP BY employee.sin) As numLivesIn
+Join
+(Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
+From Employee,Person,Works_at,infection
+Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Infection.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Infection.Person = Employee.SIN
+AND Employee.Role = 'Doctor'
+AND Employee.SIN = Person.SIN
+AND Employee.SIN = Works_at.Employee
+AND Works_At.End_Date is NULL
+Group By Infection.Person, Works_At.facility) As Info
+On 
+Info.Person = numLivesIn.sin
+Group By Info.Person, Info.Facility;
+
+Original: -- Query 8
+SELECT
+	f.Name AS Name,
+    f.Address AS Address,
+    f.City AS City,
+    f.Province AS Province,
+    f.Postal_Code AS 'Postal-Code',
+    f.Phone AS 'Phone Number',
+    f.Web_address AS 'Web Address',
+    f.Type AS Type,
+    f.Capacity AS Capacity,
+    e.Role AS 'General Manager',
+    COUNT(w.Employee) AS Num_Employees,
+    SUM(CASE WHEN e.Role = 'Doctor' THEN 1 ELSE 0 END) AS Num_Doctors,
+    SUM(CASE WHEN e.Role = 'Nurse' THEN 1 ELSE 0 END) AS Num_Nurses
+FROM Facility f
+LEFT JOIN Employee e ON f.Managed_by = e.SIN
+LEFT JOIN Works_at w ON f.Name = w.Facility
+GROUP BY
+	f.Name
+ORDER BY
+	f.Province ASC,
+    f.City ASC,
+    f.Type ASC;
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Works_At.Employee)-Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
+Original: Select Facility.name, Employee.Role, Count(DISTINCT Works_At.Employee), Count(DISTINCT Works_At.Employee)-Count(DISTINCT Infection.Person)
+From Facility, Works_At, Employee, Infection
+Where Facility.Name = Works_At.Facility
+AND Works_At.Employee = Employee.SIN
+AND Employee.SIN = Infection.Person
+Group By Facility.Name, Employee.Role
+Order By Employee.Role ASC;
+
