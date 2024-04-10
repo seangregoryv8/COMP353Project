@@ -144,19 +144,37 @@ namespace COMP353ProjectTableGeneration
             Create.PrintAll(true);
             StringBuilder mainBuilder = new StringBuilder();
 
-            Residence[] residences = Residences(40, ref mainBuilder);
-            Person[] people = People(           40, ref mainBuilder, residences);
-            Employee[] employees = Employees(   35, ref mainBuilder, people);
-            Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
-            WorksAt[] works = Works(            40, ref mainBuilder, employees, facilities);
-            LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences);
-            LivesWith[] livesWith = Lives_With( 40, ref mainBuilder, people, employees);
-            Infection[] infections = Infections(50, ref mainBuilder, people);
-            Vaccine[] vaccines = Vaccines(      45, ref mainBuilder, people, facilities);
-            Schedule[] schedules = Schedules(   30, ref mainBuilder, facilities, employees);
+            //Residence[] residences = Residences(5, ref mainBuilder);
+            //Person[] people = People(           40, ref mainBuilder, residences);
+            //Employee[] employees = Employees(   35, ref mainBuilder, people);
+            //Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
+            //WorksAt[] works = Works(            40, ref mainBuilder, employees, facilities);
+            //LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences);
+            //LivesWith[] livesWith = Lives_With( 40, ref mainBuilder, people, employees);
+            //Infection[] infections = Infections(50, ref mainBuilder, people);
+            //Vaccine[] vaccines = Vaccines(      45, ref mainBuilder, people, facilities);
+            //Schedule[] schedules = Schedules(   30, ref mainBuilder, facilities, employees);
 
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time for creating all: {stopwatch.ElapsedMilliseconds} ms");
+            //stopwatch.Stop();
+            //Console.WriteLine($"Elapsed time for creating all: {stopwatch.ElapsedMilliseconds} ms");
+
+            string appPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            int tableLocation = appPath.IndexOf("COMP353ProjectTableGeneration");
+            appPath = appPath.Remove(tableLocation, appPath.Length - tableLocation);
+
+            if (!Directory.Exists(appPath)) Directory.CreateDirectory(appPath);
+
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Residence.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Person.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Employee.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Facility.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Works_at.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Lives_in.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Lives_with.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Infection.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Vaccine.txt"));
+            mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Schedule.txt"));
+
             Export(mainBuilder, ref mainBuilder, "All", ".sql");
         }
         public static void Export(StringBuilder builder, ref StringBuilder mainBuilder, string name, string extension = ".txt")
@@ -166,11 +184,12 @@ namespace COMP353ProjectTableGeneration
             appPath = appPath.Remove(tableLocation, appPath.Length - tableLocation);
             appPath += (extension == ".sql") ? "SQL" : "Insert";
 
-            if (!Directory.Exists(appPath))Directory.CreateDirectory(appPath);
+            if (!Directory.Exists(appPath)) Directory.CreateDirectory(appPath);
 
             if (extension == ".sql") name = "Inserts";
-            using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
-            outputFile.WriteLine(builder);
+            File.AppendAllText(Path.Combine(appPath, name + extension), builder.ToString());
+            //using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
+            //outputFile.WriteLine(builder);
             mainBuilder.Append(builder.ToString());
         }
     }

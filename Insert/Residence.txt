@@ -1,43 +1,134 @@
 INSERT INTO Residence VALUES
-('6621 Maple Drive', 'Hamilton', 'Ontario', 'V74 0K0', '7871615842', 6, 'Condominium'),
-('0044 Oak Way', 'Kingston', 'Nunavut', 'V29 9F6', '4310857589', 3, 'Semi-Detached House'),
-('2044 Birch Court', 'North Bay', 'Nunavut', 'I03 8Q5', '3429239785', 3, 'Apartment'),
-('1048 Elm Boulevard', 'Moncton', 'Newfoundland and Labrador', 'M28 8H7', '5389897696', 4, 'House'),
-('1373 Pine Lane', 'London', 'Newfoundland and Labrador', 'Y82 2U1', '5714973239', 4, 'House'),
-('4445 Birch Road', 'Winnipeg', 'Nunavut', 'S97 2D9', '3711302069', 5, 'Apartment'),
-('0600 Cedar Court', 'Kelowna', 'Manitoba', 'K00 8W5', '5207041361', 4, 'Semi-Detached House'),
-('4920 Spruce Street', 'Ottawa', 'Nunavut', 'P45 3B4', '8848928278', 7, 'Apartment'),
-('0086 Spruce Circle', 'St. Johns', 'Prince Edward Island', 'G39 9M5', '7121352916', 3, 'Apartment'),
-('6411 Elm Way', 'Saint-Jérôme', 'Manitoba', 'U55 8O7', '5599945135', 7, 'Apartment'),
-('7825 Spruce Boulevard', 'Medicine Hat', 'Newfoundland and Labrador', 'I09 5U2', '4075458343', 1, 'Condominium'),
-('5616 Magnolia Road', 'Montreal', 'Prince Edward Island', 'O63 6E8', '8831679251', 3, 'House'),
-('4164 Hickory Court', 'Abbotsford', 'Alberta', 'R74 6B2', '9814941805', 6, 'Apartment'),
-('7561 Birch Lane', 'Saskatoon', 'Saskatchewan', 'S24 5W2', '8688206130', 4, 'Apartment'),
-('7230 Cedar Avenue', 'Toronto', 'Northwest Territories', 'R63 1T6', '4061003880', 6, 'Condominium'),
-('0109 Maple Circle', 'Brandon', 'British Columbia', 'K18 7E8', '3178634560', 2, 'House'),
-('2994 Elm Avenue', 'St. Albert', 'Nunavut', 'U85 9A0', '4825385835', 1, 'Condominium'),
-('0073 Oak Terrace', 'Quebec City', 'Nova Scotia', 'H55 6H5', '6793679460', 3, 'Semi-Detached House'),
-('6789 Cedar Road', 'Windsor', 'Alberta', 'M30 8Z3', '8068782692', 3, 'Condominium'),
-('6619 Oak Road', 'Prince George', 'Nunavut', 'W50 3K2', '8046489503', 1, 'Apartment'),
-('1645 Cedar Boulevard', 'Regina', 'Saskatchewan', 'M59 2G8', '5737289287', 4, 'Apartment'),
-('1756 Birch Avenue', 'Saint John', 'New Brunswick', 'S25 9S0', '5711624433', 5, 'Apartment'),
-('9764 Pine Court', 'Fredericton', 'Manitoba', 'G88 9N9', '9476103301', 4, 'Apartment'),
-('5819 Cedar Circle', 'White Rock', 'Newfoundland and Labrador', 'Z20 1T0', '5182366359', 5, 'House'),
-('7421 Elm Road', 'Kanata', 'Quebec', 'Q80 2Y6', '2215648840', 1, 'House'),
-('8039 Pine Terrace', 'Chicoutimi', 'Alberta', 'K72 3E9', '6175977920', 6, 'Apartment'),
-('9072 Birch Circle', 'Mirabel', 'Newfoundland and Labrador', 'T47 8I0', '5514942714', 2, 'Apartment'),
-('6697 Cedar Drive', 'Vancouver', 'Prince Edward Island', 'U92 0E9', '8670974559', 7, 'House'),
-('4659 Elm Drive', 'Norfolk County', 'British Columbia', 'V40 5B2', '9436591779', 5, 'Semi-Detached House'),
-('7889 Elm Street', 'Cornwall', 'Newfoundland and Labrador', 'L12 9V1', '9090952894', 2, 'Condominium'),
-('4080 Maple Boulevard', 'Drummondville', 'Ontario', 'W08 8I6', '7242218460', 6, 'House'),
-('6105 Spruce Avenue', 'Barrie', 'Nova Scotia', 'X54 1N2', '3833680923', 6, 'Semi-Detached House'),
-('8769 Oak Court', 'Oshawa', 'Newfoundland and Labrador', 'R74 4F8', '7467939374', 3, 'Apartment'),
-('3679 Cedar Way', 'Kitchener', 'New Brunswick', 'W96 9A2', '9542112533', 5, 'Apartment'),
-('0011 Spruce Drive', 'Lethbridge', 'Northwest Territories', 'Q89 3R1', '3009543020', 3, 'House'),
-('0699 Willow Terrace', 'Saint-Hyacinthe', 'Nova Scotia', 'D15 6U0', '9575748029', 4, 'Semi-Detached House'),
-('1456 Pine Drive', 'Belleville', 'Alberta', 'T57 0K6', '2492362806', 6, 'Semi-Detached House'),
-('5485 Cedar Street', 'Aurora', 'Ontario', 'L73 7X0', '5813161534', 3, 'Apartment'),
-('2449 Hickory Avenue', 'Edmonton', 'Nova Scotia', 'C97 3U2', '7426316310', 6, 'Apartment'),
-('8228 Magnolia Avenue', 'Red Deer', 'Manitoba', 'E08 3X8', '5775345030', 6, 'House');
+('3009 Willow Court', 'Halifax', 'Alberta', 'Q28 7T6', '9838451214', 4, 'House'),
+('0153 Elm Street', 'Oshawa', 'Nunavut', 'C07 9H7', '5550643984', 4, 'Apartment'),
+('3658 Magnolia Terrace', 'Saskatoon', 'Northwest Territories', 'O64 5K0', '6136370614', 5, 'House'),
+('9972 Maple Avenue', 'Victoria', 'Alberta', 'B26 4B0', '7888817055', 2, 'House'),
+('0064 Elm Avenue', 'Chicoutimi', 'Alberta', 'P15 3V5', '5228895797', 2, 'House'),
+('6709 Birch Lane', 'St. Johns', 'Northwest Territories', 'N68 4E8', '2260565549', 7, 'Apartment'),
+('1220 Magnolia Drive', 'Kanata', 'Nova Scotia', 'J00 7Y3', '8050370889', 7, 'Condominium'),
+('2348 Cedar Drive', 'Ottawa', 'Nunavut', 'U16 5W6', '7743078938', 7, 'Semi-Detached House'),
+('0294 Cedar Street', 'North Bay', 'Saskatchewan', 'Y35 2S3', '5830806174', 5, 'Apartment'),
+('8732 Spruce Terrace', 'Lethbridge', 'Quebec', 'M73 6K2', '8898373969', 7, 'Semi-Detached House'),
+('1734 Oak Terrace', 'Mirabel', 'Ontario', 'V79 5K1', '6253484484', 5, 'Condominium'),
+('0700 Elm Road', 'Toronto', 'Manitoba', 'O59 2A4', '6182062479', 5, 'Condominium'),
+('4560 Willow Circle', 'Hamilton', 'Nunavut', 'C69 4Z7', '6103970205', 5, 'Apartment'),
+('5823 Spruce Lane', 'Trois-Rivieres', 'Nova Scotia', 'E15 2Y8', '2289421902', 1, 'Semi-Detached House'),
+('4995 Magnolia Boulevard', 'Vancouver', 'Nova Scotia', 'V81 1N1', '3485453747', 7, 'House'),
+('6038 Oak Way', 'Prince George', 'Ontario', 'L66 2K7', '3485183549', 3, 'Condominium'),
+('3268 Birch Circle', 'Victoriaville', 'Quebec', 'Y70 5B6', '6800330305', 5, 'House'),
+('7066 Hickory Avenue', 'Norfolk County', 'Newfoundland and Labrador', 'Q23 2H2', '5362070458', 6, 'Condominium'),
+('2288 Pine Road', 'Saint-Jérôme', 'Nova Scotia', 'J67 5V1', '4922615387', 6, 'House'),
+('4208 Maple Court', 'Edmonton', 'Saskatchewan', 'J56 8T3', '3819639840', 7, 'Condominium'),
+('4727 Magnolia Circle', 'Drummondville', 'Quebec', 'Q87 0V5', '8246558002', 7, 'House'),
+('3918 Elm Circle', 'Red Deer', 'New Brunswick', 'B24 7T4', '7302045327', 2, 'House'),
+('2071 Willow Road', 'Brandon', 'Ontario', 'S34 5Y8', '4058796826', 4, 'Apartment'),
+('0608 Maple Boulevard', 'Aurora', 'Prince Edward Island', 'O26 4X3', '4655186585', 5, 'Condominium'),
+('5639 Cedar Way', 'Calgary', 'Nunavut', 'H28 2C5', '6277210950', 6, 'Apartment'),
+('7290 Maple Terrace', 'Winnipeg', 'Newfoundland and Labrador', 'A64 0D7', '9185337614', 2, 'Condominium'),
+('0257 Spruce Street', 'Peterborough', 'Ontario', 'U67 1H8', '6142945622', 7, 'Semi-Detached House'),
+('9523 Pine Court', 'Cornwall', 'British Columbia', 'N31 9B0', '4092618036', 6, 'House'),
+('4896 Cedar Lane', 'London', 'British Columbia', 'F90 9B2', '4921101410', 7, 'Semi-Detached House'),
+('5194 Cedar Avenue', 'Regina', 'British Columbia', 'N53 6I2', '5211569448', 4, 'Condominium'),
+('5872 Spruce Boulevard', 'Quebec City', 'Prince Edward Island', 'M18 2D3', '7662864337', 7, 'House'),
+('9262 Hickory Street', 'Abbotsford', 'Quebec', 'I10 5K8', '2292552877', 3, 'Semi-Detached House'),
+('4142 Maple Way', 'Montreal', 'Saskatchewan', 'N08 6L2', '5115213407', 7, 'Apartment'),
+('5032 Magnolia Court', 'St. Albert', 'Northwest Territories', 'H09 0X2', '8729286383', 6, 'Semi-Detached House'),
+('7783 Birch Court', 'Kelowna', 'British Columbia', 'N80 1L6', '7372695151', 6, 'Condominium'),
+('7741 Magnolia Avenue', 'Medicine Hat', 'British Columbia', 'M02 2C3', '4978874861', 2, 'House'),
+('3673 Maple Street', 'Newmarket', 'Northwest Territories', 'R73 0Y8', '9594677283', 6, 'House'),
+('6056 Pine Circle', 'Moncton', 'Manitoba', 'R20 4N1', '8217086692', 1, 'Condominium'),
+('9920 Maple Road', 'Belleville', 'British Columbia', 'W04 2S7', '5365183938', 3, 'Semi-Detached House'),
+('1417 Pine Way', 'Windsor', 'British Columbia', 'J94 6V1', '9962980946', 6, 'Condominium');
 
+
+INSERT INTO Residence VALUES
+('5869 Magnolia Avenue', 'Brandon', 'Manitoba', 'E76 7V3', '5922515653', 7, 'Condominium'),
+('1696 Willow Circle', 'Sherbrooke', 'Ontario', 'E93 3Z3', '4322864743', 2, 'Semi-Detached House'),
+('7467 Birch Avenue', 'Quebec City', 'Prince Edward Island', 'G85 8K8', '2086976855', 2, 'House'),
+('5606 Willow Drive', 'Saint-Jérôme', 'Ontario', 'A43 7G8', '3571883841', 6, 'Apartment'),
+('4431 Birch Boulevard', 'London', 'New Brunswick', 'Z60 3B9', '8067378282', 6, 'Semi-Detached House');
+
+INSERT INTO Residence VALUES
+('4164 Elm Drive', 'Winnipeg', 'Nunavut', 'H94 1D3', '5624055152', 4, 'Condominium'),
+('0626 Willow Circle', 'Medicine Hat', 'Nova Scotia', 'E83 1N9', '8837452214', 2, 'House'),
+('0427 Cedar Boulevard', 'Kitchener', 'Prince Edward Island', 'V83 6D1', '6531934753', 5, 'Semi-Detached House'),
+('5176 Oak Lane', 'Newmarket', 'Nova Scotia', 'U70 3D8', '6672605352', 7, 'Condominium'),
+('0868 Birch Terrace', 'Saskatoon', 'British Columbia', 'V54 8N7', '2357786402', 7, 'Condominium');
+
+INSERT INTO Residence VALUES
+('3191 Elm Road', 'Abbotsford', 'Alberta', 'P03 6R2', '4819686209', 4, 'House'),
+('6539 Magnolia Court', 'Ottawa', 'Prince Edward Island', 'H26 2P3', '2210999726', 6, 'Condominium'),
+('5101 Magnolia Boulevard', 'Montreal', 'Quebec', 'Y30 2T8', '9679275003', 5, 'Apartment'),
+('0079 Oak Avenue', 'St. Johns', 'Northwest Territories', 'S16 8V3', '3695508765', 3, 'House'),
+('6622 Willow Drive', 'North Bay', 'British Columbia', 'L85 6Z1', '2012095428', 3, 'Apartment');
+
+INSERT INTO Residence VALUES
+('2588 Oak Lane', 'Edmonton', 'Quebec', 'S54 2F9', '4608183392', 4, 'House'),
+('3753 Maple Drive', 'Aurora', 'British Columbia', 'Y45 0W1', '6933548756', 7, 'House'),
+('6100 Magnolia Road', 'Belleville', 'Manitoba', 'P39 8B4', '7926115184', 2, 'Condominium'),
+('6299 Maple Street', 'London', 'Quebec', 'S09 9Y1', '8559425009', 6, 'Apartment'),
+('9987 Maple Circle', 'Trois-Rivieres', 'Quebec', 'E34 3S2', '2540877912', 2, 'Condominium');
+
+INSERT INTO Residence VALUES
+('9310 Willow Avenue', 'Belleville', 'Manitoba', 'Y05 8B2', '8233875722', 4, 'Semi-Detached House'),
+('1063 Oak Boulevard', 'Saint-Jérôme', 'Alberta', 'N68 5C4', '8787484321', 3, 'Condominium'),
+('1877 Hickory Avenue', 'Halifax', 'Manitoba', 'N48 3W7', '9817452851', 2, 'Apartment'),
+('8634 Oak Way', 'Drummondville', 'Quebec', 'Z04 7Y8', '5149505508', 4, 'Condominium'),
+('7215 Elm Street', 'Vancouver', 'Alberta', 'S51 9G5', '6607913799', 3, 'House');
+
+INSERT INTO Residence VALUES
+('2474 Birch Drive', 'Quebec City', 'New Brunswick', 'C17 0Z9', '5346487304', 2, 'Condominium'),
+('8737 Pine Court', 'Kelowna', 'Prince Edward Island', 'O74 2N6', '6891896922', 1, 'Apartment'),
+('0467 Birch Lane', 'Guelph', 'Northwest Territories', 'H07 2B4', '9612120016', 7, 'Condominium'),
+('2236 Magnolia Street', 'Montreal', 'Ontario', 'G27 4H0', '9052974873', 4, 'House'),
+('4637 Spruce Boulevard', 'Saint John', 'Saskatchewan', 'A95 8A3', '2357753565', 7, 'Semi-Detached House');
+
+INSERT INTO Residence VALUES
+('2642 Hickory Road', 'Abbotsford', 'Newfoundland and Labrador', 'V18 3P1', '5533457352', 1, 'Condominium'),
+('0605 Maple Court', 'Saint-Jérôme', 'Newfoundland and Labrador', 'L61 9J0', '7796725015', 6, 'Apartment'),
+('4637 Birch Lane', 'Chicoutimi', 'Manitoba', 'C24 5I7', '8740059220', 1, 'Semi-Detached House'),
+('8254 Spruce Street', 'Medicine Hat', 'Manitoba', 'I01 7I8', '3550872092', 7, 'Condominium'),
+('7887 Pine Circle', 'St. Albert', 'British Columbia', 'C40 3U0', '7547695048', 6, 'Condominium');
+
+INSERT INTO Residence VALUES
+('6276 Oak Court', 'Halifax', 'Nunavut', 'K66 0Z5', '2438094514', 4, 'Semi-Detached House'),
+('8339 Hickory Avenue', 'Moncton', 'Nova Scotia', 'M44 7G1', '5409713294', 3, 'Apartment'),
+('0529 Willow Boulevard', 'Hamilton', 'Ontario', 'G71 1D0', '5274021338', 1, 'Apartment'),
+('9679 Birch Way', 'Kitchener', 'Newfoundland and Labrador', 'K12 2T4', '9134719649', 1, 'Semi-Detached House'),
+('6612 Cedar Terrace', 'Red Deer', 'Ontario', 'D23 9C7', '7519727975', 7, 'House');
+
+INSERT INTO Residence VALUES
+('4675 Elm Terrace', 'Norfolk County', 'Northwest Territories', 'Q18 7Y8', '5595899937', 5, 'Apartment'),
+('8974 Maple Circle', 'Chicoutimi', 'Newfoundland and Labrador', 'P24 1P9', '7503922574', 3, 'Apartment'),
+('3764 Oak Way', 'St. Johns', 'Northwest Territories', 'Q25 8T2', '8782649659', 3, 'House'),
+('5436 Cedar Lane', 'Cornwall', 'Saskatchewan', 'A69 3D9', '9859837105', 6, 'Apartment'),
+('6784 Pine Way', 'Saint John', 'Nova Scotia', 'H66 9Q5', '2965018840', 1, 'Semi-Detached House');
+
+INSERT INTO Residence VALUES
+('5623 Spruce Way', 'Moncton', 'Newfoundland and Labrador', 'N55 4Z4', '2045163350', 4, 'Semi-Detached House'),
+('7357 Magnolia Street', 'Kingston', 'Prince Edward Island', 'L09 9S3', '5219930958', 4, 'House'),
+('5688 Willow Lane', 'Vancouver', 'Northwest Territories', 'I78 6Z6', '9371117034', 6, 'Condominium'),
+('6217 Oak Drive', 'Belleville', 'Northwest Territories', 'R95 1O2', '8033176801', 5, 'Semi-Detached House'),
+('5344 Spruce Terrace', 'Brandon', 'Nova Scotia', 'D41 5S6', '4878952709', 2, 'Semi-Detached House');
+
+INSERT INTO Residence VALUES
+('5865 Willow Circle', 'Windsor', 'New Brunswick', 'S92 0A1', '7144374891', 2, 'House'),
+('4997 Elm Road', 'Brandon', 'Prince Edward Island', 'P63 8L8', '6804245498', 6, 'Condominium'),
+('5060 Magnolia Avenue', 'Fredericton', 'Quebec', 'A86 1W3', '5023136837', 6, 'Condominium'),
+('8418 Magnolia Drive', 'Aurora', 'New Brunswick', 'C59 1R5', '5883654280', 3, 'Apartment'),
+('9352 Maple Road', 'Oshawa', 'Prince Edward Island', 'U48 0J4', '9070694689', 7, 'Semi-Detached House');
+
+INSERT INTO Residence VALUES
+('8384 Maple Circle', 'Saskatoon', 'Newfoundland and Labrador', 'L42 0D0', '9008683034', 4, 'House'),
+('5336 Magnolia Terrace', 'Saint-Hyacinthe', 'New Brunswick', 'J35 8Y9', '9505448358', 6, 'Semi-Detached House'),
+('2274 Magnolia Lane', 'Norfolk County', 'Alberta', 'V36 9F7', '5662018273', 7, 'Apartment'),
+('1952 Oak Road', 'Halifax', 'British Columbia', 'B11 3V3', '9012085041', 2, 'Condominium'),
+('8809 Cedar Lane', 'Victoria', 'British Columbia', 'P23 3J6', '2824965548', 4, 'Condominium');
+
+INSERT INTO Residence VALUES
+('1093 Hickory Way', 'Saint John', 'Nova Scotia', 'Q13 3I6', '5530116803', 1, 'House'),
+('6266 Magnolia Court', 'Medicine Hat', 'Manitoba', 'V16 5E1', '8106189610', 1, 'Condominium'),
+('8932 Hickory Drive', 'Ottawa', 'Manitoba', 'W03 3W1', '7021255857', 5, 'Semi-Detached House'),
+('5479 Spruce Terrace', 'Kelowna', 'Quebec', 'K75 5D4', '6962313082', 5, 'Condominium'),
+('6125 Oak Circle', 'Fredericton', 'Newfoundland and Labrador', 'O59 8C1', '6663004449', 5, 'House');
 
