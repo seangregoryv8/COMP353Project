@@ -186,10 +186,9 @@ namespace COMP353ProjectTableGeneration
 
             if (!Directory.Exists(appPath)) Directory.CreateDirectory(appPath);
 
-            if (extension == ".sql") name = "Inserts";
-            File.AppendAllText(Path.Combine(appPath, name + extension), builder.ToString());
-            //using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
-            //outputFile.WriteLine(builder);
+            //File.AppendAllText(Path.Combine(appPath, name + extension), builder.ToString());
+            using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
+            outputFile.WriteLine(builder);
             mainBuilder.Append(builder.ToString());
         }
     }
