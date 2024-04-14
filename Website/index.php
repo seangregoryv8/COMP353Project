@@ -1366,7 +1366,7 @@
 		$servername = "localhost:3306";
 		$username = "root";
 		$password = "pass123";
-		$dbname = "hfest";
+		$dbname = "HFESTS";
 
 		$conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -1384,11 +1384,11 @@
 		} else {
 			echo "Error executing initial relations query: " . $conn->error;
 		}
-
 		// Execute the second SQL query
 		if ($conn->multi_query($initInserts)) {
 			// Loop through the result sets to free them
 			do {
+				echo "HELLO WORLD";
 				if ($result = $conn->store_result()) {
 					$result->free();
 				}
@@ -1397,6 +1397,7 @@
 			echo "Error executing initial inserts query: " . $conn->error;
 		}
 
+		
 		// Close connection
 		$conn->close();
 	?>

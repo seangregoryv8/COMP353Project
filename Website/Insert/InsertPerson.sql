@@ -1,5 +1,5 @@
-insert into person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation,PrimaryResidence)
-values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+insert into person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?);
 /*
 Alter Table employees
 Add Constraint check_EResidence 

@@ -140,23 +140,19 @@ namespace COMP353ProjectTableGeneration
         }
         static void Main()
         {
-            var stopwatch = Stopwatch.StartNew();
             Create.PrintAll(true);
             StringBuilder mainBuilder = new StringBuilder();
 
-            //Residence[] residences = Residences(5, ref mainBuilder);
-            //Person[] people = People(           40, ref mainBuilder);
-            //Employee[] employees = Employees(   35, ref mainBuilder, people);
-            ////Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
-            ////WorksAt[] works = Works(            40, ref mainBuilder, employees, facilities);
-            //LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences);
-            //LivesWith[] livesWith = Lives_With( 40, ref mainBuilder, people, employees);
-            ////Infection[] infections = Infections(50, ref mainBuilder, people);
-            ////Vaccine[] vaccines = Vaccines(      45, ref mainBuilder, people, facilities);
-            ////Schedule[] schedules = Schedules(   30, ref mainBuilder, facilities, employees);
-
-            //stopwatch.Stop();
-            //Console.WriteLine($"Elapsed time for creating all: {stopwatch.ElapsedMilliseconds} ms");
+            Residence[] residences = Residences(5, ref mainBuilder);
+            Person[] people = People(           40, ref mainBuilder);
+            Employee[] employees = Employees(   35, ref mainBuilder, people);
+            Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
+            WorksAt[] works = Works(            40, ref mainBuilder, employees, facilities);
+            LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences);
+            LivesWith[] livesWith = Lives_With( 40, ref mainBuilder, people, employees);
+            Infection[] infections = Infections(50, ref mainBuilder, people);
+            Vaccine[] vaccines = Vaccines(      45, ref mainBuilder, people, facilities);
+            Schedule[] schedules = Schedules(   30, ref mainBuilder, facilities, employees);
 
             string appPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             int tableLocation = appPath.IndexOf("COMP353ProjectTableGeneration");
