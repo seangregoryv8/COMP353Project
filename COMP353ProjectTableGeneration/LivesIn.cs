@@ -42,23 +42,20 @@ namespace COMP353ProjectTableGeneration
                     end = new DateTime(endYear, endMonth, endDay);
                 } while (end < start);
 
-                lives[i] = new LivesIn(person, residence, Format(startYear, startMonth, startDay), Format(endYear, endMonth, endDay), TypesOfLodging.Secondary);
-            }
+                Array values = Enum.GetValues(typeof(TypesOfLodging));
+                Random random = new Random();
+                TypesOfLodging randomBar = (TypesOfLodging)values.GetValue(random.Next(values.Length));
 
-            for (int i = 0; i < residences.Length; i++)
-            {
-                DateTime end = DateTime.Now;
-                lives[i] = new LivesIn(people[Functions.RandomNumber(0, residences.Length - 1)], residences[i],
-                    Format(Functions.RandomYear(1970), Functions.RandomMonth(), Functions.RandomDay()), Format(end.Year, end.Month, end.Day), TypesOfLodging.Primary);
+                lives[i] = new LivesIn(person, residence, Format(startYear, startMonth, startDay), Format(endYear, endMonth, endDay), randomBar);
             }
 
             List<LivesIn> LivesIn1 = lives.OfType<LivesIn>().ToList();
 
             for (int i = LivesIn1.Count() - 1; i >= 0; i--)
             {
-                for (int j = 0; j < LivesIn1.Count; j++)
+                for (int j = 0; j < LivesIn1.Count() - 1; j++)
                 {
-                    if (i != j && LivesIn1[i].Person == LivesIn1[j].Person && LivesIn1[i].Residence == LivesIn1[j].Residence && LivesIn1[i].Status == TypesOfLodging.Primary && LivesIn1[j].Status == TypesOfLodging.Primary)
+                    if (i != j && LivesIn1[i].Person == LivesIn1[j].Person && LivesIn1[i].Residence == LivesIn1[j].Residence)
                         LivesIn1.RemoveAt(j);
                 }
             }
