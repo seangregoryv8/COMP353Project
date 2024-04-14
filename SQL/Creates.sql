@@ -42,11 +42,7 @@ CREATE TABLE Person
 
  EmailAddress VARCHAR(255),
 
- Occupation VARCHAR(255),
-
- PrimaryResidence VARCHAR(255),
-
- FOREIGN KEY (PrimaryResidence) REFERENCES Residence(Address) 
+ Occupation VARCHAR(255)
 
 );
 
@@ -130,7 +126,13 @@ CREATE TABLE lives_in( Residence VARCHAR(255),
 
  Person VARCHAR(255),
 
- Address_start_date DATE,
+ Start_date DATE,
+
+ End_date DATE,
+
+ Status VARCHAR(255) CHECK ( Status IN ('Primary',
+
+ 'Secondary')),
 
  FOREIGN KEY (Residence) REFERENCES Residence(Address),
 

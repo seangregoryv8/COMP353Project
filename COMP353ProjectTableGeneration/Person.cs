@@ -13,11 +13,10 @@ namespace COMP353ProjectTableGeneration
         public string Citizenship { get; set; }
         public string EmailAddress { get; set; }
         public string Occupation { get; set; }
-        public Residence PrimaryResidence { get; set; }
         // SIN = 0
         // Medicare = 4
         // PrimaryResidence = Last
-        public static Person[] MakePeople(int amount, Residence[] residences)
+        public static Person[] MakePeople(int amount)
         {
             Person[] people = new Person[amount];
             var names = Functions.GenerateRandomNames(amount);
@@ -35,14 +34,13 @@ namespace COMP353ProjectTableGeneration
                 DateTime start = new DateTime(year, month, day);
 
                 string med = char.ToString(Functions.GetLetter()) + Functions.RandomDigits(9);
-                Residence residence = residences[Functions.RandomNumber(0, residences.Length - 1)];
 
-                people[i] = new Person(sin, first, last, start, med, phones[i], "Canadian", residence, occupations[i]);
+                people[i] = new Person(sin, first, last, start, med, phones[i], "Canadian", occupations[i]);
             }
 
             return people;
         }
-        public Person(string sin, string f, string l, DateTime date, string medicare, string telephone, string citi, Residence residence, string occupation)
+        public Person(string sin, string f, string l, DateTime date, string medicare, string telephone, string citi, string occupation)
         {
             SIN = sin;
             FirstName = f;
@@ -52,7 +50,6 @@ namespace COMP353ProjectTableGeneration
             TelephoneNumber = telephone;
             Citizenship = citi;
             EmailAddress = (f + l).ToLower() + Functions.RandomDigits(2) + "@gmail.com";
-            PrimaryResidence = residence;
             Occupation = occupation;
         }
         public string FormatDate(DateTime date) => date.Year + "-" + date.Month + "-" + date.Day;
@@ -60,7 +57,7 @@ namespace COMP353ProjectTableGeneration
         {
             return "('" + SIN + "', '" + FirstName + "', '" + LastName + "', '" +
                 FormatDate(DateOfBirth) + "', '" + MedicareCardNumber + "', '" + TelephoneNumber + "', '" + Citizenship + "', '" +
-                EmailAddress + "', '" + Occupation + "', '" + PrimaryResidence.Address + "')";
+                EmailAddress + "', '" + Occupation + "')";
         }
     }
 }

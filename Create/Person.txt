@@ -7,7 +7,5 @@ CREATE TABLE Person
  TelephoneNumber VARCHAR(255),
  Citizenship VARCHAR(255),
  EmailAddress VARCHAR(255),
- Occupation VARCHAR(255),
- PrimaryResidence VARCHAR(255),
- FOREIGN KEY (PrimaryResidence) REFERENCES Residence(Address) 
+ Occupation VARCHAR(255)
 );

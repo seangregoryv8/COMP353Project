@@ -18,7 +18,7 @@ namespace COMP353ProjectTableGeneration
         }
         public static string PrintPerson()
         {
-            StringBuilder builder = new StringBuilder("CREATE TABLE Person( SIN VARCHAR(255) PRIMARY KEY, FirstName VARCHAR(255), LastName VARCHAR(255), DateOfBirth DATE, MedicareCardNumber VARCHAR(255) NOT NULL UNIQUE, TelephoneNumber VARCHAR(255), Citizenship VARCHAR(255), EmailAddress VARCHAR(255), Occupation VARCHAR(255), PrimaryResidence VARCHAR(255), FOREIGN KEY (PrimaryResidence) REFERENCES Residence(Address) );");
+            StringBuilder builder = new StringBuilder("CREATE TABLE Person( SIN VARCHAR(255) PRIMARY KEY, FirstName VARCHAR(255), LastName VARCHAR(255), DateOfBirth DATE, MedicareCardNumber VARCHAR(255) NOT NULL UNIQUE, TelephoneNumber VARCHAR(255), Citizenship VARCHAR(255), EmailAddress VARCHAR(255), Occupation VARCHAR(255));");
             return Export(ref builder, MethodBase.GetCurrentMethod().Name);
         }
         public static string PrintEmployee()
@@ -38,7 +38,7 @@ namespace COMP353ProjectTableGeneration
         }
         public static string PrintLivesIn()
         {
-            StringBuilder builder = new StringBuilder("CREATE TABLE lives_in( Residence VARCHAR(255), Person VARCHAR(255), Address_start_date DATE, FOREIGN KEY (Residence) REFERENCES Residence(Address), FOREIGN KEY (Person) REFERENCES Person(SIN), PRIMARY KEY (Residence, Person) );");
+            StringBuilder builder = new StringBuilder("CREATE TABLE lives_in( Residence VARCHAR(255), Person VARCHAR(255), Start_date DATE, End_date DATE, Status VARCHAR(255) CHECK ( Status IN ('Primary', 'Secondary')), FOREIGN KEY (Residence) REFERENCES Residence(Address), FOREIGN KEY (Person) REFERENCES Person(SIN), PRIMARY KEY (Residence, Person) );");
             return Export(ref builder, MethodBase.GetCurrentMethod().Name);
         }
         public static string PrintLivesWith()
