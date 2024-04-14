@@ -144,16 +144,16 @@ namespace COMP353ProjectTableGeneration
             Create.PrintAll(true);
             StringBuilder mainBuilder = new StringBuilder();
 
-            Residence[] residences = Residences(5, ref mainBuilder);
-            Person[] people = People(           40, ref mainBuilder);
-            Employee[] employees = Employees(   35, ref mainBuilder, people);
-            //Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
-            //WorksAt[] works = Works(            40, ref mainBuilder, employees, facilities);
-            LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences);
-            LivesWith[] livesWith = Lives_With( 40, ref mainBuilder, people, employees);
-            //Infection[] infections = Infections(50, ref mainBuilder, people);
-            //Vaccine[] vaccines = Vaccines(      45, ref mainBuilder, people, facilities);
-            //Schedule[] schedules = Schedules(   30, ref mainBuilder, facilities, employees);
+            //Residence[] residences = Residences(5, ref mainBuilder);
+            //Person[] people = People(           40, ref mainBuilder);
+            //Employee[] employees = Employees(   35, ref mainBuilder, people);
+            ////Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
+            ////WorksAt[] works = Works(            40, ref mainBuilder, employees, facilities);
+            //LivesIn[] livesIn = Lives_In(       40, ref mainBuilder, people, residences);
+            //LivesWith[] livesWith = Lives_With( 40, ref mainBuilder, people, employees);
+            ////Infection[] infections = Infections(50, ref mainBuilder, people);
+            ////Vaccine[] vaccines = Vaccines(      45, ref mainBuilder, people, facilities);
+            ////Schedule[] schedules = Schedules(   30, ref mainBuilder, facilities, employees);
 
             //stopwatch.Stop();
             //Console.WriteLine($"Elapsed time for creating all: {stopwatch.ElapsedMilliseconds} ms");
@@ -186,9 +186,9 @@ namespace COMP353ProjectTableGeneration
 
             if (!Directory.Exists(appPath)) Directory.CreateDirectory(appPath);
 
-            File.AppendAllText(Path.Combine(appPath, name + extension), builder.ToString());
-            //using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
-            //outputFile.WriteLine(builder);
+            //File.AppendAllText(Path.Combine(appPath, name + extension), builder.ToString());
+            using StreamWriter outputFile = new StreamWriter(Path.Combine(appPath, name + extension));
+            outputFile.WriteLine(builder);
             mainBuilder.Append(builder.ToString());
         }
     }
