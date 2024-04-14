@@ -43,5 +43,3 @@ INSERT INTO Vaccination VALUES
 (2, 'Moderna', '2023-2-12', '7417936765', 'GenLab 2767'),
 (7, 'AstraZeneca', '2020-4-5', '1122052676', 'HealthBioTech 0215'),
 (5, 'Johnson & Johnson', '2020-11-15', '0694980954', 'GenPharmaCare 8526');
-
-

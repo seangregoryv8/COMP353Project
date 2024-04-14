@@ -24,5 +24,3 @@ INSERT INTO Facility VALUES
 ('GenPharm 6110', '7780 Spruce Circle', 'Fredericton', 'Nova Scotia', 'I50 9O6', '3367366991', 'www.genpharm6110425.org', 'Hospital', 436, '0205970077'),
 ('HealthPharmaCare 3635', '3476 Cedar Court', 'White Rock', 'Nunavut', 'V05 1K5', '6683480193', 'www.healthpharmacare3635989.org', 'Special Instalment', 505, '2257797469'),
 ('LifeSolutions 4776', '5788 Pine Circle', 'Newmarket', 'Manitoba', 'H72 8I8', '8856619141', 'www.lifesolutions4776500.org', 'CLSC', 855, '0694980954');
-
-

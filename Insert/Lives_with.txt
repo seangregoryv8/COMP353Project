@@ -38,10 +38,7 @@ INSERT INTO lives_with VALUES
 ('9814664072', '0181050279', 'Non-Parent Dependent'),
 ('5531886753', '9870028105', 'Children'),
 ('0960221279', '1267802962', 'Children'),
-('7417936765', '4077841550', 'Roommate');
-
-
-INSERT INTO lives_with VALUES
+('7417936765', '4077841550', 'Roommate'),
 ('2197446962', '7823794112', 'Parent'),
 ('1352823733', '0776829885', 'Roommate'),
 ('8073547744', '4861230803', 'Roommate'),
@@ -80,9 +77,7 @@ INSERT INTO lives_with VALUES
 ('6524526199', '9902151853', 'Children'),
 ('4861230803', '2197446962', 'Roommate'),
 ('4861230803', '1352823733', 'Partner'),
-('2732540415', '0776829885', 'Partner');
-
-INSERT INTO lives_with VALUES
+('2732540415', '0776829885', 'Partner'),
 ('3022670114', '1838395198', 'Children'),
 ('7234224893', '5101091349', 'Parent'),
 ('6208351526', '7396175814', 'Parent'),
@@ -121,9 +116,7 @@ INSERT INTO lives_with VALUES
 ('7003484987', '4477627756', 'Parent'),
 ('2714625655', '2062687888', 'Roommate'),
 ('6017291583', '2714625655', 'Partner'),
-('4477627756', '2417122923', 'Partner');
-
-INSERT INTO lives_with VALUES
+('4477627756', '2417122923', 'Partner'),
 ('2832491020', '8713403267', 'Children'),
 ('8702480659', '1203346636', 'Parent'),
 ('5101719368', '3759006262', 'Non-Parent Dependent'),
@@ -163,9 +156,7 @@ INSERT INTO lives_with VALUES
 ('0950918878', '4957309614', 'Parent'),
 ('4658338475', '4326566250', 'Parent'),
 ('8713403267', '5267309871', 'Children'),
-('3026663744', '3759006262', 'Non-Parent Dependent');
-
-INSERT INTO lives_with VALUES
+('3026663744', '3759006262', 'Non-Parent Dependent'),
 ('2903513929', '2490331145', 'Parent'),
 ('0209378488', '9816483354', 'Partner'),
 ('6066832189', '9816483354', 'Children'),
@@ -205,9 +196,7 @@ INSERT INTO lives_with VALUES
 ('6392397178', '7275010549', 'Children'),
 ('9143488864', '6676829233', 'Children'),
 ('0634685889', '9057073701', 'Children'),
-('7537411609', '4204650741', 'Parent');
-
-INSERT INTO lives_with VALUES
+('7537411609', '4204650741', 'Parent'),
 ('8009788027', '2948747446', 'Non-Parent Dependent'),
 ('5107885382', '6108704052', 'Non-Parent Dependent'),
 ('6815328418', '0205155706', 'Roommate'),
@@ -247,9 +236,7 @@ INSERT INTO lives_with VALUES
 ('5844878132', '0293770067', 'Parent'),
 ('9787442416', '4825911318', 'Non-Parent Dependent'),
 ('6363602708', '7452834612', 'Roommate'),
-('6183352962', '8240463454', 'Partner');
-
-INSERT INTO lives_with VALUES
+('6183352962', '8240463454', 'Partner'),
 ('0133762294', '1989566364', 'Children'),
 ('2400176442', '0133762294', 'Non-Parent Dependent'),
 ('7768578503', '8997315806', 'Parent'),
@@ -288,9 +275,7 @@ INSERT INTO lives_with VALUES
 ('7509746537', '2738210664', 'Parent'),
 ('9360929592', '6337985321', 'Parent'),
 ('7906513972', '1461325900', 'Children'),
-('2476981425', '0133762294', 'Roommate');
-
-INSERT INTO lives_with VALUES
+('2476981425', '0133762294', 'Roommate'),
 ('3476350484', '8606950035', 'Roommate'),
 ('7995664300', '1260125282', 'Non-Parent Dependent'),
 ('8606950035', '0490794999', 'Partner'),
@@ -331,4 +316,3 @@ INSERT INTO lives_with VALUES
 ('4207000240', '3535798235', 'Roommate'),
 ('4169271013', '4941727423', 'Roommate'),
 ('1251295646', '9977353156', 'Roommate');
-

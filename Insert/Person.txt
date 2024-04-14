@@ -38,10 +38,7 @@ INSERT INTO Person VALUES
 ('8030840338', 'Mia', 'Clark', '1978-6-25', 'U007935759', '2375261930', 'Canadian', 'miaclark05@gmail.com', 'Construction Worker'),
 ('1108451730', 'Oliver', 'Hill', '1943-10-13', 'I755611788', '5833750227', 'Canadian', 'oliverhill02@gmail.com', 'Meteorologist'),
 ('4736680095', 'Elizabeth', 'Miller', '1976-9-16', 'R076227546', '8844561660', 'Canadian', 'elizabethmiller55@gmail.com', 'Engineer'),
-('7950328430', 'Mia', 'Baker', '1956-3-5', 'A131903413', '3378033475', 'Canadian', 'miabaker35@gmail.com', 'Economist');
-
-
-INSERT INTO Person VALUES
+('7950328430', 'Mia', 'Baker', '1956-3-5', 'A131903413', '3378033475', 'Canadian', 'miabaker35@gmail.com', 'Economist'),
 ('5321493701', 'William', 'Rodriguez', '1952-8-24', 'R881009307', '9397566191', 'Canadian', 'williamrodriguez53@gmail.com', 'Bartender'),
 ('3642153011', 'William', 'Green', '1964-3-19', 'H433705732', '2036830850', 'Canadian', 'williamgreen17@gmail.com', 'Mechanic'),
 ('2959395108', 'Henry', 'Lewis', '1957-5-9', 'I524578507', '7670525158', 'Canadian', 'henrylewis40@gmail.com', 'Doctor'),
@@ -81,9 +78,7 @@ INSERT INTO Person VALUES
 ('9096493822', 'Emma', 'Davis', '1943-1-25', 'B520907219', '4322598624', 'Canadian', 'emmadavis81@gmail.com', 'Biologist'),
 ('1321428712', 'Lucas', 'Garcia', '1977-2-16', 'U954572423', '9164821369', 'Canadian', 'lucasgarcia00@gmail.com', 'Real Estate Agent'),
 ('4848090124', 'David', 'Jackson', '1997-1-16', 'N065847770', '9189682137', 'Canadian', 'davidjackson73@gmail.com', 'HR Manager'),
-('7399418838', 'Matthew', 'Campbell', '1984-11-23', 'T643043058', '7265726241', 'Canadian', 'matthewcampbell21@gmail.com', 'Plumber');
-
-INSERT INTO Person VALUES
+('7399418838', 'Matthew', 'Campbell', '1984-11-23', 'T643043058', '7265726241', 'Canadian', 'matthewcampbell21@gmail.com', 'Plumber'),
 ('5674825256', 'Sebastian', 'Jones', '2010-3-14', 'T286734546', '2807604947', 'Canadian', 'sebastianjones96@gmail.com', 'Carpenter'),
 ('2384479593', 'Henry', 'Robinson', '2010-9-15', 'K001049841', '3706144451', 'Canadian', 'henryrobinson12@gmail.com', 'Social Worker'),
 ('0384470272', 'Emily', 'Williams', '1965-7-11', 'B190731739', '5549750721', 'Canadian', 'emilywilliams88@gmail.com', 'Fitness Trainer'),
@@ -123,9 +118,7 @@ INSERT INTO Person VALUES
 ('4485217149', 'Isabella', 'Carter', '1984-2-8', 'I114420180', '9954093776', 'Canadian', 'isabellacarter85@gmail.com', 'Fashion Designer'),
 ('6418162824', 'Alexander', 'White', '1964-9-26', 'Z808654027', '9255502007', 'Canadian', 'alexanderwhite59@gmail.com', 'Photographer'),
 ('9919248082', 'Oliver', 'Baker', '1975-7-14', 'N254974860', '5526103102', 'Canadian', 'oliverbaker84@gmail.com', 'Marketing Manager'),
-('1182408760', 'Grace', 'Davis', '1943-7-10', 'G844973234', '6117945141', 'Canadian', 'gracedavis73@gmail.com', 'HR Manager');
-
-INSERT INTO Person VALUES
+('1182408760', 'Grace', 'Davis', '1943-7-10', 'G844973234', '6117945141', 'Canadian', 'gracedavis73@gmail.com', 'HR Manager'),
 ('0304731548', 'Victoria', 'Harris', '2000-1-24', 'O266970672', '8183891122', 'Canadian', 'victoriaharris83@gmail.com', 'Flight Attendant'),
 ('4871219911', 'Avery', 'Perez', '2007-10-16', 'I370922322', '9539149859', 'Canadian', 'averyperez42@gmail.com', 'Nurse'),
 ('8073547744', 'Sebastian', 'Jackson', '1962-4-22', 'H666292432', '7186022422', 'Canadian', 'sebastianjackson42@gmail.com', 'Waiter/Waitress'),
@@ -165,9 +158,7 @@ INSERT INTO Person VALUES
 ('9135494233', 'Samuel', 'Williams', '2013-8-21', 'U966088026', '3115867019', 'Canadian', 'samuelwilliams81@gmail.com', 'Software Developer'),
 ('2197446962', 'Lucas', 'Lee', '1981-10-1', 'A445089623', '6240317800', 'Canadian', 'lucaslee31@gmail.com', 'Fitness Trainer'),
 ('3814772084', 'Oliver', 'Carter', '2002-8-26', 'Z732845943', '2454282201', 'Canadian', 'olivercarter06@gmail.com', 'Librarian'),
-('7550425286', 'Ava', 'Miller', '1962-7-24', 'B191025761', '3498848880', 'Canadian', 'avamiller30@gmail.com', 'Lawyer');
-
-INSERT INTO Person VALUES
+('7550425286', 'Ava', 'Miller', '1962-7-24', 'B191025761', '3498848880', 'Canadian', 'avamiller30@gmail.com', 'Lawyer'),
 ('1941208331', 'Michael', 'Hill', '1989-6-23', 'E408235212', '9728331772', 'Canadian', 'michaelhill58@gmail.com', 'Photographer'),
 ('9506806257', 'Samuel', 'Garcia', '1942-5-5', 'Z691430899', '9197775363', 'Canadian', 'samuelgarcia43@gmail.com', 'Veterinarian'),
 ('7234224893', 'Henry', 'Martin', '2003-11-26', 'M317607860', '5857191340', 'Canadian', 'henrymartin62@gmail.com', 'Paramedic'),
@@ -207,9 +198,7 @@ INSERT INTO Person VALUES
 ('2714625655', 'Sofia', 'Miller', '1954-6-14', 'D451552810', '6000169597', 'Canadian', 'sofiamiller66@gmail.com', 'Lawyer'),
 ('9083880438', 'Avery', 'Hall', '2022-8-26', 'E678212788', '8040764139', 'Canadian', 'averyhall37@gmail.com', 'Chef'),
 ('9075522100', 'Avery', 'Hill', '1964-10-15', 'V351500613', '4828908135', 'Canadian', 'averyhill72@gmail.com', 'Economist'),
-('0207915618', 'Sophia', 'Lopez', '1981-7-1', 'M563975370', '6967954522', 'Canadian', 'sophialopez19@gmail.com', 'Bartender');
-
-INSERT INTO Person VALUES
+('0207915618', 'Sophia', 'Lopez', '1981-7-1', 'M563975370', '6967954522', 'Canadian', 'sophialopez19@gmail.com', 'Bartender'),
 ('1505878532', 'Sofia', 'Nelson', '2014-1-1', 'G669338288', '2394213610', 'Canadian', 'sofianelson72@gmail.com', 'Marine Biologist'),
 ('7864671844', 'Carter', 'Robinson', '1957-4-5', 'J238715100', '4214617219', 'Canadian', 'carterrobinson56@gmail.com', 'Actor'),
 ('0950918878', 'Charlotte', 'Scott', '2021-7-20', 'U579166559', '3059361405', 'Canadian', 'charlottescott62@gmail.com', 'Pharmacist'),
@@ -249,9 +238,7 @@ INSERT INTO Person VALUES
 ('3636179705', 'Aria', 'Parker', '2005-7-4', 'V768632540', '7212680755', 'Canadian', 'ariaparker99@gmail.com', 'Bartender'),
 ('5075962471', 'Sophia', 'Taylor', '1973-10-27', 'N583969824', '8220976851', 'Canadian', 'sophiataylor91@gmail.com', 'Web Designer'),
 ('8472506615', 'Mia', 'Campbell', '2023-2-19', 'Z528838711', '8623236038', 'Canadian', 'miacampbell75@gmail.com', 'Psychologist'),
-('8702480659', 'Isabella', 'Mitchell', '1966-9-12', 'W716312305', '5273706597', 'Canadian', 'isabellamitchell62@gmail.com', 'Plumber');
-
-INSERT INTO Person VALUES
+('8702480659', 'Isabella', 'Mitchell', '1966-9-12', 'W716312305', '5273706597', 'Canadian', 'isabellamitchell62@gmail.com', 'Plumber'),
 ('7275010549', 'Daniel', 'Brown', '2003-2-10', 'R892873836', '5554979751', 'Canadian', 'danielbrown08@gmail.com', 'Graphic Designer'),
 ('7537411609', 'Elizabeth', 'Taylor', '2012-9-7', 'B636613771', '2788082054', 'Canadian', 'elizabethtaylor31@gmail.com', 'Doctor'),
 ('9057073701', 'Grace', 'Miller', '1997-8-22', 'W781442093', '8511474322', 'Canadian', 'gracemiller76@gmail.com', 'Interior Designer'),
@@ -291,9 +278,7 @@ INSERT INTO Person VALUES
 ('1408667027', 'Daniel', 'Baker', '1991-6-24', 'M149697135', '7588773294', 'Canadian', 'danielbaker49@gmail.com', 'Librarian'),
 ('0209378488', 'Liam', 'Nelson', '2004-3-21', 'C695845275', '8877044215', 'Canadian', 'liamnelson14@gmail.com', 'Geologist'),
 ('1551084002', 'Avery', 'Nelson', '2023-2-20', 'K089256356', '6575443954', 'Canadian', 'averynelson22@gmail.com', 'Translator'),
-('9572275922', 'Ethan', 'Smith', '1979-8-11', 'N278089367', '9155685449', 'Canadian', 'ethansmith65@gmail.com', 'Bartender');
-
-INSERT INTO Person VALUES
+('9572275922', 'Ethan', 'Smith', '1979-8-11', 'N278089367', '9155685449', 'Canadian', 'ethansmith65@gmail.com', 'Bartender'),
 ('4825911318', 'Harper', 'White', '1997-8-2', 'B629236913', '6402420368', 'Canadian', 'harperwhite93@gmail.com', 'Artist'),
 ('2091381428', 'Henry', 'Smith', '2021-7-9', 'X355230227', '4329851461', 'Canadian', 'henrysmith88@gmail.com', 'Doctor'),
 ('3356066840', 'Grace', 'Hall', '2016-2-19', 'G954026102', '6772006358', 'Canadian', 'gracehall96@gmail.com', 'Interior Designer'),
@@ -333,9 +318,7 @@ INSERT INTO Person VALUES
 ('6183352962', 'Aiden', 'Green', '1941-7-9', 'N028297576', '4884391371', 'Canadian', 'aidengreen98@gmail.com', 'Librarian'),
 ('6815328418', 'Evelyn', 'Walker', '1984-7-21', 'X122810135', '8161835261', 'Canadian', 'evelynwalker42@gmail.com', 'Veterinarian'),
 ('7585516843', 'Samuel', 'Anderson', '2007-6-3', 'C549638841', '2159020412', 'Canadian', 'samuelanderson27@gmail.com', 'Fashion Designer'),
-('5107885382', 'Evelyn', 'Roberts', '2004-11-8', 'J606125117', '3570178302', 'Canadian', 'evelynroberts64@gmail.com', 'HR Manager');
-
-INSERT INTO Person VALUES
+('5107885382', 'Evelyn', 'Roberts', '2004-11-8', 'J606125117', '3570178302', 'Canadian', 'evelynroberts64@gmail.com', 'HR Manager'),
 ('8485750468', 'Mason', 'Phillips', '2023-3-20', 'U415441976', '6317664292', 'Canadian', 'masonphillips38@gmail.com', 'Artist'),
 ('1050044666', 'Riley', 'Roberts', '2004-8-16', 'U293566534', '5537466302', 'Canadian', 'rileyroberts93@gmail.com', 'Carpenter'),
 ('4833183602', 'Madison', 'White', '2000-10-23', 'X373882186', '3629094415', 'Canadian', 'madisonwhite18@gmail.com', 'Electrician'),
@@ -375,9 +358,7 @@ INSERT INTO Person VALUES
 ('4721166772', 'Abigail', 'Miller', '1988-2-2', 'K012700695', '3093114294', 'Canadian', 'abigailmiller89@gmail.com', 'Plumber'),
 ('3448446601', 'Alexander', 'Hill', '2009-10-26', 'N075168449', '7447684369', 'Canadian', 'alexanderhill98@gmail.com', 'Flight Attendant'),
 ('5400718100', 'Oliver', 'Scott', '1943-8-11', 'P046052078', '5777722894', 'Canadian', 'oliverscott83@gmail.com', 'Construction Worker'),
-('9716781233', 'Elizabeth', 'Baker', '1951-10-11', 'P700949507', '8256113544', 'Canadian', 'elizabethbaker32@gmail.com', 'Mechanic');
-
-INSERT INTO Person VALUES
+('9716781233', 'Elizabeth', 'Baker', '1951-10-11', 'P700949507', '8256113544', 'Canadian', 'elizabethbaker32@gmail.com', 'Mechanic'),
 ('0336211324', 'Sofia', 'Moore', '1947-1-2', 'N883363991', '4178158917', 'Canadian', 'sofiamoore09@gmail.com', 'Lawyer'),
 ('1108039217', 'Jackson', 'Wilson', '1973-1-7', 'E033529347', '4278907625', 'Canadian', 'jacksonwilson70@gmail.com', 'Web Designer'),
 ('6170022529', 'Noah', 'Evans', '1956-9-12', 'P880471448', '8808497368', 'Canadian', 'noahevans03@gmail.com', 'Carpenter'),
@@ -417,9 +398,7 @@ INSERT INTO Person VALUES
 ('1746473832', 'Sophia', 'Perez', '1983-7-24', 'V819413831', '3961307306', 'Canadian', 'sophiaperez02@gmail.com', 'Waiter/Waitress'),
 ('1152181781', 'Elizabeth', 'Gonzalez', '2016-10-23', 'T881883540', '4656708971', 'Canadian', 'elizabethgonzalez76@gmail.com', 'Chemist'),
 ('2990921221', 'Mila', 'Edwards', '1940-3-10', 'B161506194', '4082214596', 'Canadian', 'milaedwards80@gmail.com', 'Social Worker'),
-('8807727190', 'Olivia', 'Martinez', '1968-4-12', 'Q220395793', '4243134638', 'Canadian', 'oliviamartinez14@gmail.com', 'Paramedic');
-
-INSERT INTO Person VALUES
+('8807727190', 'Olivia', 'Martinez', '1968-4-12', 'Q220395793', '4243134638', 'Canadian', 'oliviamartinez14@gmail.com', 'Paramedic'),
 ('8314827285', 'Liam', 'Scott', '1986-11-21', 'D154013404', '2036748924', 'Canadian', 'liamscott86@gmail.com', 'Web Designer'),
 ('3476350484', 'Matthew', 'Gonzalez', '1966-11-9', 'S649406335', '4797217185', 'Canadian', 'matthewgonzalez60@gmail.com', 'Police Officer'),
 ('0158068160', 'Scarlett', 'Lewis', '1945-4-20', 'E124394007', '3944842556', 'Canadian', 'scarlettlewis05@gmail.com', 'Marine Biologist'),
@@ -460,4 +439,3 @@ INSERT INTO Person VALUES
 ('4941727423', 'Avery', 'Adams', '1956-1-15', 'L450256515', '9177508365', 'Canadian', 'averyadams50@gmail.com', 'Librarian'),
 ('1260125282', 'Carter', 'Thomas', '1963-9-4', 'Y196466222', '2555457174', 'Canadian', 'carterthomas41@gmail.com', 'Plumber'),
 ('9250407001', 'Samuel', 'Rodriguez', '1984-1-24', 'Y383956756', '6412019247', 'Canadian', 'samuelrodriguez04@gmail.com', 'Biologist');
-

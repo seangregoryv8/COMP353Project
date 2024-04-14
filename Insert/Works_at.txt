@@ -64,5 +64,3 @@ INSERT INTO Works_at VALUES
 ('5856504126', 'TheraPharmaCare 0741', '2018-11-17', NULL),
 ('8030840338', 'CureHealthcare 0646', '2016-1-7', NULL),
 ('0960221279', 'BioPharm 3244', '2020-2-6', '2023-10-7');
-
-

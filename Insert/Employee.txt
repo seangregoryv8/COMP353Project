@@ -33,10 +33,7 @@ INSERT INTO Employee VALUES
 ('0370854396', 'Administrative Personnel'),
 ('1653918339', 'Pharmacist'),
 ('3017793058', 'Administrative Personnel'),
-('2899965168', 'Security Personnel');
-
-
-INSERT INTO Employee VALUES
+('2899965168', 'Security Personnel'),
 ('7120556426', 'Cashier'),
 ('0752776916', 'Doctor'),
 ('7665443474', 'Pharmacist'),
@@ -71,9 +68,7 @@ INSERT INTO Employee VALUES
 ('2959395108', 'Administrative Personnel'),
 ('6340895686', 'Cashier'),
 ('2411145075', 'Cashier'),
-('0386952416', 'Security Personnel');
-
-INSERT INTO Employee VALUES
+('0386952416', 'Security Personnel'),
 ('5456005876', 'Administrative Personnel'),
 ('3798022544', 'Administrative Personnel'),
 ('2801369668', 'Regular Employee'),
@@ -108,9 +103,7 @@ INSERT INTO Employee VALUES
 ('5422291474', 'Nurse'),
 ('8434897983', 'Administrative Personnel'),
 ('7904628160', 'Regular Employee'),
-('9207961316', 'Cashier');
-
-INSERT INTO Employee VALUES
+('9207961316', 'Cashier'),
 ('0130487027', 'Regular Employee'),
 ('2197446962', 'Cashier'),
 ('8073547744', 'Regular Employee'),
@@ -145,9 +138,7 @@ INSERT INTO Employee VALUES
 ('4034981294', 'Receptionist'),
 ('7861366821', 'Doctor'),
 ('5771599265', 'Security Personnel'),
-('4323716742', 'Cashier');
-
-INSERT INTO Employee VALUES
+('4323716742', 'Cashier'),
 ('5101091349', 'Doctor'),
 ('5025932156', 'Regular Employee'),
 ('6103425184', 'Security Personnel'),
@@ -182,9 +173,7 @@ INSERT INTO Employee VALUES
 ('2062687888', 'Administrative Personnel'),
 ('2369700059', 'Doctor'),
 ('3022670114', 'Doctor'),
-('3290038713', 'Receptionist');
-
-INSERT INTO Employee VALUES
+('3290038713', 'Receptionist'),
 ('7387197336', 'Receptionist'),
 ('0864973267', 'Security Personnel'),
 ('2111558385', 'Regular Employee'),
@@ -219,9 +208,7 @@ INSERT INTO Employee VALUES
 ('2832491020', 'Security Personnel'),
 ('0950918878', 'Regular Employee'),
 ('9199468968', 'Cashier'),
-('1346073439', 'Receptionist');
-
-INSERT INTO Employee VALUES
+('1346073439', 'Receptionist'),
 ('5999328014', 'Doctor'),
 ('5677464228', 'Cashier'),
 ('6676829233', 'Receptionist'),
@@ -256,9 +243,7 @@ INSERT INTO Employee VALUES
 ('2438254064', 'Administrative Personnel'),
 ('2506440306', 'Receptionist'),
 ('2825065872', 'Security Personnel'),
-('2058110287', 'Cashier');
-
-INSERT INTO Employee VALUES
+('2058110287', 'Cashier'),
 ('5176283972', 'Regular Employee'),
 ('0785541846', 'Receptionist'),
 ('5348037625', 'Pharmacist'),
@@ -293,9 +278,7 @@ INSERT INTO Employee VALUES
 ('6068555105', 'Nurse'),
 ('8240463454', 'Nurse'),
 ('8117061329', 'Security Personnel'),
-('6108704052', 'Cashier');
-
-INSERT INTO Employee VALUES
+('6108704052', 'Cashier'),
 ('1050044666', 'Administrative Personnel'),
 ('4090730788', 'Doctor'),
 ('9716781233', 'Doctor'),
@@ -330,9 +313,7 @@ INSERT INTO Employee VALUES
 ('1482895944', 'Nurse'),
 ('5060770902', 'Doctor'),
 ('4721166772', 'Cashier'),
-('1204965848', 'Security Personnel');
-
-INSERT INTO Employee VALUES
+('1204965848', 'Security Personnel'),
 ('3292888130', 'Cashier'),
 ('6337985321', 'Doctor'),
 ('2400176442', 'Doctor'),
@@ -367,9 +348,7 @@ INSERT INTO Employee VALUES
 ('8807727190', 'Cashier'),
 ('7906513972', 'Administrative Personnel'),
 ('4079330127', 'Administrative Personnel'),
-('6673060443', 'Cashier');
-
-INSERT INTO Employee VALUES
+('6673060443', 'Cashier'),
 ('1251295646', 'Pharmacist'),
 ('6732378558', 'Receptionist'),
 ('4207000240', 'Pharmacist'),
@@ -405,4 +384,3 @@ INSERT INTO Employee VALUES
 ('1192830010', 'Doctor'),
 ('6524524470', 'Regular Employee'),
 ('3864390660', 'Pharmacist');
-

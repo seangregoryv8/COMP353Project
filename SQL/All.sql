@@ -28,73 +28,52 @@ INSERT INTO Residence VALUES
 ('7443 Willow Road', 'Montreal', 'Manitoba', 'F18 4P7', '9398357510', 5, 'House'),
 ('6978 Maple Avenue', 'Peterborough', 'Nova Scotia', 'C87 9L8', '2622073505', 5, 'Semi-Detached House'),
 ('8549 Hickory Circle', 'Sherbrooke', 'Nova Scotia', 'Z95 1O5', '6787492281', 6, 'Semi-Detached House'),
-('0239 Hickory Avenue', 'Chicoutimi', 'Saskatchewan', 'S74 4K9', '9872546096', 6, 'Condominium');
-
-
-INSERT INTO Residence VALUES
+('0239 Hickory Avenue', 'Chicoutimi', 'Saskatchewan', 'S74 4K9', '9872546096', 6, 'Condominium'),
 ('4306 Spruce Circle', 'St. Johns', 'Nova Scotia', 'F19 5W0', '8332736713', 5, 'Apartment'),
 ('8988 Birch Boulevard', 'North Bay', 'Nova Scotia', 'U77 7T1', '3546509823', 7, 'Apartment'),
 ('8236 Cedar Drive', 'Saint-Jérôme', 'British Columbia', 'W44 1C9', '4643800251', 5, 'House'),
 ('4119 Cedar Lane', 'Lethbridge', 'Quebec', 'T17 4T9', '6624174929', 2, 'Condominium'),
-('1438 Birch Way', 'White Rock', 'Quebec', 'B67 7L7', '5076658618', 7, 'Condominium');
-
-INSERT INTO Residence VALUES
+('1438 Birch Way', 'White Rock', 'Quebec', 'B67 7L7', '5076658618', 7, 'Condominium'),
 ('1268 Birch Drive', 'Ottawa', 'Saskatchewan', 'Z97 5E3', '8080097697', 7, 'Condominium'),
 ('5632 Pine Boulevard', 'Kitchener', 'Saskatchewan', 'R53 7Z2', '5043882193', 7, 'House'),
 ('0641 Pine Road', 'Kelowna', 'Prince Edward Island', 'O53 7C8', '2435590556', 6, 'Semi-Detached House'),
 ('2625 Willow Terrace', 'Sherbrooke', 'British Columbia', 'A55 9N8', '3948414237', 1, 'Apartment'),
-('9840 Hickory Drive', 'Lethbridge', 'Prince Edward Island', 'P54 6Q9', '3281604970', 1, 'Semi-Detached House');
-
-INSERT INTO Residence VALUES
+('9840 Hickory Drive', 'Lethbridge', 'Prince Edward Island', 'P54 6Q9', '3281604970', 1, 'Semi-Detached House'),
 ('8957 Hickory Court', 'London', 'Quebec', 'R37 1T7', '2763258602', 1, 'Apartment'),
 ('2276 Elm Avenue', 'Saint-Jérôme', 'British Columbia', 'Z62 5P1', '5429900621', 7, 'Apartment'),
 ('7163 Maple Road', 'Kingston', 'British Columbia', 'J26 9S0', '5844855315', 2, 'Condominium'),
 ('3899 Hickory Way', 'Prince George', 'New Brunswick', 'H60 1H7', '5291742048', 1, 'Semi-Detached House'),
-('2877 Spruce Circle', 'Chicoutimi', 'Ontario', 'T46 2L9', '9863763898', 4, 'Condominium');
-
-INSERT INTO Residence VALUES
+('2877 Spruce Circle', 'Chicoutimi', 'Ontario', 'T46 2L9', '9863763898', 4, 'Condominium'),
 ('9578 Maple Circle', 'Regina', 'Prince Edward Island', 'M82 7Z3', '4073536349', 1, 'Apartment'),
 ('6112 Magnolia Drive', 'Barrie', 'Nova Scotia', 'U14 6H6', '7652002246', 3, 'House'),
 ('6841 Oak Circle', 'Prince George', 'New Brunswick', 'H54 6G7', '3325957461', 6, 'House'),
 ('6577 Hickory Way', 'Norfolk County', 'Nunavut', 'F23 2S8', '6837919237', 5, 'House'),
-('8239 Birch Street', 'Sherbrooke', 'Nunavut', 'N76 7T1', '3971532448', 2, 'Apartment');
-
-INSERT INTO Residence VALUES
+('8239 Birch Street', 'Sherbrooke', 'Nunavut', 'N76 7T1', '3971532448', 2, 'Apartment'),
 ('7146 Maple Lane', 'Vancouver', 'Nunavut', 'B04 2H7', '2512675591', 1, 'Apartment'),
 ('1800 Cedar Avenue', 'Oshawa', 'Newfoundland and Labrador', 'O71 9D4', '3486363394', 1, 'Apartment'),
 ('0938 Maple Boulevard', 'Winnipeg', 'Newfoundland and Labrador', 'X74 1X9', '8563878287', 6, 'Semi-Detached House'),
 ('0910 Spruce Circle', 'Saint-Jérôme', 'Quebec', 'V93 7Q7', '6916669047', 6, 'Condominium'),
-('3590 Pine Way', 'Red Deer', 'Prince Edward Island', 'E36 5U9', '3779228880', 1, 'Apartment');
-
-INSERT INTO Residence VALUES
+('3590 Pine Way', 'Red Deer', 'Prince Edward Island', 'E36 5U9', '3779228880', 1, 'Apartment'),
 ('9323 Pine Circle', 'St. Johns', 'Ontario', 'A44 6D6', '4523129874', 4, 'Semi-Detached House'),
 ('3186 Cedar Drive', 'Trois-Rivieres', 'Manitoba', 'I29 7Q0', '8429511192', 7, 'Condominium'),
 ('5716 Willow Court', 'Winnipeg', 'Quebec', 'P02 1T2', '8770960275', 7, 'Apartment'),
 ('1516 Maple Way', 'Prince George', 'Nova Scotia', 'D50 9E4', '3202444642', 7, 'Semi-Detached House'),
-('6360 Cedar Road', 'Montreal', 'Saskatchewan', 'D85 8R4', '7846617691', 2, 'Condominium');
-
-INSERT INTO Residence VALUES
+('6360 Cedar Road', 'Montreal', 'Saskatchewan', 'D85 8R4', '7846617691', 2, 'Condominium'),
 ('0128 Oak Street', 'Newmarket', 'Manitoba', 'H26 8Z7', '2046370426', 6, 'Semi-Detached House'),
 ('7517 Spruce Street', 'Victoriaville', 'Newfoundland and Labrador', 'Y39 6V6', '4825841399', 2, 'House'),
 ('3140 Spruce Avenue', 'Ottawa', 'Prince Edward Island', 'Y04 4Y2', '2435420594', 7, 'House'),
 ('7551 Birch Boulevard', 'Montreal', 'Alberta', 'W10 9N7', '3962782621', 2, 'Condominium'),
-('9499 Pine Terrace', 'Guelph', 'Ontario', 'E66 9I8', '2311241355', 4, 'House');
-
-INSERT INTO Residence VALUES
+('9499 Pine Terrace', 'Guelph', 'Ontario', 'E66 9I8', '2311241355', 4, 'House'),
 ('4216 Birch Boulevard', 'Red Deer', 'New Brunswick', 'C60 0U8', '5208082167', 5, 'Apartment'),
 ('4287 Pine Court', 'Abbotsford', 'Nova Scotia', 'V58 7Y1', '6359826642', 3, 'Condominium'),
 ('2480 Maple Avenue', 'Newmarket', 'Newfoundland and Labrador', 'G88 6G6', '6263988218', 3, 'Condominium'),
 ('3777 Cedar Lane', 'Kitchener', 'New Brunswick', 'I97 0M5', '3113390579', 1, 'Semi-Detached House'),
-('9138 Birch Avenue', 'Brandon', 'Northwest Territories', 'Y74 1C7', '2030666074', 7, 'House');
-
-INSERT INTO Residence VALUES
+('9138 Birch Avenue', 'Brandon', 'Northwest Territories', 'Y74 1C7', '2030666074', 7, 'House'),
 ('0133 Magnolia Drive', 'Hamilton', 'Saskatchewan', 'I27 9M8', '4037030949', 7, 'House'),
 ('8334 Hickory Drive', 'Saint-Hyacinthe', 'British Columbia', 'F00 7B1', '9426482104', 2, 'Apartment'),
 ('8520 Hickory Road', 'London', 'Ontario', 'G32 6U6', '2921220143', 5, 'Apartment'),
 ('3723 Birch Boulevard', 'Edmonton', 'Quebec', 'K99 3N3', '2580527797', 4, 'Condominium'),
-('9386 Oak Road', 'Saint John', 'Manitoba', 'X76 2X8', '2270614686', 6, 'Apartment');
-
-INSERT INTO Residence VALUES
+('9386 Oak Road', 'Saint John', 'Manitoba', 'X76 2X8', '2270614686', 6, 'Apartment'),
 ('2304 Birch Court', 'Oshawa', 'Northwest Territories', 'I72 7F4', '9409962763', 6, 'House'),
 ('1574 Willow Terrace', 'Chicoutimi', 'Alberta', 'I87 6H0', '4834123387', 2, 'House'),
 ('0360 Magnolia Way', 'Brandon', 'Nova Scotia', 'G17 6V2', '7991700616', 3, 'Apartment'),
@@ -141,10 +120,7 @@ INSERT INTO Person VALUES
 ('8030840338', 'Mia', 'Clark', '1978-6-25', 'U007935759', '2375261930', 'Canadian', 'miaclark05@gmail.com', 'Construction Worker'),
 ('1108451730', 'Oliver', 'Hill', '1943-10-13', 'I755611788', '5833750227', 'Canadian', 'oliverhill02@gmail.com', 'Meteorologist'),
 ('4736680095', 'Elizabeth', 'Miller', '1976-9-16', 'R076227546', '8844561660', 'Canadian', 'elizabethmiller55@gmail.com', 'Engineer'),
-('7950328430', 'Mia', 'Baker', '1956-3-5', 'A131903413', '3378033475', 'Canadian', 'miabaker35@gmail.com', 'Economist');
-
-
-INSERT INTO Person VALUES
+('7950328430', 'Mia', 'Baker', '1956-3-5', 'A131903413', '3378033475', 'Canadian', 'miabaker35@gmail.com', 'Economist'),
 ('5321493701', 'William', 'Rodriguez', '1952-8-24', 'R881009307', '9397566191', 'Canadian', 'williamrodriguez53@gmail.com', 'Bartender'),
 ('3642153011', 'William', 'Green', '1964-3-19', 'H433705732', '2036830850', 'Canadian', 'williamgreen17@gmail.com', 'Mechanic'),
 ('2959395108', 'Henry', 'Lewis', '1957-5-9', 'I524578507', '7670525158', 'Canadian', 'henrylewis40@gmail.com', 'Doctor'),
@@ -184,9 +160,7 @@ INSERT INTO Person VALUES
 ('9096493822', 'Emma', 'Davis', '1943-1-25', 'B520907219', '4322598624', 'Canadian', 'emmadavis81@gmail.com', 'Biologist'),
 ('1321428712', 'Lucas', 'Garcia', '1977-2-16', 'U954572423', '9164821369', 'Canadian', 'lucasgarcia00@gmail.com', 'Real Estate Agent'),
 ('4848090124', 'David', 'Jackson', '1997-1-16', 'N065847770', '9189682137', 'Canadian', 'davidjackson73@gmail.com', 'HR Manager'),
-('7399418838', 'Matthew', 'Campbell', '1984-11-23', 'T643043058', '7265726241', 'Canadian', 'matthewcampbell21@gmail.com', 'Plumber');
-
-INSERT INTO Person VALUES
+('7399418838', 'Matthew', 'Campbell', '1984-11-23', 'T643043058', '7265726241', 'Canadian', 'matthewcampbell21@gmail.com', 'Plumber'),
 ('5674825256', 'Sebastian', 'Jones', '2010-3-14', 'T286734546', '2807604947', 'Canadian', 'sebastianjones96@gmail.com', 'Carpenter'),
 ('2384479593', 'Henry', 'Robinson', '2010-9-15', 'K001049841', '3706144451', 'Canadian', 'henryrobinson12@gmail.com', 'Social Worker'),
 ('0384470272', 'Emily', 'Williams', '1965-7-11', 'B190731739', '5549750721', 'Canadian', 'emilywilliams88@gmail.com', 'Fitness Trainer'),
@@ -226,9 +200,7 @@ INSERT INTO Person VALUES
 ('4485217149', 'Isabella', 'Carter', '1984-2-8', 'I114420180', '9954093776', 'Canadian', 'isabellacarter85@gmail.com', 'Fashion Designer'),
 ('6418162824', 'Alexander', 'White', '1964-9-26', 'Z808654027', '9255502007', 'Canadian', 'alexanderwhite59@gmail.com', 'Photographer'),
 ('9919248082', 'Oliver', 'Baker', '1975-7-14', 'N254974860', '5526103102', 'Canadian', 'oliverbaker84@gmail.com', 'Marketing Manager'),
-('1182408760', 'Grace', 'Davis', '1943-7-10', 'G844973234', '6117945141', 'Canadian', 'gracedavis73@gmail.com', 'HR Manager');
-
-INSERT INTO Person VALUES
+('1182408760', 'Grace', 'Davis', '1943-7-10', 'G844973234', '6117945141', 'Canadian', 'gracedavis73@gmail.com', 'HR Manager'),
 ('0304731548', 'Victoria', 'Harris', '2000-1-24', 'O266970672', '8183891122', 'Canadian', 'victoriaharris83@gmail.com', 'Flight Attendant'),
 ('4871219911', 'Avery', 'Perez', '2007-10-16', 'I370922322', '9539149859', 'Canadian', 'averyperez42@gmail.com', 'Nurse'),
 ('8073547744', 'Sebastian', 'Jackson', '1962-4-22', 'H666292432', '7186022422', 'Canadian', 'sebastianjackson42@gmail.com', 'Waiter/Waitress'),
@@ -268,9 +240,7 @@ INSERT INTO Person VALUES
 ('9135494233', 'Samuel', 'Williams', '2013-8-21', 'U966088026', '3115867019', 'Canadian', 'samuelwilliams81@gmail.com', 'Software Developer'),
 ('2197446962', 'Lucas', 'Lee', '1981-10-1', 'A445089623', '6240317800', 'Canadian', 'lucaslee31@gmail.com', 'Fitness Trainer'),
 ('3814772084', 'Oliver', 'Carter', '2002-8-26', 'Z732845943', '2454282201', 'Canadian', 'olivercarter06@gmail.com', 'Librarian'),
-('7550425286', 'Ava', 'Miller', '1962-7-24', 'B191025761', '3498848880', 'Canadian', 'avamiller30@gmail.com', 'Lawyer');
-
-INSERT INTO Person VALUES
+('7550425286', 'Ava', 'Miller', '1962-7-24', 'B191025761', '3498848880', 'Canadian', 'avamiller30@gmail.com', 'Lawyer'),
 ('1941208331', 'Michael', 'Hill', '1989-6-23', 'E408235212', '9728331772', 'Canadian', 'michaelhill58@gmail.com', 'Photographer'),
 ('9506806257', 'Samuel', 'Garcia', '1942-5-5', 'Z691430899', '9197775363', 'Canadian', 'samuelgarcia43@gmail.com', 'Veterinarian'),
 ('7234224893', 'Henry', 'Martin', '2003-11-26', 'M317607860', '5857191340', 'Canadian', 'henrymartin62@gmail.com', 'Paramedic'),
@@ -310,9 +280,7 @@ INSERT INTO Person VALUES
 ('2714625655', 'Sofia', 'Miller', '1954-6-14', 'D451552810', '6000169597', 'Canadian', 'sofiamiller66@gmail.com', 'Lawyer'),
 ('9083880438', 'Avery', 'Hall', '2022-8-26', 'E678212788', '8040764139', 'Canadian', 'averyhall37@gmail.com', 'Chef'),
 ('9075522100', 'Avery', 'Hill', '1964-10-15', 'V351500613', '4828908135', 'Canadian', 'averyhill72@gmail.com', 'Economist'),
-('0207915618', 'Sophia', 'Lopez', '1981-7-1', 'M563975370', '6967954522', 'Canadian', 'sophialopez19@gmail.com', 'Bartender');
-
-INSERT INTO Person VALUES
+('0207915618', 'Sophia', 'Lopez', '1981-7-1', 'M563975370', '6967954522', 'Canadian', 'sophialopez19@gmail.com', 'Bartender'),
 ('1505878532', 'Sofia', 'Nelson', '2014-1-1', 'G669338288', '2394213610', 'Canadian', 'sofianelson72@gmail.com', 'Marine Biologist'),
 ('7864671844', 'Carter', 'Robinson', '1957-4-5', 'J238715100', '4214617219', 'Canadian', 'carterrobinson56@gmail.com', 'Actor'),
 ('0950918878', 'Charlotte', 'Scott', '2021-7-20', 'U579166559', '3059361405', 'Canadian', 'charlottescott62@gmail.com', 'Pharmacist'),
@@ -352,9 +320,7 @@ INSERT INTO Person VALUES
 ('3636179705', 'Aria', 'Parker', '2005-7-4', 'V768632540', '7212680755', 'Canadian', 'ariaparker99@gmail.com', 'Bartender'),
 ('5075962471', 'Sophia', 'Taylor', '1973-10-27', 'N583969824', '8220976851', 'Canadian', 'sophiataylor91@gmail.com', 'Web Designer'),
 ('8472506615', 'Mia', 'Campbell', '2023-2-19', 'Z528838711', '8623236038', 'Canadian', 'miacampbell75@gmail.com', 'Psychologist'),
-('8702480659', 'Isabella', 'Mitchell', '1966-9-12', 'W716312305', '5273706597', 'Canadian', 'isabellamitchell62@gmail.com', 'Plumber');
-
-INSERT INTO Person VALUES
+('8702480659', 'Isabella', 'Mitchell', '1966-9-12', 'W716312305', '5273706597', 'Canadian', 'isabellamitchell62@gmail.com', 'Plumber'),
 ('7275010549', 'Daniel', 'Brown', '2003-2-10', 'R892873836', '5554979751', 'Canadian', 'danielbrown08@gmail.com', 'Graphic Designer'),
 ('7537411609', 'Elizabeth', 'Taylor', '2012-9-7', 'B636613771', '2788082054', 'Canadian', 'elizabethtaylor31@gmail.com', 'Doctor'),
 ('9057073701', 'Grace', 'Miller', '1997-8-22', 'W781442093', '8511474322', 'Canadian', 'gracemiller76@gmail.com', 'Interior Designer'),
@@ -394,9 +360,7 @@ INSERT INTO Person VALUES
 ('1408667027', 'Daniel', 'Baker', '1991-6-24', 'M149697135', '7588773294', 'Canadian', 'danielbaker49@gmail.com', 'Librarian'),
 ('0209378488', 'Liam', 'Nelson', '2004-3-21', 'C695845275', '8877044215', 'Canadian', 'liamnelson14@gmail.com', 'Geologist'),
 ('1551084002', 'Avery', 'Nelson', '2023-2-20', 'K089256356', '6575443954', 'Canadian', 'averynelson22@gmail.com', 'Translator'),
-('9572275922', 'Ethan', 'Smith', '1979-8-11', 'N278089367', '9155685449', 'Canadian', 'ethansmith65@gmail.com', 'Bartender');
-
-INSERT INTO Person VALUES
+('9572275922', 'Ethan', 'Smith', '1979-8-11', 'N278089367', '9155685449', 'Canadian', 'ethansmith65@gmail.com', 'Bartender'),
 ('4825911318', 'Harper', 'White', '1997-8-2', 'B629236913', '6402420368', 'Canadian', 'harperwhite93@gmail.com', 'Artist'),
 ('2091381428', 'Henry', 'Smith', '2021-7-9', 'X355230227', '4329851461', 'Canadian', 'henrysmith88@gmail.com', 'Doctor'),
 ('3356066840', 'Grace', 'Hall', '2016-2-19', 'G954026102', '6772006358', 'Canadian', 'gracehall96@gmail.com', 'Interior Designer'),
@@ -436,9 +400,7 @@ INSERT INTO Person VALUES
 ('6183352962', 'Aiden', 'Green', '1941-7-9', 'N028297576', '4884391371', 'Canadian', 'aidengreen98@gmail.com', 'Librarian'),
 ('6815328418', 'Evelyn', 'Walker', '1984-7-21', 'X122810135', '8161835261', 'Canadian', 'evelynwalker42@gmail.com', 'Veterinarian'),
 ('7585516843', 'Samuel', 'Anderson', '2007-6-3', 'C549638841', '2159020412', 'Canadian', 'samuelanderson27@gmail.com', 'Fashion Designer'),
-('5107885382', 'Evelyn', 'Roberts', '2004-11-8', 'J606125117', '3570178302', 'Canadian', 'evelynroberts64@gmail.com', 'HR Manager');
-
-INSERT INTO Person VALUES
+('5107885382', 'Evelyn', 'Roberts', '2004-11-8', 'J606125117', '3570178302', 'Canadian', 'evelynroberts64@gmail.com', 'HR Manager'),
 ('8485750468', 'Mason', 'Phillips', '2023-3-20', 'U415441976', '6317664292', 'Canadian', 'masonphillips38@gmail.com', 'Artist'),
 ('1050044666', 'Riley', 'Roberts', '2004-8-16', 'U293566534', '5537466302', 'Canadian', 'rileyroberts93@gmail.com', 'Carpenter'),
 ('4833183602', 'Madison', 'White', '2000-10-23', 'X373882186', '3629094415', 'Canadian', 'madisonwhite18@gmail.com', 'Electrician'),
@@ -478,9 +440,7 @@ INSERT INTO Person VALUES
 ('4721166772', 'Abigail', 'Miller', '1988-2-2', 'K012700695', '3093114294', 'Canadian', 'abigailmiller89@gmail.com', 'Plumber'),
 ('3448446601', 'Alexander', 'Hill', '2009-10-26', 'N075168449', '7447684369', 'Canadian', 'alexanderhill98@gmail.com', 'Flight Attendant'),
 ('5400718100', 'Oliver', 'Scott', '1943-8-11', 'P046052078', '5777722894', 'Canadian', 'oliverscott83@gmail.com', 'Construction Worker'),
-('9716781233', 'Elizabeth', 'Baker', '1951-10-11', 'P700949507', '8256113544', 'Canadian', 'elizabethbaker32@gmail.com', 'Mechanic');
-
-INSERT INTO Person VALUES
+('9716781233', 'Elizabeth', 'Baker', '1951-10-11', 'P700949507', '8256113544', 'Canadian', 'elizabethbaker32@gmail.com', 'Mechanic'),
 ('0336211324', 'Sofia', 'Moore', '1947-1-2', 'N883363991', '4178158917', 'Canadian', 'sofiamoore09@gmail.com', 'Lawyer'),
 ('1108039217', 'Jackson', 'Wilson', '1973-1-7', 'E033529347', '4278907625', 'Canadian', 'jacksonwilson70@gmail.com', 'Web Designer'),
 ('6170022529', 'Noah', 'Evans', '1956-9-12', 'P880471448', '8808497368', 'Canadian', 'noahevans03@gmail.com', 'Carpenter'),
@@ -520,9 +480,7 @@ INSERT INTO Person VALUES
 ('1746473832', 'Sophia', 'Perez', '1983-7-24', 'V819413831', '3961307306', 'Canadian', 'sophiaperez02@gmail.com', 'Waiter/Waitress'),
 ('1152181781', 'Elizabeth', 'Gonzalez', '2016-10-23', 'T881883540', '4656708971', 'Canadian', 'elizabethgonzalez76@gmail.com', 'Chemist'),
 ('2990921221', 'Mila', 'Edwards', '1940-3-10', 'B161506194', '4082214596', 'Canadian', 'milaedwards80@gmail.com', 'Social Worker'),
-('8807727190', 'Olivia', 'Martinez', '1968-4-12', 'Q220395793', '4243134638', 'Canadian', 'oliviamartinez14@gmail.com', 'Paramedic');
-
-INSERT INTO Person VALUES
+('8807727190', 'Olivia', 'Martinez', '1968-4-12', 'Q220395793', '4243134638', 'Canadian', 'oliviamartinez14@gmail.com', 'Paramedic'),
 ('8314827285', 'Liam', 'Scott', '1986-11-21', 'D154013404', '2036748924', 'Canadian', 'liamscott86@gmail.com', 'Web Designer'),
 ('3476350484', 'Matthew', 'Gonzalez', '1966-11-9', 'S649406335', '4797217185', 'Canadian', 'matthewgonzalez60@gmail.com', 'Police Officer'),
 ('0158068160', 'Scarlett', 'Lewis', '1945-4-20', 'E124394007', '3944842556', 'Canadian', 'scarlettlewis05@gmail.com', 'Marine Biologist'),
@@ -599,10 +557,7 @@ INSERT INTO Employee VALUES
 ('0370854396', 'Administrative Personnel'),
 ('1653918339', 'Pharmacist'),
 ('3017793058', 'Administrative Personnel'),
-('2899965168', 'Security Personnel');
-
-
-INSERT INTO Employee VALUES
+('2899965168', 'Security Personnel'),
 ('7120556426', 'Cashier'),
 ('0752776916', 'Doctor'),
 ('7665443474', 'Pharmacist'),
@@ -637,9 +592,7 @@ INSERT INTO Employee VALUES
 ('2959395108', 'Administrative Personnel'),
 ('6340895686', 'Cashier'),
 ('2411145075', 'Cashier'),
-('0386952416', 'Security Personnel');
-
-INSERT INTO Employee VALUES
+('0386952416', 'Security Personnel'),
 ('5456005876', 'Administrative Personnel'),
 ('3798022544', 'Administrative Personnel'),
 ('2801369668', 'Regular Employee'),
@@ -674,9 +627,7 @@ INSERT INTO Employee VALUES
 ('5422291474', 'Nurse'),
 ('8434897983', 'Administrative Personnel'),
 ('7904628160', 'Regular Employee'),
-('9207961316', 'Cashier');
-
-INSERT INTO Employee VALUES
+('9207961316', 'Cashier'),
 ('0130487027', 'Regular Employee'),
 ('2197446962', 'Cashier'),
 ('8073547744', 'Regular Employee'),
@@ -711,9 +662,7 @@ INSERT INTO Employee VALUES
 ('4034981294', 'Receptionist'),
 ('7861366821', 'Doctor'),
 ('5771599265', 'Security Personnel'),
-('4323716742', 'Cashier');
-
-INSERT INTO Employee VALUES
+('4323716742', 'Cashier'),
 ('5101091349', 'Doctor'),
 ('5025932156', 'Regular Employee'),
 ('6103425184', 'Security Personnel'),
@@ -748,9 +697,7 @@ INSERT INTO Employee VALUES
 ('2062687888', 'Administrative Personnel'),
 ('2369700059', 'Doctor'),
 ('3022670114', 'Doctor'),
-('3290038713', 'Receptionist');
-
-INSERT INTO Employee VALUES
+('3290038713', 'Receptionist'),
 ('7387197336', 'Receptionist'),
 ('0864973267', 'Security Personnel'),
 ('2111558385', 'Regular Employee'),
@@ -785,9 +732,7 @@ INSERT INTO Employee VALUES
 ('2832491020', 'Security Personnel'),
 ('0950918878', 'Regular Employee'),
 ('9199468968', 'Cashier'),
-('1346073439', 'Receptionist');
-
-INSERT INTO Employee VALUES
+('1346073439', 'Receptionist'),
 ('5999328014', 'Doctor'),
 ('5677464228', 'Cashier'),
 ('6676829233', 'Receptionist'),
@@ -822,9 +767,7 @@ INSERT INTO Employee VALUES
 ('2438254064', 'Administrative Personnel'),
 ('2506440306', 'Receptionist'),
 ('2825065872', 'Security Personnel'),
-('2058110287', 'Cashier');
-
-INSERT INTO Employee VALUES
+('2058110287', 'Cashier'),
 ('5176283972', 'Regular Employee'),
 ('0785541846', 'Receptionist'),
 ('5348037625', 'Pharmacist'),
@@ -859,9 +802,7 @@ INSERT INTO Employee VALUES
 ('6068555105', 'Nurse'),
 ('8240463454', 'Nurse'),
 ('8117061329', 'Security Personnel'),
-('6108704052', 'Cashier');
-
-INSERT INTO Employee VALUES
+('6108704052', 'Cashier'),
 ('1050044666', 'Administrative Personnel'),
 ('4090730788', 'Doctor'),
 ('9716781233', 'Doctor'),
@@ -896,9 +837,7 @@ INSERT INTO Employee VALUES
 ('1482895944', 'Nurse'),
 ('5060770902', 'Doctor'),
 ('4721166772', 'Cashier'),
-('1204965848', 'Security Personnel');
-
-INSERT INTO Employee VALUES
+('1204965848', 'Security Personnel'),
 ('3292888130', 'Cashier'),
 ('6337985321', 'Doctor'),
 ('2400176442', 'Doctor'),
@@ -933,9 +872,7 @@ INSERT INTO Employee VALUES
 ('8807727190', 'Cashier'),
 ('7906513972', 'Administrative Personnel'),
 ('4079330127', 'Administrative Personnel'),
-('6673060443', 'Cashier');
-
-INSERT INTO Employee VALUES
+('6673060443', 'Cashier'),
 ('1251295646', 'Pharmacist'),
 ('6732378558', 'Receptionist'),
 ('4207000240', 'Pharmacist'),
@@ -998,7 +935,6 @@ INSERT INTO Facility VALUES
 ('GenPharm 6110', '7780 Spruce Circle', 'Fredericton', 'Nova Scotia', 'I50 9O6', '3367366991', 'www.genpharm6110425.org', 'Hospital', 436, '0205970077'),
 ('HealthPharmaCare 3635', '3476 Cedar Court', 'White Rock', 'Nunavut', 'V05 1K5', '6683480193', 'www.healthpharmacare3635989.org', 'Special Instalment', 505, '2257797469'),
 ('LifeSolutions 4776', '5788 Pine Circle', 'Newmarket', 'Manitoba', 'H72 8I8', '8856619141', 'www.lifesolutions4776500.org', 'CLSC', 855, '0694980954');
-
 
 INSERT INTO Works_at VALUES
 ('2283229751', 'BioSolutions 3003', '2022-2-21', NULL),
@@ -1066,7 +1002,6 @@ INSERT INTO Works_at VALUES
 ('5856504126', 'TheraPharmaCare 0741', '2018-11-17', NULL),
 ('8030840338', 'CureHealthcare 0646', '2016-1-7', NULL),
 ('0960221279', 'BioPharm 3244', '2020-2-6', '2023-10-7');
-
 
 INSERT INTO lives_in VALUES
 ('2655 Hickory Terrace', '7793249250', '2015-6-27', '2018-7-2', 'Secondary'),
@@ -1147,10 +1082,7 @@ INSERT INTO lives_in VALUES
 ('3846 Oak Lane', '5111453599', '2016-9-19', '2020-11-5', 'Secondary'),
 ('3897 Elm Circle', '6041318578', '2020-8-26', '2022-1-22', 'Primary'),
 ('0699 Birch Circle', '0694980954', '2017-5-25', '2017-11-8', 'Secondary'),
-('3633 Birch Court', '1122052676', '2016-10-13', '2021-5-17', 'Secondary');
-
-
-INSERT INTO lives_in VALUES
+('3633 Birch Court', '1122052676', '2016-10-13', '2021-5-17', 'Secondary'),
 ('3899 Hickory Way', '0204192927', '2021-5-3', '2023-11-20', 'Primary'),
 ('2276 Elm Avenue', '0304731548', '2023-1-3', '2023-10-12', 'Primary'),
 ('2276 Elm Avenue', '0341598106', '2022-3-5', '2022-9-22', 'Secondary'),
@@ -1215,9 +1147,7 @@ INSERT INTO lives_in VALUES
 ('8957 Hickory Court', '2496322406', '2017-3-23', '2020-6-13', 'Primary'),
 ('7163 Maple Road', '8768124438', '2023-8-14', '2023-9-3', 'Primary'),
 ('2276 Elm Avenue', '7823794112', '2018-5-6', '2020-8-18', 'Secondary'),
-('2276 Elm Avenue', '3814772084', '2020-9-14', '2021-10-8', 'Primary');
-
-INSERT INTO lives_in VALUES
+('2276 Elm Avenue', '3814772084', '2020-9-14', '2021-10-8', 'Primary'),
 ('6577 Hickory Way', '6017291583', '2018-10-25', '2023-11-11', 'Secondary'),
 ('6112 Magnolia Drive', '3290038713', '2017-6-24', '2022-9-15', 'Secondary'),
 ('6577 Hickory Way', '6208351526', '2023-10-25', '2023-11-7', 'Secondary'),
@@ -1283,9 +1213,7 @@ INSERT INTO lives_in VALUES
 ('9578 Maple Circle', '3290038713', '2015-4-10', '2016-9-13', 'Secondary'),
 ('6841 Oak Circle', '6017291583', '2016-1-2', '2022-11-19', 'Secondary'),
 ('9578 Maple Circle', '0758897617', '2022-1-4', '2022-5-24', 'Primary'),
-('6841 Oak Circle', '5821185036', '2023-7-2', '2023-10-2', 'Secondary');
-
-INSERT INTO lives_in VALUES
+('6841 Oak Circle', '5821185036', '2023-7-2', '2023-10-2', 'Secondary'),
 ('1800 Cedar Avenue', '5075962471', '2015-10-22', '2023-11-5', 'Secondary'),
 ('1800 Cedar Avenue', '4957309614', '2022-3-3', '2023-2-26', 'Primary'),
 ('0938 Maple Boulevard', '1896074604', '2021-8-16', '2023-10-6', 'Secondary'),
@@ -1347,9 +1275,7 @@ INSERT INTO lives_in VALUES
 ('0938 Maple Boulevard', '2832491020', '2018-8-25', '2023-10-18', 'Secondary'),
 ('1800 Cedar Avenue', '3636179705', '2016-10-23', '2020-10-8', 'Primary'),
 ('0938 Maple Boulevard', '9847121973', '2018-6-12', '2023-9-15', 'Primary'),
-('1800 Cedar Avenue', '1896074604', '2018-6-19', '2022-3-23', 'Primary');
-
-INSERT INTO lives_in VALUES
+('1800 Cedar Avenue', '1896074604', '2018-6-19', '2022-3-23', 'Primary'),
 ('1516 Maple Way', '2694212508', '2016-3-5', '2022-2-13', 'Primary'),
 ('3186 Cedar Drive', '4728061278', '2022-6-15', '2023-9-16', 'Secondary'),
 ('3186 Cedar Drive', '9057073701', '2016-6-12', '2022-9-4', 'Secondary'),
@@ -1408,9 +1334,7 @@ INSERT INTO lives_in VALUES
 ('3186 Cedar Drive', '9816483354', '2016-1-8', '2019-7-24', 'Primary'),
 ('3186 Cedar Drive', '4204650741', '2022-10-4', '2022-10-27', 'Primary'),
 ('1516 Maple Way', '2506440306', '2017-11-25', '2023-2-24', 'Secondary'),
-('5716 Willow Court', '0427718933', '2020-11-23', '2021-9-21', 'Secondary');
-
-INSERT INTO lives_in VALUES
+('5716 Willow Court', '0427718933', '2020-11-23', '2021-9-21', 'Secondary'),
 ('0128 Oak Street', '6083630317', '2021-11-7', '2021-11-11', 'Secondary'),
 ('3140 Spruce Avenue', '8648048052', '2023-7-19', '2023-7-23', 'Primary'),
 ('3140 Spruce Avenue', '8117061329', '2019-6-16', '2021-5-5', 'Secondary'),
@@ -1468,9 +1392,7 @@ INSERT INTO lives_in VALUES
 ('7551 Birch Boulevard', '7585516843', '2015-3-4', '2021-9-10', 'Secondary'),
 ('7517 Spruce Street', '3351202478', '2020-2-5', '2021-2-10', 'Primary'),
 ('3140 Spruce Avenue', '2948747446', '2022-2-7', '2022-8-21', 'Secondary'),
-('7551 Birch Boulevard', '8867956372', '2022-5-4', '2022-9-23', 'Secondary');
-
-INSERT INTO lives_in VALUES
+('7551 Birch Boulevard', '8867956372', '2022-5-4', '2022-9-23', 'Secondary'),
 ('8334 Hickory Drive', '4311620556', '2020-10-18', '2023-3-13', 'Primary'),
 ('3723 Birch Boulevard', '5682958626', '2021-7-8', '2022-10-1', 'Secondary'),
 ('8334 Hickory Drive', '1249793075', '2018-7-11', '2019-7-4', 'Secondary'),
@@ -1534,9 +1456,7 @@ INSERT INTO lives_in VALUES
 ('8520 Hickory Road', '8997315806', '2022-1-13', '2023-10-26', 'Secondary'),
 ('8520 Hickory Road', '1746473832', '2015-5-3', '2018-2-11', 'Primary'),
 ('3723 Birch Boulevard', '3292888130', '2023-6-6', '2023-8-20', 'Secondary'),
-('3723 Birch Boulevard', '2990921221', '2022-1-1', '2022-3-14', 'Primary');
-
-INSERT INTO lives_in VALUES
+('3723 Birch Boulevard', '2990921221', '2022-1-1', '2022-3-14', 'Primary'),
 ('2304 Birch Court', '1192830010', '2019-8-12', '2023-1-26', 'Secondary'),
 ('2304 Birch Court', '4941727423', '2020-5-1', '2020-7-27', 'Secondary'),
 ('2304 Birch Court', '6919005515', '2015-2-11', '2017-3-12', 'Primary'),
@@ -1639,10 +1559,7 @@ INSERT INTO lives_with VALUES
 ('9814664072', '0181050279', 'Non-Parent Dependent'),
 ('5531886753', '9870028105', 'Children'),
 ('0960221279', '1267802962', 'Children'),
-('7417936765', '4077841550', 'Roommate');
-
-
-INSERT INTO lives_with VALUES
+('7417936765', '4077841550', 'Roommate'),
 ('2197446962', '7823794112', 'Parent'),
 ('1352823733', '0776829885', 'Roommate'),
 ('8073547744', '4861230803', 'Roommate'),
@@ -1681,9 +1598,7 @@ INSERT INTO lives_with VALUES
 ('6524526199', '9902151853', 'Children'),
 ('4861230803', '2197446962', 'Roommate'),
 ('4861230803', '1352823733', 'Partner'),
-('2732540415', '0776829885', 'Partner');
-
-INSERT INTO lives_with VALUES
+('2732540415', '0776829885', 'Partner'),
 ('3022670114', '1838395198', 'Children'),
 ('7234224893', '5101091349', 'Parent'),
 ('6208351526', '7396175814', 'Parent'),
@@ -1722,9 +1637,7 @@ INSERT INTO lives_with VALUES
 ('7003484987', '4477627756', 'Parent'),
 ('2714625655', '2062687888', 'Roommate'),
 ('6017291583', '2714625655', 'Partner'),
-('4477627756', '2417122923', 'Partner');
-
-INSERT INTO lives_with VALUES
+('4477627756', '2417122923', 'Partner'),
 ('2832491020', '8713403267', 'Children'),
 ('8702480659', '1203346636', 'Parent'),
 ('5101719368', '3759006262', 'Non-Parent Dependent'),
@@ -1764,9 +1677,7 @@ INSERT INTO lives_with VALUES
 ('0950918878', '4957309614', 'Parent'),
 ('4658338475', '4326566250', 'Parent'),
 ('8713403267', '5267309871', 'Children'),
-('3026663744', '3759006262', 'Non-Parent Dependent');
-
-INSERT INTO lives_with VALUES
+('3026663744', '3759006262', 'Non-Parent Dependent'),
 ('2903513929', '2490331145', 'Parent'),
 ('0209378488', '9816483354', 'Partner'),
 ('6066832189', '9816483354', 'Children'),
@@ -1806,9 +1717,7 @@ INSERT INTO lives_with VALUES
 ('6392397178', '7275010549', 'Children'),
 ('9143488864', '6676829233', 'Children'),
 ('0634685889', '9057073701', 'Children'),
-('7537411609', '4204650741', 'Parent');
-
-INSERT INTO lives_with VALUES
+('7537411609', '4204650741', 'Parent'),
 ('8009788027', '2948747446', 'Non-Parent Dependent'),
 ('5107885382', '6108704052', 'Non-Parent Dependent'),
 ('6815328418', '0205155706', 'Roommate'),
@@ -1848,9 +1757,7 @@ INSERT INTO lives_with VALUES
 ('5844878132', '0293770067', 'Parent'),
 ('9787442416', '4825911318', 'Non-Parent Dependent'),
 ('6363602708', '7452834612', 'Roommate'),
-('6183352962', '8240463454', 'Partner');
-
-INSERT INTO lives_with VALUES
+('6183352962', '8240463454', 'Partner'),
 ('0133762294', '1989566364', 'Children'),
 ('2400176442', '0133762294', 'Non-Parent Dependent'),
 ('7768578503', '8997315806', 'Parent'),
@@ -1889,9 +1796,7 @@ INSERT INTO lives_with VALUES
 ('7509746537', '2738210664', 'Parent'),
 ('9360929592', '6337985321', 'Parent'),
 ('7906513972', '1461325900', 'Children'),
-('2476981425', '0133762294', 'Roommate');
-
-INSERT INTO lives_with VALUES
+('2476981425', '0133762294', 'Roommate'),
 ('3476350484', '8606950035', 'Roommate'),
 ('7995664300', '1260125282', 'Non-Parent Dependent'),
 ('8606950035', '0490794999', 'Partner'),
@@ -1985,7 +1890,6 @@ INSERT INTO Infection VALUES
 ('2020-3-15', 'COVID-19', 5, '2221868413'),
 ('2023-3-5', 'COVID-19', 7, '9455078721');
 
-
 INSERT INTO Vaccination VALUES
 (3, 'AstraZeneca', '2020-3-24', '7659036250', 'MediResearch 5788'),
 (8, 'Johnson & Johnson', '2023-1-25', '2283229751', 'MediResearch 5788'),
@@ -2032,7 +1936,6 @@ INSERT INTO Vaccination VALUES
 (7, 'AstraZeneca', '2020-4-5', '1122052676', 'HealthBioTech 0215'),
 (5, 'Johnson & Johnson', '2020-11-15', '0694980954', 'GenPharmaCare 8526');
 
-
 INSERT INTO Schedule VALUES
 ('2017-2-16', '2019-2-10 4:52:33', '2021-1-7 6:55:50', 'VitaLab 9413', '1267802962'),
 ('2020-9-3', '2018-2-11 17:33:2', '2019-3-8 22:26:39', 'HealthPharmaCare 3635', '1716262758'),
@@ -2064,6 +1967,3 @@ INSERT INTO Schedule VALUES
 ('2020-2-5', '2019-1-19 1:11:56', '2023-4-15 12:54:46', 'TheraPharm 7698', '5093124724'),
 ('2022-7-21', '2023-8-13 5:4:14', '2023-8-14 8:14:7', 'BioLab 8979', '2221868413'),
 ('2023-7-27', '2018-3-14 22:33:29', '2021-7-23 11:7:44', 'BioPharm 3244', '0488962295');
-
-
-
