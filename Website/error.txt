@@ -9332,3 +9332,970 @@ ORDER BY
     f.City ASC,
     f.Type ASC;
 
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 8759603459, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 1653918339, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: %, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: a%, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 1%, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 1%, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 1%, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: [0123456789]%, Value: s
+Original: Insert into Residence (Address,City,Province,Postal_code,Phone,Bedrooms,Type) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: Bedrooms_isInt, Value: 2, Value: i
+Key: Type, Value: Condominium, Value: s
+Original: select *
+from Residence
+where Residence.Address = ?;
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Original: insert into Person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Marcus, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 123, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Doctor, Value: s
+Key: PrimaryResidence, Value: 12190 Henri-Beau, Value: s
+Original: insert into Person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Marcus, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 123, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Doctor, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: insert into Employee (SIN ,ROLE) values (?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: Role, Value: Doctor, Value: s
+Original: select *
+from Employee
+where Employee.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: insert into Person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 321, Value: s
+Key: FirstName, Value: Manu, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 321, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Janitor, Value: s
+Original: insert into Person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Manu, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 321, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Janitor, Value: s
+Original: insert into Lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+/*
+Alter Table housemates
+Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));
+
+Alter Table housemates
+Add Constraint check_HSsn Check(HSsn IN (select employees.ESsn from employees where employees.ESsn = HSsn));
+
+Alter Table housemates
+Add Constraint check_HRelationship Check(Upper(HRelationship) IN ('ROOMATE', 'PARTNER', 'PARENT', 'DEPENDENT'));
+
+Alter Table housemates
+Add Constraint check_HHouseMate 
+    Check(housemates.HAddress IN 
+    (select employees.EAddress
+    From employees, housemates
+    Where housemates.HAddress = employees.EAddress 
+    and housemates.HCity = employees.ECity 
+    and housemates.HProvince = employees.EProvince 
+    and housemates.HPostalCode = employees.EPostalCode));
+    */
+
+Key: Employee, Value: 321, Value: s
+Key: Person, Value: 321, Value: s
+Key: Relationship, Value: Parent, Value: s
+Original: insert into Lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+/*
+Alter Table housemates
+Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));
+
+Alter Table housemates
+Add Constraint check_HSsn Check(HSsn IN (select employees.ESsn from employees where employees.ESsn = HSsn));
+
+Alter Table housemates
+Add Constraint check_HRelationship Check(Upper(HRelationship) IN ('ROOMATE', 'PARTNER', 'PARENT', 'DEPENDENT'));
+
+Alter Table housemates
+Add Constraint check_HHouseMate 
+    Check(housemates.HAddress IN 
+    (select employees.EAddress
+    From employees, housemates
+    Where housemates.HAddress = employees.EAddress 
+    and housemates.HCity = employees.ECity 
+    and housemates.HProvince = employees.EProvince 
+    and housemates.HPostalCode = employees.EPostalCode));
+    */
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 321, Value: s
+Key: Relationship, Value: Parent, Value: s
+Original: select *
+from Lives_with
+where Lives_with.Employee = ? AND Lives_with.Person = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 321, Value: s
+Original: insert into Works_at(Employee, Facility, Start_date, End_date) values(?,?,?,?);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: PharmaPharmaCare 4738, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Key: EndDate, Value: NULL, Value: s
+Original: insert into Works_at(Employee, Facility, Start_date, End_date) values(?,?,?,?);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: PharmaPharmaCare 4738, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Key: EndDate, Value: , Value: s
+Original: insert into Works_at(Employee, Facility, Start_date, End_date) values(?,?,?,?);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: PharmaPharmaCare 4738, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: insert into Works_at(Employee, Facility, Start_date, End_date) values(?,?,?,?);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: PharmaPharmaCare 4738, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: insert into Works_at(Employee, Facility, Start_date, End_date) values(?,?,?,NULL);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: PharmaPharmaCare 4738, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: insert into Facility(Name,Address,City,Province,Postal_code,Phone,Web_address,Type,Capacity,Managed_by) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table facilities
+Add Constraint check_FType Check (UPPER(FType) IN ('HOSPITAL', 'CLSC', 'CLINIC', 'PHARMACY', 'SPECIAL INSTALLMENT'));
+*/
+
+Key: Name, Value: abc, Value: s
+Key: Address, Value: 123abc, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: WebAddress, Value: abc.com, Value: s
+Key: Type, Value: Clinic, Value: s
+Key: Capacity_isInt, Value: 100, Value: i
+Key: Manager, Value: 123, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: select *
+from Employee
+where Employee.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: insert into Works_at(Employee, Facility, Start_date, End_date) values(?,?,?,NULL);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: abc, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: select *
+from Works_at
+where Works_at.Employee = ? AND Works_at.Facility = ? AND Works_at.Start_date = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: abc, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: Insert into Residence (Address,City,Province,Postal_code,Phone,Bedrooms,Type) values (?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table residences
+Add Constraint check_RType Check (UPPER(residences.RType) IN ('APARTMENT', 'CONDOMINIUM', 'SEMIDETACHED HOUSE', 'HOUSE'));
+*/
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: Bedrooms_isInt, Value: 2, Value: i
+Key: Type, Value: Condominium, Value: s
+Original: insert into Person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: FirstName, Value: Marcus, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 123, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Janitor, Value: s
+Original: insert into Employee (SIN ,ROLE) values (?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 123, Value: s
+Key: Role, Value: Doctor, Value: s
+Original: insert into Person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter Table employees
+Add Constraint check_EResidence 
+Check(employees.EAddress IN 
+(select residence.RAddress
+From residence, employees
+where employees.EAddress = residence.RAddress 
+and employees.ECity = residence.RCity 
+and employees.EProvince = residence.RProvince 
+and employees.EPostalCode = residence.RPostalCode));
+
+Alter Table employees
+Add Constraint check_EFacility 
+Check(employees.EFacility IN (select facilities.FName From facilities));
+
+Alter Table employees
+Add Constraint check_ERole 
+Check(UPPER(ERole) IN 
+('NURSE', 'DOCTOR', 'CASHIER', 'PHARMACIST', 'RECEPTIONIST', 'ADMINISTRIVE PERSONNEL', 'SECURITY PERSONNEL', 'REGULAR EMPLOYEE'));
+
+Alter Table employees
+Add Constraint check_FName 
+Check(employees.FName IN (Select timesheets.TFName from timesheets Where employees.FName = timesheets.TFName and employees.LName = timesheets.TLName and timesheets.TEndDate = null));
+*/
+
+Key: SIN, Value: 321, Value: s
+Key: FirstName, Value: Manu, Value: s
+Key: LastName, Value: Sharma, Value: s
+Key: DateOfBirth, Value: 2002-02-02, Value: s
+Key: MedicareCardNumber, Value: 321, Value: s
+Key: TelehoneNumber, Value: 6666666666, Value: s
+Key: Citizenship, Value: Canadian, Value: s
+Key: EmailAddress, Value: marcusmmm007@gmail.com, Value: s
+Key: Occupation, Value: Janitor, Value: s
+Original: insert into Lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+/*
+Alter Table housemates
+Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));
+
+Alter Table housemates
+Add Constraint check_HSsn Check(HSsn IN (select employees.ESsn from employees where employees.ESsn = HSsn));
+
+Alter Table housemates
+Add Constraint check_HRelationship Check(Upper(HRelationship) IN ('ROOMATE', 'PARTNER', 'PARENT', 'DEPENDENT'));
+
+Alter Table housemates
+Add Constraint check_HHouseMate 
+    Check(housemates.HAddress IN 
+    (select employees.EAddress
+    From employees, housemates
+    Where housemates.HAddress = employees.EAddress 
+    and housemates.HCity = employees.ECity 
+    and housemates.HProvince = employees.EProvince 
+    and housemates.HPostalCode = employees.EPostalCode));
+    */
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 321, Value: s
+Key: Relationship, Value: Parent, Value: s
+Original: insert into Facility(Name,Address,City,Province,Postal_code,Phone,Web_address,Type,Capacity,Managed_by) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table facilities
+Add Constraint check_FType Check (UPPER(FType) IN ('HOSPITAL', 'CLSC', 'CLINIC', 'PHARMACY', 'SPECIAL INSTALLMENT'));
+*/
+
+Key: Name, Value: abc, Value: s
+Key: Address, Value: abc 123, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: WebAddress, Value: abc.com, Value: s
+Key: Type, Value: COVID-19, Value: s
+Key: Capacity_isInt, Value: 2, Value: i
+Key: Manager, Value: 123, Value: s
+Original: insert into Facility(Name,Address,City,Province,Postal_code,Phone,Web_address,Type,Capacity,Managed_by) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+/*
+Alter table facilities
+Add Constraint check_FType Check (UPPER(FType) IN ('HOSPITAL', 'CLSC', 'CLINIC', 'PHARMACY', 'SPECIAL INSTALLMENT'));
+*/
+
+Key: Name, Value: abc, Value: s
+Key: Address, Value: abc 123, Value: s
+Key: City, Value: Montreal, Value: s
+Key: Province, Value: Quebec, Value: s
+Key: PostalCode, Value: H4K 2B5, Value: s
+Key: Phone, Value: 5146232791, Value: s
+Key: WebAddress, Value: abc.com, Value: s
+Key: Type, Value: Clinic, Value: s
+Key: Capacity_isInt, Value: 2, Value: i
+Key: Manager, Value: 123, Value: s
+Original: insert into Works_at(Employee, Facility, Start_date, End_date) values(?,?,?,NULL);
+/*
+Update timesheets
+Set TEndDate = '$StartDate'
+Where (timesheets.TFName = '$FName' or timesheets.TLName = '$LName' or timesheets.Facility <> '$Facility') and timesheets.TEndDate is Null;
+*/
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: abc, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: insert into Infection (Date, Type, Quarantine_Period, Person) values (?, ?, ?, ?);
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: Type, Value: COVID-19, Value: s
+Key: Quarantine_Period_isInt, Value: 3, Value: i
+Key: Person, Value: 321, Value: s
+Original: select *
+from Infection
+where Infection.Date = ? AND Infection.Person = ?;
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 321, Value: s
+Original: insert into Vaccination (Dose, Type, Date, Person, Taken_at) values (?, ?, ?, ?, ?);
+
+Key: Dose, Value: 3, Value: s
+Key: Type, Value: Moderna, Value: s
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 123, Value: s
+Key: TakenAt, Value: abc, Value: s
+Original: select *
+from Vaccination
+where Vaccination.Dose = ? AND Vaccination.Person = ?;
+
+Key: Dose_isInt, Value: 3, Value: i
+Key: Person, Value: 321, Value: s
+Original: select *
+from Vaccination
+where Vaccination.Dose = ? AND Vaccination.Person = ?;
+
+Key: Dose_isInt, Value: 3, Value: i
+Key: Person, Value: 123, Value: s
+Original: select *
+from Facility
+where Facility.Name = ?;
+
+Key: Name, Value: abc, Value: s
+Original: insert into Schedule (Date, Start_time, End_time, Scheduled_at, Scheduled_for) values (?, ?, ?, ?, ?);
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: StartTime, Value: 2020-02-02 11:11:11, Value: s
+Key: EndTime, Value: 2020-02-02 11:11:12, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: select *
+from Schedule
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;
+
+Key: StartTime, Value: 2020-02-02 11:11:11, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: insert into Schedule (Date, Start_time, End_time, Scheduled_at, Scheduled_for) values (?, ?, ?, ?, ?);
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: StartTime, Value: 2020-02-02 11:11:10, Value: s
+Key: EndTime, Value: 2020-02-02 11:11:13, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: insert into Schedule (Date, Start_time, End_time, Scheduled_at, Scheduled_for) values (?, ?, ?, ?, ?);
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: StartTime, Value: 2020-02-02 12:11:11, Value: s
+Key: EndTime, Value: 2020-02-02 12:11:13, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: insert into Schedule (Date, Start_time, End_time, Scheduled_at, Scheduled_for) values (?, ?, ?, ?, ?);
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: StartTime, Value: 2020-02-02 14:11:11, Value: s
+Key: EndTime, Value: 2020-02-02 14:11:13, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: insert into Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) values (?, ?, ?, ?, ?);
+
+Key: Residence, Value: abc, Value: s
+Key: Person, Value: 123, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Key: Status, Value: Primary, Value: s
+Original: insert into Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) values (?, ?, ?, ?, ?);
+
+Key: Residence, Value: abc, Value: s
+Key: Person, Value: 123, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Key: Status, Value: Primary, Value: s
+Original: insert into Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) values (?, ?, ?, ?, ?);
+
+Key: Residence, Value: abc, Value: s
+Key: Person, Value: 123, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Key: Status, Value: Primary, Value: s
+Original: insert into Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) values (?, ?, ?, NULL, ?);
+
+Key: Residence, Value: abc, Value: s
+Key: Person, Value: 123, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Key: Status, Value: Primary, Value: s
+Original: insert into Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) values (?, ?, ?, NULL, ?);
+
+Key: Residence, Value: 12190 Henri-Beau, Value: s
+Key: Person, Value: 123, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Key: Status, Value: Primary, Value: s
+Original: select *
+from Lives_in
+where Lives_in.Residence = ? AND Lives_in.Person = ?;
+
+Key: Residence, Value: 12190 Henri-Beau, Value: s
+Key: Person, Value: 123, Value: s
+Original: UPDATE Residence
+SET City = ?
+WHERE Address = ?;
+
+Key: NewValue, Value: Quebec
+Key: Address, Value: 12190 Henri-Beau
+Original: select *
+from Residence
+where Residence.Address = ?;
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Original: UPDATE Person
+SET FirstName = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: Marc
+Key: SIN, Value: 123
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: UPDATE Employee
+SET Role = ?
+WHERE SIN = ?;
+
+Key: NewValue, Value: Doctor
+Key: SIN, Value: 123
+Original: select *
+from Employee
+where Employee.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: UPDATE Lives_with
+SET Relationship = ?
+WHERE Employee = ? AND Person = ?;
+
+Key: NewValue, Value: Partner
+Key: Employee, Value: 123
+Key: Person, Value: 321
+Original: select *
+from Lives_with
+where Lives_with.Employee = ? AND Lives_with.Person = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 321, Value: s
+Original: UPDATE Works_at
+SET End_date = ?
+WHERE Employee = ? AND Facility = ? AND Start_date = ?;
+
+Key: NewValue, Value: 2024-08-1
+Key: Employee, Value: 123
+Key: Facility, Value: abc
+Key: StartDate, Value: 2002-02-02
+Original: select *
+from Works_at
+where Works_at.Employee = ? AND Works_at.Facility = ? AND Works_at.Start_date = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: abc, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: UPDATE Vaccination
+SET Type = ?
+WHERE Dose = ? AND Person = ?;
+
+Key: NewValue, Value: AstraZeneca
+Key: Dose_isInt, Value: 3
+Key: Person, Value: 123
+Original: select *
+from Vaccination
+where Vaccination.Dose = ? AND Vaccination.Person = ?;
+
+Key: Dose_isInt, Value: 3, Value: i
+Key: Person, Value: 123, Value: s
+Original: UPDATE Infection
+SET Type = ?
+WHERE Date = ? AND Person = ?;
+
+Key: NewValue, Value: Other
+Key: Date, Value: 2020-02-02
+Key: Person, Value: 321
+Original: select *
+from Infection
+where Infection.Date = ? AND Infection.Person = ?;
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 321, Value: s
+Original: UPDATE Facility
+SET City = ?
+WHERE Name = ?;
+
+Key: NewValue, Value: Quebec
+Key: Name, Value: abc
+Original: select *
+from Facility
+where Facility.Name = ?;
+
+Key: Name, Value: abc, Value: s
+Original: UPDATE Schedule
+SET End_date = ?
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;
+
+Original: UPDATE Schedule
+SET End_date = ?
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;
+
+Original: UPDATE Schedule
+SET End_time = ?
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;
+
+Key: NewValue, Value: 2020-02-02 11:11:20
+Key: StartTime, Value: 2020-02-02 11:11:11
+Key: ScheduleAt, Value: abc
+Key: ScheduleFor, Value: 123
+Original: select *
+from Schedule
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;
+
+Key: StartTime, Value: 2020-02-02 11:11:11, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: UPDATE Lives_in
+SET Type = ?
+where Residence = ? AND Person = ?;
+
+Original: UPDATE Lives_in
+SET Type = ?
+where Residence = ? AND Person = ?;
+
+Original: UPDATE Lives_in
+SET Status = ?
+where Residence = ? AND Person = ?;
+
+Key: NewValue, Value: Secondary
+Key: Residence, Value: 12190 Henri-Beau
+Key: Person, Value: 123
+Original: select *
+from Lives_in
+where Lives_in.Residence = ? AND Lives_in.Person = ?;
+
+Key: Residence, Value: 12190 Henri-Beau, Value: s
+Key: Person, Value: 123, Value: s
+Original: DELETE FROM Lives_in
+where Residence = ? AND Person = ?;
+
+Key: Residence, Value: abc, Value: s
+Key: Person, Value: 123, Value: s
+Original: DELETE FROM Lives_in
+where Residence = ? AND Person = ?;
+
+Key: Residence, Value: 12190 Henri-Beau, Value: s
+Key: Person, Value: 123, Value: s
+Original: select *
+from Lives_in
+where Lives_in.Residence = ? AND Lives_in.Person = ?;
+
+Key: Residence, Value: 12190 Henri-Beau, Value: s
+Key: Person, Value: 123, Value: s
+Original: DELETE FROM Schedule
+WHERE Start_time = ? AND Scheduled_at = ? AND Scheduled_for = ?;
+
+Key: StartTime, Value: 2020-02-02 11:11:11, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: select *
+from Schedule
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;
+
+Key: StartTime, Value: 2020-02-02 11:11:11, Value: s
+Key: ScheduleAt, Value: abc, Value: s
+Key: ScheduleFor, Value: 123, Value: s
+Original: DELETE FROM Infection
+WHERE Date = ? AND Person = ?;
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 123, Value: s
+Original: DELETE FROM Infection
+WHERE Date = ? AND Person = ?;
+
+Key: Date, Value: 2023-8-23, Value: s
+Key: Person, Value: 123, Value: s
+Original: DELETE FROM Infection
+WHERE Date = ? AND Person = ?;
+
+Key: Date, Value: 2022-7-21, Value: s
+Key: Person, Value: 123, Value: s
+Original: DELETE FROM Infection
+WHERE Date = ? AND Person = ?;
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 321, Value: s
+Original: select *
+from Infection
+where Infection.Date = ? AND Infection.Person = ?;
+
+Key: Date, Value: 2020-02-02, Value: s
+Key: Person, Value: 321, Value: s
+Original: DELETE FROM Vaccination
+WHERE Dose = ? AND Person = ?;
+
+Key: Dose_isInt, Value: 3, Value: i
+Key: Person, Value: 123, Value: s
+Original: select *
+from Vaccination
+where Vaccination.Dose = ? AND Vaccination.Person = ?;
+
+Key: Dose_isInt, Value: 3, Value: i
+Key: Person, Value: 123, Value: s
+Original: DELETE FROM Works_at
+WHERE Employee = ? AND Facility = ? AND Start_date = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: abc, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: select *
+from Works_at
+where Works_at.Employee = ? AND Works_at.Facility = ? AND Works_at.Start_date = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Facility, Value: abc, Value: s
+Key: StartDate, Value: 2002-02-02, Value: s
+Original: DELETE FROM Lives_with
+WHERE Employee = ? AND Person = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 321, Value: s
+Original: select *
+from Lives_with
+where Lives_with.Employee = ? AND Lives_with.Person = ?;
+
+Key: Employee, Value: 123, Value: s
+Key: Person, Value: 321, Value: s
+Original: DELETE FROM Employee
+WHERE SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: select *
+from Employee
+where Employee.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: select *
+from Facility
+where Facility.Name = ?;
+
+Key: Name, Value: abc, Value: s
+Original: select *
+from Facility
+where Facility.Name = ?;
+
+Key: Name, Value: abc, Value: s
+Original: select *
+from Facility
+where Facility.Name = ?;
+
+Key: Name, Value: abc, Value: s
+Original: DELETE FROM Facility
+WHERE Name = ?;
+
+Key: Name, Value: abc, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: DELETE FROM Person
+WHERE SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: select *
+from Person
+where Person.SIN = ?;
+
+Key: SIN, Value: 123, Value: s
+Original: select *
+from Residence
+where Residence.Address = ?;
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Original: DELETE FROM Residence
+WHERE address = ?;
+
+Key: Address, Value: 12190 Henri-Beau, Value: s
+Original: select *
+from Residence
+where Residence.Address = ?;
+
+Key: Address, Value: 12190 Henri-Beau, Value: s

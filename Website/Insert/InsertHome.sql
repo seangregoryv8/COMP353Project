@@ -1,1 +1,1 @@
-insert into Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) values (?, ?, ?, ?, ?);
+insert into Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) values (?, ?, ?, NULL, ?);

@@ -1,1 +1,1 @@
-insert into schedule (Date, Start_time, End_time, Scheduled_at, Scheduled_for) values (?, ?, ?, ?, ?);
+insert into Schedule (Date, Start_time, End_time, Scheduled_at, Scheduled_for) values (?, ?, ?, ?, ?);

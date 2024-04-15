@@ -718,6 +718,7 @@
 				addLabelAndTextBox(form, "PostalCode", "Enter text");
 				addLabelAndTextBox(form, "Phone", "Enter text");
 				addLabelAndTextBox(form, "WebAddress", "Enter text");
+				addLabelAndTextBox(form, "Type", "Enter text");
 				addLabelAndNumberBox(form, "Capacity", "Enter number");
 				addLabelAndTextBox(form, "Manager", "Enter text");
 				// You can add more input fields here as needed for each SQL file
@@ -755,7 +756,6 @@
 				addLabelAndTextBox(form, "Citizenship", "Enter text");
 				addLabelAndTextBox(form, "EmailAddress", "Enter text");
 				addLabelAndTextBox(form, "Occupation", "Enter text");
-				addLabelAndTextBox(form, "PrimaryResidence", "Enter text");
 
 				// You can add more input fields here as needed for each SQL file
 
@@ -793,7 +793,6 @@
 				addLabelAndTextBox(form, "Employee", "Enter text");
 				addLabelAndTextBox(form, "Facility", "Enter text");
 				addLabelAndTextBox(form, "StartDate", "yyyy-mm-dd");
-				addLabelAndTextBox(form, "EndDate", "yyyy-mm-dd or null if working there");
 
 				// You can add more input fields here as needed for each SQL file
 
@@ -831,40 +830,12 @@
 
 				return form;
 				
-				}else if (sqlFile == 'InsertVaccination.sql') {
-				// Add labels and text boxes to the form
-				addLabelAndTextBox(form, "Dose", "Enter number");
-				addLabelAndTextBox(form, "Type", "Enter text");
-				addLabelAndTextBox(form, "Date", "yyyy-mm-dd");
-				addLabelAndTextBox(form, "Person", "Enter text");
-				addLabelAndTextBox(form, "TakenAt", "Enter text");
-
-				// You can add more input fields here as needed for each SQL file
-
-				// Append the form to the body
-				place.appendChild(form);
-
-				return form;
-				
-				} else if (sqlFile == 'InsertInfection.sql') {
-				// Add labels and text boxes to the form
-				addLabelAndTextBox(form, "Date", "yyyy-mm-dd");
-				addLabelAndTextBox(form, "Type", "Enter text");
-				addLabelAndNumberBox(form, "Quarantine_Period", "Enter number");
-				addLabelAndTextBox(form, "Person", "Enter text");
-
-				// You can add more input fields here as needed for each SQL file
-
-				// Append the form to the body
-				place.appendChild(form);
-
-				return form;
-				
 				}else if (sqlFile == 'InsertHome.sql') {
 				// Add labels and text boxes to the form
 				addLabelAndTextBox(form, "Residence", "Enter text");
 				addLabelAndTextBox(form, "Person", "Enter text");
 				addLabelAndTextBox(form, "StartDate", "yyyy-mm-dd");
+				addLabelAndTextBox(form, "Status", "Primary Or Secondary");
 
 				// You can add more input fields here as needed for each SQL file
 
