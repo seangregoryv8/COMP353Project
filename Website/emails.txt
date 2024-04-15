@@ -1,0 +1,48 @@
+EmailID
+Date
+Subject
+Body
+Sender
+Receiver
+1
+2024-04-15
+Notification of Schedule Cancellation
+Due to a recent infection, your schedule at our facility have been cancelled for the next two weeks.
+BioPharm 3244
+2257797469
+2
+2024-04-15
+Notification of Schedule Cancellation
+Due to a recent infection, your schedule at our facility have been cancelled for the next two weeks.
+CureSolutions 5050
+4420868235
+3
+2024-04-15
+Notification of Schedule Cancellation
+Due to a recent infection, your schedule at our facility have been cancelled for the next two weeks.
+GenPharmaCare 8526
+7365026668
+4
+2024-04-15
+Notification of Schedule Cancellation
+Due to a recent infection, your schedule at our facility have been cancelled for the next two weeks.
+MediHealthcare 1035
+7365026668
+5
+2024-04-15
+Notification of Schedule Cancellation
+Due to a recent infection, your schedule at our facility have been cancelled for the next two weeks.
+VitaLab 9413
+7365026668
+6
+2024-04-15
+Your Scheduled Time This Week
+2024-04-20:2024-04-01 12:33:29
+HealthBioTech 0215
+7793249250
+7
+2024-04-15
+Your Scheduled Time This Week
+2024-04-20:2024-04-05 12:33:29
+HealthBioTech 0215
+7793249250

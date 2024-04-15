@@ -138,13 +138,63 @@ if (isset($file)) {
 			// An error occurred during execution, retrieve and echo the error message
 			$data[0][0] = "Insert failed: " . $stmt->error;
 		}
-
 		// Close the statement
 		$stmt->close();
-
+		
 		// Close the connection
 		$conn->close();
+		
+		if($file == "InsertInfection.sql")
+		{	
+			$stmt = $conn->prepare("Select * From EmailLog;");
+			$data1 = [];
+				
+			try {
+				// Execute the statement
+				$stmt->execute();
+				
+				// Get the result set
+				$result = $stmt->get_result();
 
+				// Check if rows were returned
+				if ($result->num_rows > 0) {
+					// Fetch column names
+					$columns = [];
+					while ($column = $result->fetch_field()) {
+						$columns[] = $column->name;
+					}
+					$data1[] = $columns;
+					// Fetch the results
+					while ($row = $result->fetch_assoc()) {
+								$data1[] = $row;
+					}
+				} else {
+					// Insert failed, but no error was thrown
+					$data1[0][0] = "The Selected Item Does Not exist.";
+				}
+			} catch (Exception $e) {
+				// An error occurred during execution, retrieve and echo the error message
+				$data1[0][0] = "Insert failed: " . $stmt->error;
+			}
+			// File path
+			$filePath = "emails.txt";
+
+			// Open the file in write mode (create if not exists)
+			$file = fopen($filePath, "w");
+
+			// Loop through each row of the 2D array
+			foreach ($data1 as $row) {
+				// Loop through each element of the row
+				foreach ($row as $element) {
+					// Write the element to the file followed by a newline
+					fwrite($file, $element . PHP_EOL);
+				}
+			}
+			
+			// Close the statement
+			$stmt->close();
+		}
+		
 		// Return the data as JSON
 		header('Content-Type: application/json');
 		echo json_encode($data);
