@@ -535,8 +535,13 @@
 			<!-- Button to execute the chosen SQL file -->
 			<button type="button" onclick="submitChosenForm()">Run</button>
 			<button type="button" onclick="DisplayInfo()">Info</button>
+			<br></br>
 			<form action="reset.php" id = "reset">
 				<button type="submit">Reset Database</button>
+			</form>
+			<br></br>
+			<form action="sendSundayEmail.php" id = "sunday">
+				<button type="submit">Send Sunday Email</button>
 			</form>
         </div>
 		<button type="button" id = "buttonSwitch" onclick="switchButtons()">&#9668;</button>
@@ -676,7 +681,7 @@
 			var forms = document.querySelectorAll('form');
 			var place = document.getElementById('inputs');
 			forms.forEach(function (form) {
-				if(form.id != 'reset')
+				if(form.id != 'reset' && form.id != 'sunday')
 				{
 					console.log("Removing active class from form:", form);
 					form.remove();
@@ -1490,7 +1495,7 @@
 			}
 			var forms = document.querySelectorAll('form');
 			forms.forEach(function (form) {
-				if(form.id != 'reset')
+				if(form.id != 'reset' && form.id != 'sunday')
 				{
 					console.log("Removing active class from form:", form);
 					form.remove();
