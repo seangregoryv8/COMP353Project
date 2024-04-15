@@ -1848,21 +1848,7 @@ INSERT INTO Infection (Date, Type, Quarantine_Period, Person) VALUES
 ('2022-5-15', 'SARS-Cov-2 Variant', 13, '0205970077'),
 ('2020-5-1', 'SARS-Cov-2 Variant', 11, '5856504126'),
 ('2020-3-15', 'COVID-19', 5, '2221868413'),
-('2023-3-5', 'COVID-19', 7, '9455078721'),
-(CurDate(), 'SARS-Cov-2 Variant', 10, '5531886753'),
-(CurDate(), 'Other', 2, '9870028105'),
-(CurDate(), 'SARS-Cov-2 Variant', 8, '3017793058'),
-(CurDate(), 'Other', 4, '0370854396'),
-(CurDate(), 'SARS-Cov-2 Variant', 2, '4826635732'),
-(CurDate(), 'COVID-19', 13, '1846896272'),
-(CurDate(), 'Other', 9, '4420868235'),
-(CurDate(), 'Other', 2, '0960221279'),
-(CurDate(), 'SARS-Cov-2 Variant', 1, '4736680095'),
-(CurDate(), 'COVID-19', 9, '1396587158'),
-(CurDate(), 'SARS-Cov-2 Variant', 13, '0205970077'),
-(CurDate(), 'SARS-Cov-2 Variant', 11, '5856504126'),
-(CurDate(), 'COVID-19', 5, '2221868413'),
-(CurDate(), 'COVID-19', 7, '9455078721');
+('2023-3-5', 'COVID-19', 7, '9455078721');
 
 INSERT INTO Vaccination (Dose, Type, Date, Person, Taken_at) VALUES
 (3, 'AstraZeneca', '2020-3-24', '7659036250', 'MediResearch 5788'),

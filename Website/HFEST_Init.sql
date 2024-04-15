@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS EmailLog;
 DROP TABLE IF EXISTS Schedule;
 DROP TABLE IF EXISTS Vaccination;
 DROP TABLE IF EXISTS Infection;
-DROP TABLE IF EXISTS works_at;
+DROP TABLE IF EXISTS Works_at;
 DROP TABLE IF EXISTS lives_in;
 DROP TABLE IF EXISTS lives_with;
 DROP TABLE IF EXISTS Facility;
@@ -79,7 +79,7 @@ CREATE TABLE Works_at
     PRIMARY KEY (Employee, Facility, Start_date) 
 );
 
-CREATE TABLE lives_in
+CREATE TABLE Lives_in
 (
     Residence VARCHAR(255),
     Person VARCHAR(255),
@@ -91,7 +91,7 @@ CREATE TABLE lives_in
     PRIMARY KEY (Residence, Person)
 );
 
-CREATE TABLE lives_with
+CREATE TABLE Lives_with
 (
     Employee VARCHAR(255),
     Person VARCHAR(255),

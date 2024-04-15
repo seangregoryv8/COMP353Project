@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using static COMP353ProjectTableGeneration.Employee;
+using static COMP353ProjectTableGeneration.Facility;
 
 namespace COMP353ProjectTableGeneration
 {
@@ -143,7 +146,8 @@ namespace COMP353ProjectTableGeneration
             Create.PrintAll(true);
             StringBuilder mainBuilder = new StringBuilder();
 
-            Residence[] residences = Residences(5, ref mainBuilder);
+
+            Residence[] residences = Residences(30, ref mainBuilder);
             Person[] people = People(           40, ref mainBuilder);
             Employee[] employees = Employees(   35, ref mainBuilder, people);
             Facility[] facilities = Facilities( 25, ref mainBuilder, employees);
@@ -160,6 +164,7 @@ namespace COMP353ProjectTableGeneration
 
             if (!Directory.Exists(appPath)) Directory.CreateDirectory(appPath);
 
+            //EmergencyWorks(appPath, mainBuilder);
             mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Residence.txt"));
             mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Person.txt"));
             mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Employee.txt"));
@@ -172,6 +177,64 @@ namespace COMP353ProjectTableGeneration
             mainBuilder.Append(File.ReadAllText(appPath + "\\Insert\\Schedule.txt"));
 
             Export(mainBuilder, ref mainBuilder, "All", ".sql");
+        }
+        public static void EmergencyWorks(string appPath, StringBuilder mainBuilder)
+        {
+            List<List<string>> person = GetList(File.ReadAllText(appPath + "\\Insert\\Person.txt"));
+            List<List<string>> employee = GetList(File.ReadAllText(appPath + "\\Insert\\Employee.txt"));
+            List<List<string>> facility = GetList(File.ReadAllText(appPath + "\\Insert\\Facility.txt"));
+            List<List<string>> works = GetList(File.ReadAllText(appPath + "\\Insert\\Works_at.txt"));
+
+            List<Person> people = new List<Person>();
+            List<Employee> employees = new List<Employee>();
+            List<Facility> facilities = new List<Facility>();
+
+            foreach (List<string> i in person)
+                people.Add(new Person(i[0]));
+            foreach (List<string> i in employee)
+            {
+                switch (i[1])
+                {
+                    case "Administrative Personnel":
+                        i[1] = "Administrative";
+                        break;
+                    case "Security Personnel":
+                        i[1] = "Security";
+                        break;
+                    case "Regular Employee":
+                        i[1] = "Regular";
+                        break;
+                }
+                TypesOfEmployee type = (TypesOfEmployee)Enum.Parse(typeof(TypesOfEmployee), i[1], true);
+                employees.Add(new Employee(Person.Find(i[0], people.ToArray()), type));
+            }
+            foreach (List<string> i in facility)
+            {
+                // i.Count() - 1 = Employee
+                // i.Count() - 3 = Type
+                if (i[i.Count() - 3] == "Special Instalment") i[i.Count() - 3] = "Special";
+                TypesOfFacilities type = (TypesOfFacilities)Enum.Parse(typeof(TypesOfFacilities), i[i.Count() - 3], true);
+                facilities.Add(new Facility(i[0], type, Employee.Find(i[i.Count() - 1], employees.ToArray())));
+            }
+
+            int am = Convert.ToInt32(employees.Count() * .75);
+
+            WorksAt[] worksEm = Works(am, ref mainBuilder, employees.ToArray(), facilities.ToArray());
+        }
+        public static List<List<string>> GetList(string text)
+        {
+            text = text.Substring(text.IndexOf('('), text.Length - text.IndexOf('('));
+            string[] people = text.Split("),");
+            List<List<string>> attributes = new List<List<string>>();
+            foreach (string p in people)
+            {
+                string newstr = p.Replace("\r", "").Replace("\n", "").Replace("(", "").Replace(")", "").Replace(";", "");
+                List<string> att = newstr.Replace("'", "").Split(",").ToList();
+                for (int i = 0; i < att.Count(); i++)
+                    att[i] = att[i].Trim();
+                attributes.Add(att);
+            }
+            return attributes;
         }
         public static void Export(StringBuilder builder, ref StringBuilder mainBuilder, string name, string extension = ".txt")
         {

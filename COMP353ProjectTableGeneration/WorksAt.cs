@@ -16,7 +16,7 @@ namespace COMP353ProjectTableGeneration
         {
             WorksAt[] works = new WorksAt[amount + facilities.Length];
 
-            for (int i = 0; i < works.Length; i++)
+            for (int i = 0; i < amount; i++)
             {
                 Employee employee = employees[Functions.RandomNumber(0, employees.Length - 1)];
                 Facility facility = facilities[Functions.RandomNumber(0, facilities.Length - 1)];
@@ -46,7 +46,7 @@ namespace COMP353ProjectTableGeneration
             for (int i = 0; i < facilities.Length; i++)
             {
                 Employee employee = Array.Find(employees, residence => residence.Equals(facilities[i].Managed_By));
-                works[i] = new WorksAt(employee, facilities[i], Format(Functions.RandomYear(2015), Functions.RandomMonth(), Functions.RandomDay()), "NULL");
+                works[amount + i - 1] = new WorksAt(employee, facilities[i], Format(Functions.RandomYear(2015), Functions.RandomMonth(), Functions.RandomDay()), "NULL");
             }
 
             List<WorksAt> WorksAt1 = works.OfType<WorksAt>().ToList();

@@ -14,3 +14,20 @@ C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGener
 C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.csproj.AssemblyReference.cache
 C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\chief\OneDrive\Documents\GitHub\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.csproj.CopyComplete
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.exe
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.deps.json
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.runtimeconfig.json
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.runtimeconfig.dev.json
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.dll
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.pdb
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.csproj.AssemblyReference.cache
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.AssemblyInfoInputs.cache
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.AssemblyInfo.cs
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.csproj.CoreCompileInputs.cache
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.dll
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.pdb
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.genruntimeconfig.cache
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353ProjectTableGeneration.sourcelink.json
+C:\Users\marcu\OneDrive\Desktop\School\COMP 353\Project\COMP353Project\COMP353ProjectTableGeneration\obj\Debug\netcoreapp3.1\COMP353P.F3DEF65F.Up2Date

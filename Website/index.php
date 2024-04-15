@@ -535,6 +535,9 @@
 			<!-- Button to execute the chosen SQL file -->
 			<button type="button" onclick="submitChosenForm()">Run</button>
 			<button type="button" onclick="DisplayInfo()">Info</button>
+			<form action="reset.php" id = "reset">
+				<button type="submit">Reset Database</button>
+			</form>
         </div>
 		<button type="button" id = "buttonSwitch" onclick="switchButtons()">&#9668;</button>
 		<div id="InfoElm">
@@ -651,6 +654,9 @@
             <h2>Table</h2>
             <div id="table"></div>
         </div>
+		<form action="reset.php">
+			<button type="submit">Reset Database</button>
+		</form>
     </div>
 	
 	
@@ -670,8 +676,11 @@
 			var forms = document.querySelectorAll('form');
 			var place = document.getElementById('inputs');
 			forms.forEach(function (form) {
-				console.log("Removing active class from form:", form);
-				form.remove();
+				if(form.id != 'reset')
+				{
+					console.log("Removing active class from form:", form);
+					form.remove();
+				}
 			});
 			
 			if(type == "Insert"){
@@ -1497,8 +1506,11 @@
 			}
 			var forms = document.querySelectorAll('form');
 			forms.forEach(function (form) {
-				console.log("Removing active class from form:", form);
-				form.remove();
+				if(form.id != 'reset')
+				{
+					console.log("Removing active class from form:", form);
+					form.remove();
+				}
 			});
 		}
 		function switchButtons(){
@@ -1527,13 +1539,14 @@
 		}
 	</script>
 	<?php
+	/*
 		$initRelations = file_get_contents('HFEST_Init.sql');
 		$initInserts = file_get_contents('Insert/InsertValues.sql');
 		// Execute the SQL query (Note: This is a simple example and may need proper error handling and security measures)
-		$servername = "localhost:3306";
-		$username = "root";
-		$password = "pass123";
-		$dbname = "HFESTS";
+		$servername = "vkc353.encs.concordia.ca:3306";
+		$username = "vkc353_4";
+		$password = "44JS14DE2";
+		$dbname = "vkc353_4";
 
 		$conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -1566,6 +1579,7 @@
 		
 		// Close connection
 		$conn->close();
+		*/
 	?>
 </body>
 </html>

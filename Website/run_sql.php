@@ -4,10 +4,10 @@ $file = $_POST["sqlFile"];
 // Ensure a file is uploaded
 if (isset($file)) {
     // Execute the SQL query (Note: This is a simple example and may need proper error handling and security measures)
-    $servername = "localhost:3306";
-	$username = "root";
-	$password = "pass123";
-	$dbname = "hfests";
+    $servername = "vkc353.encs.concordia.ca:3306";
+	$username = "vkc353_4";
+	$password = "44JS14DE2";
+	$dbname = "vkc353_4";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 

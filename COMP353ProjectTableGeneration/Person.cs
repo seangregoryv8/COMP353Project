@@ -52,6 +52,18 @@ namespace COMP353ProjectTableGeneration
             EmailAddress = (f + l).ToLower() + Functions.RandomDigits(2) + "@gmail.com";
             Occupation = occupation;
         }
+        public static Person Find(string SIN, Person[] people)
+        {
+            foreach (Person p in people)
+            {
+                if (p.SIN == SIN) return p;
+            }
+            return people[0];
+        }
+        public Person(string sin)
+        {
+            SIN = sin;
+        }
         public string FormatDate(DateTime date) => date.Year + "-" + date.Month + "-" + date.Day;
         public override string ToString()
         {

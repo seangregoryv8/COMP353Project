@@ -44,6 +44,14 @@ namespace COMP353ProjectTableGeneration
             SIN = sin;
             Role = role;
         }
+        public static Employee Find(string SIN, Employee[] employees)
+        {
+            foreach (Employee e in employees)
+            {
+                if (e.SIN.SIN == SIN) return e;
+            }
+            return employees[0];
+        }
 
         public override string ToString()
         {

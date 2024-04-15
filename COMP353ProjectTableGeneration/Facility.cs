@@ -60,6 +60,12 @@ namespace COMP353ProjectTableGeneration
             Capacity = cap;
             Managed_By = man;
         }
+        public Facility(string n, TypesOfFacilities t, Employee man)
+        {
+            Name = n;
+            Type = t;
+            Managed_By = man;
+        }
 
         public override string ToString()
         {
