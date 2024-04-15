@@ -362,7 +362,7 @@ END;
 # Ensure Person has one primary residence at a time
 # ------------------------------------------------------------------------------------
  
-CREATE TRIGGER Ensure_Single_Primary BEFORE INSERT ON lives_in
+CREATE TRIGGER Ensure_Single_Primary BEFORE INSERT ON Lives_in
 FOR EACH ROW
 BEGIN
     -- Check if the new residence entry is set to 'Primary'
@@ -374,7 +374,7 @@ BEGIN
         -- Check for any other primary residences that overlap in date
         IF EXISTS (
             SELECT 1
-            FROM lives_in
+            FROM Lives_in
             WHERE Person = NEW.Person
             AND Status = 'Primary'
             AND Residence <> NEW.Residence
@@ -386,7 +386,7 @@ BEGIN
 END;
  
  
-CREATE TRIGGER Ensure_Single_Primary_Update BEFORE UPDATE ON lives_in
+CREATE TRIGGER Ensure_Single_Primary_Update BEFORE UPDATE ON Lives_in
 FOR EACH ROW
 BEGIN
     -- Check if the updated residence entry is set to 'Primary'
@@ -396,7 +396,7 @@ BEGIN
         END IF;
         IF EXISTS (
             SELECT 1
-            FROM lives_in
+            FROM Lives_in
             WHERE Person = NEW.Person
             AND Status = 'Primary'
             AND Residence <> NEW.Residence
