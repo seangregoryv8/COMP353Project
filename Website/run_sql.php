@@ -7,7 +7,7 @@ if (isset($file)) {
     $servername = "localhost:3306";
 	$username = "root";
 	$password = "pass123";
-	$dbname = "hfest";
+	$dbname = "hfests";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 

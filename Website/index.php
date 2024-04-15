@@ -23,6 +23,17 @@
             flex: 2;
             margin-right: 20px;
         }
+		
+		#InfoElm {
+            flex: 10;
+            background-color: #fff;
+            padding: 20px;
+            border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
         #table-container {
             flex: 10;
@@ -89,6 +100,12 @@
             width: 100%;
 			height: 100%
             border-collapse: collapse;
+        }
+		.query-description {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 		.table-selects {
             border-collapse: collapse; /* Collapse borders into a single border */
@@ -517,8 +534,119 @@
 			<div id="inputs"></div>
 			<!-- Button to execute the chosen SQL file -->
 			<button type="button" onclick="submitChosenForm()">Run</button>
+			<button type="button" onclick="DisplayInfo()">Info</button>
         </div>
 		<button type="button" id = "buttonSwitch" onclick="switchButtons()">&#9668;</button>
+		<div id="InfoElm">
+			<!-- Query 8 -->
+			<div class="query-description">
+				<h3>Query 8</h3>
+				<p>Get details of all the facilities recorded in the system. Details include facility name,
+				address, city, province, postal-code, phone number, web address, type, capacity, name
+				of the general manager, number of employees currently working at the facility, number
+				of doctors currently working in the facility, and number of nurses currently working in
+				the facility. Results should be displayed sorted in ascending order by province, then by
+				city, then by type, then by number of doctors currently working for the facility.</p>
+			</div>
+
+			<!-- Query 9 -->
+			<div class="query-description">
+				<h3>Query 9</h3>
+				<p>Get details of all the employees currently working in a specific facility who have at
+				least one secondary residence. Details include employee’s first-name, last-name, start
+				date of work, date of birth, Medicare card number, telephone-number, primary address,
+				city, province, postal-code, citizenship, email address, and the number of secondary
+				residences. Results should be displayed sorted in descending order by start date, then
+				by first name, then by last name.</p>
+			</div>
+
+			<!-- Query 10 -->
+			<div class="query-description">
+				<h3>Query 10</h3>
+				<p>For a given employee, get the details of all the schedules she/he has been scheduled
+				during a specific period of time. Details include facility name, day of the year, start
+				time and end time. Results should be displayed sorted in ascending order by facility
+				name, then by day of the year, then by start time.</p>
+			</div>
+
+			<!-- Query 11 -->
+			<div class="query-description">
+				<h3>Query 11</h3>
+				<p>For a given employee, get the details of all the people who live with the employee at
+				the primary address and at all the secondary addresses. For every address the employee
+				has, you need to provide the residence type for that address, and for every person who
+				lives at that address, you need to provide the person’s first name, last name, occupation
+				of the person, and the relationship with the employee.</p>
+			</div>
+
+			<!-- Query 12 -->
+			<div class="query-description">
+				<h3>Query 12</h3>
+				<p>Get details of all the doctors who have been infected by COVID-19 in the past two
+				weeks. Details include doctor’s first-name, last-name, date of infection, the name of
+				the facility that the doctor is currently working for, and the number of secondary
+				residences the doctor has. Results should be displayed sorted in ascending order by the
+				facility name, then by the number of secondary residences the doctor has.</p>
+			</div>
+
+			<!-- Query 13 -->
+			<div class="query-description">
+				<h3>Query 13</h3>
+				<p>For a given facility, list the emails generated for the cancellation of assignments during
+				a specific period of time. The results should be displayed in descending order by the
+				date of the emails.</p>
+			</div>
+
+			<!-- Query 14 -->
+			<div class="query-description">
+				<h3>Query 14</h3>
+				<p>For a given facility, generate a list of all the employees who have at least three
+				secondary residences and who have been on schedule to work in the last four weeks.
+				The list should include first-name, last-name, role, number of secondary residences.
+				Results should be displayed in ascending order by role, then by the number of
+				secondary residences.</p>
+			</div>
+
+			<!-- Query 15 -->
+			<div class="query-description">
+				<h3>Query 15</h3>
+				<p>Get details of nurses who are currently working at two or more different facilities and
+				have been infected by COVID-19 in the last two weeks. Details include first-name,
+				last-name, first day of work as a nurse, date of birth, email address, total number of
+				times the nurse got infected by COVID-19, total number of vaccines the nurse had,
+				total number of hours scheduled, and total number of secondary residences. Results
+				should be displayed sorted in ascending order by first day of work, then by first name,
+				then by last name.</p>
+			</div>
+
+			<!-- Query 16 -->
+			<div class="query-description">
+				<h3>Query 16</h3>
+				<p>Provide a report of all the employees working in all the facilities by role. Report should
+				include for every role of the employees, the total number of employees currently
+				working in the facilities, and the total number of employees currently infected by
+				COVID-19. Report should be displayed in ascending order by role.</p>
+			</div>
+
+			<!-- Query 17 -->
+			<div class="query-description">
+				<h3>Query 17</h3>
+				<p>Provide a report of all the employees working in all the facilities by role. Report should
+				include for every role of the employees, the total number of employees currently
+				working in the facilities, and the total number of employees who have never been
+				infected by COVID-19. Report should be displayed in ascending order by role.</p>
+			</div>
+
+			<!-- Query 18 -->
+			<div class="query-description">
+				<h3>Query 18</h3>
+				<p>For all provinces, give the total number of facilities, the total number of employees
+				currently working in the facilities, the total number of employees currently working
+				and infected by COVID-19, the maximum capacity of the facilities, and the total hours
+				scheduled in all facilities during a specific period. Results should be displayed in
+				ascending order by province.</p>
+			</div>
+		</div>
         <div id="table-container">
             <h2>Table</h2>
             <div id="table"></div>
@@ -533,6 +661,8 @@
 		showOptions('displayoptions');
 		showOptions('deleteoptions');
 		showOptions('editoptions');
+		var x = document.getElementById("InfoElm");		  
+		x.style.display = "none";
 		
 		function showForm(sqlFile, type) 
 		{
@@ -769,10 +899,24 @@
 				inputFileName.setAttribute("value", sqlFile);
 				form.appendChild(inputFileName);
 				
+				if (sqlFile == 'ViewQuery9.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "Facility", "Enter text");
+				
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+				
+				return form;
+				
+				}
+				
 				if (sqlFile == 'ViewQuery10.sql') {
 				// Add labels and text boxes to the form
 				addLabelAndTextBox(form, "After", "yyyy-mm-dd hh:mm:ss");
 				addLabelAndTextBox(form, "Before", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "EmployeeSIN", "Enter text");
 				// You can add more input fields here as needed for each SQL file
 
 				// Append the form to the body
@@ -782,7 +926,19 @@
 				
 				}else if (sqlFile == 'ViewQuery11.sql') {
 				// Add labels and text boxes to the form
-				addLabelAndNumberBox(form, "EmployeeSIN", "EnterNumber");
+				addLabelAndTextBox(form, "EmployeeSIN", "Enter text");
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+				
+				return form;
+				
+				}
+				if (sqlFile == 'ViewQuery18.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "After", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "Before", "yyyy-mm-dd hh:mm:ss");
 				// You can add more input fields here as needed for each SQL file
 
 				// Append the form to the body
@@ -1358,6 +1514,17 @@
 				buttonSwitch.innerHTML = '&#9668;'
 			}
 		}
+		function DisplayInfo() {
+		  var x = document.getElementById("InfoElm");
+		  var y = document.getElementById("table-container");
+		  if (x.style.display === "none") {
+			x.style.display = "block";
+			y.style.display = "none";
+		  } else {
+			x.style.display = "none";
+			y.style.display = "block";
+		  }
+		}
 	</script>
 	<?php
 		$initRelations = file_get_contents('HFEST_Init.sql');
@@ -1388,7 +1555,6 @@
 		if ($conn->multi_query($initInserts)) {
 			// Loop through the result sets to free them
 			do {
-				echo "HELLO WORLD";
 				if ($result = $conn->store_result()) {
 					$result->free();
 				}

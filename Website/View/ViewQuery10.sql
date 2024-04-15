@@ -1,7 +1,7 @@
 -- Query 10
 SELECT *
 FROM Schedule
-Where Schedule.start_time > ? AND Schedule.end_time < ?
+Where Schedule.start_time > ? AND Schedule.end_time < ? AND Schedule.Scheduled_for = ?
 GROUP BY
 	Schedule.Scheduled_at,
 	Schedule.Scheduled_for,
