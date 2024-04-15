@@ -9,8 +9,9 @@ Join
 (Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
 From Employee,Person,Schedule
 Where Employee.SIN = Schedule.Scheduled_for
-AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+AND Schedule.Date > DATE_SUB(CURDATE(), INTERVAL 28 DAY)
 AND Schedule.Date <= DATE_SUB(CURDATE(), INTERVAL 0 DAY)
+AND Schedule.Scheduled_at = ?
 AND Employee.SIN = Person.SIN
 ) AS Info
 On 
