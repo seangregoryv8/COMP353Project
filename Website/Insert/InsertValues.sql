@@ -1860,7 +1860,9 @@ INSERT INTO Infection (Date, Type, Quarantine_Period, Person) VALUES
 ('2024-04-01', 'COVID-19', 9, '1716262758'),
 ('2024-04-02', 'SARS-Cov-2 Variant', 13, '2257797469'),
 ('2024-04-03', 'SARS-Cov-2 Variant', 4, '1846896272'),
-('2024-04-04', 'Other', 10, '5856504126');
+('2024-04-04', 'Other', 10, '4420868235'),
+('2024-04-14', 'Other', 10, '7365026668'),
+('2024-04-12', 'Other', 10, '7365026668');
 
 INSERT INTO Vaccination (Dose, Type, Date, Person, Taken_at) VALUES
 (3, 'AstraZeneca', '2020-3-24', '7659036250', 'MediResearch 5788'),
