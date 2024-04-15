@@ -1,5 +1,5 @@
 -- Query 11
-SELECT prime.Residence, residence.Type, person.FirstName, person.LastName, person.Occupation, lives_with.Relationship  
+SELECT prime.Residence, residence.Type, person.FirstName, person.LastName, person.Occupation, Lives_with.Relationship  
 FROM Lives_In As prime, Lives_In As second, Lives_With, Person, Employee, Residence
 Where Employee.SIN = ? 
 AND Lives_With.Employee = Employee.SIN 

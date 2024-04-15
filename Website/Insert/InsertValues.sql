@@ -1479,7 +1479,7 @@ INSERT INTO Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) V
 ('1574 Willow Terrace', '3476350484', '2020-10-8', '2023-4-20', 'Secondary');
 
 
-INSERT INTO lives_with (Employee ,Person ,Relationship) VALUES
+INSERT INTO Lives_with (Employee ,Person ,Relationship) VALUES
 ('5856504126', '0181050279', 'Parent'),
 ('4077841550', '7365026668', 'Partner'),
 ('5111453599', '9870028105', 'Non-Parent Dependent'),
