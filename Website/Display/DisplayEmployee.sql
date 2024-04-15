@@ -1,3 +1,3 @@
 select *
 from Employee
-where Employee.sin = ?;
+where Employee.SIN = ?;

@@ -1,3 +1,3 @@
 select *
-from facility
-where facility.name = ?;
+from Facility
+where Facility.Name = ?;

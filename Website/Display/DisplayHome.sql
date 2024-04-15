@@ -1,3 +1,3 @@
 select *
-from lives_in
-where lives_in.residence = ? AND lives_in.person = ?;
+from Lives_in
+where Lives_in.Residence = ? AND Lives_in.Person = ?;

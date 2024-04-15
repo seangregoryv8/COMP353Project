@@ -1,3 +1,3 @@
 select *
-from schedule
-where schedule.start_time = ? AND schedule.scheduled_at = ? AND schedule.scheduled_for = ?;
+from Schedule
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;

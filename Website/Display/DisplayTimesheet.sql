@@ -1,3 +1,3 @@
 select *
-from works_at
-where works_at.employee = ? AND works_at.facility = ? AND works_at.Start_date = ?;
+from Works_at
+where Works_at.Employee = ? AND Works_at.Facility = ? AND Works_at.Start_date = ?;

@@ -1,3 +1,3 @@
 select *
-from infection
-where infection.date = ? AND infection.person = ?;
+from Infection
+where Infection.Date = ? AND Infection.Person = ?;

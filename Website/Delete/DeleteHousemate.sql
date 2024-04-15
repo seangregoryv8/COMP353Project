@@ -1,2 +1,2 @@
-DELETE FROM lives_with
+DELETE FROM Lives_with
 WHERE Employee = ? AND Person = ?;

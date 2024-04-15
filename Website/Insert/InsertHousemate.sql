@@ -1,4 +1,4 @@
-insert into lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
+insert into Lives_with (Employee ,Person ,Relationship) values (?, ?, ?);
 /*
 Alter Table housemates
 Add Constraint check_HMcn Check(HMcn IN (select employees.HMcn from employees where employees.EMcn = HMcn));

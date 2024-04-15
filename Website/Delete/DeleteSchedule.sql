@@ -1,2 +1,2 @@
-DELETE FROM schedule
-WHERE start_time = ? AND scheduled_at = ? AND scheduled_for = ?;
+DELETE FROM Schedule
+WHERE Start_time = ? AND Scheduled_at = ? AND Scheduled_for = ?;

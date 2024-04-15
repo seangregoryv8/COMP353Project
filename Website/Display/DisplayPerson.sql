@@ -1,3 +1,3 @@
 select *
-from person
-where person.sin = ?;
+from Person
+where Person.SIN = ?;

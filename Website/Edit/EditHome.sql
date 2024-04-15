@@ -1,3 +1,3 @@
-UPDATE lives_in
+UPDATE Lives_in
 SET colValue = ?
-where residence = ? AND person = ?;
+where Residence = ? AND Person = ?;

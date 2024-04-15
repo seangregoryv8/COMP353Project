@@ -1,3 +1,3 @@
-UPDATE schedule
+UPDATE Schedule
 SET colValue = ?
-where schedule.start_time = ? AND schedule.scheduled_at = ? AND schedule.scheduled_for = ?;
+where Schedule.Start_time = ? AND Schedule.Scheduled_at = ? AND Schedule.Scheduled_for = ?;

@@ -1,3 +1,3 @@
 select *
-from residence
-where residence.address = ?;
+from Residence
+where Residence.Address = ?;

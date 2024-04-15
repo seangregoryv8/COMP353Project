@@ -1,3 +1,3 @@
-UPDATE lives_with
+UPDATE Lives_with
 SET colValue = ?
 WHERE Employee = ? AND Person = ?;

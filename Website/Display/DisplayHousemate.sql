@@ -1,3 +1,3 @@
 select *
-from lives_with
-where lives_with.employee = ? AND lives_with.person = ?;
+from Lives_with
+where Lives_with.Employee = ? AND Lives_with.Person = ?;

@@ -1,3 +1,3 @@
 select *
-from vaccination
-where vaccination.dose = ? AND vaccination.person = ?;
+from Vaccination
+where Vaccination.Dose = ? AND Vaccination.Person = ?;

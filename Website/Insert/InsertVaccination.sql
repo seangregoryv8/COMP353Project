@@ -1,1 +1,1 @@
-insert into vaccination (Dose, Type, Date, Person, Taken_at) values (?, ?, ?, ?, ?);
+insert into Vaccination (Dose, Type, Date, Person, Taken_at) values (?, ?, ?, ?, ?);

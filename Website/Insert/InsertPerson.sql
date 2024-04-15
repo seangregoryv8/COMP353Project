@@ -1,4 +1,4 @@
-insert into person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
+insert into Person (SIN,FirstName ,LastName ,DateOfBirth,MedicareCardNumber,TelephoneNumber,Citizenship,EmailAddress,Occupation)
 values (?, ?, ?, ?, ?, ?, ?, ?, ?);
 /*
 Alter Table employees

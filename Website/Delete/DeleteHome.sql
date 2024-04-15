@@ -1,2 +1,2 @@
-DELETE FROM lives_in
-where residence = ? AND person = ?;
+DELETE FROM Lives_in
+where Residence = ? AND Person = ?;
