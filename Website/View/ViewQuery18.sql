@@ -9,18 +9,18 @@ FROM
      FROM Facility
      GROUP BY Facility.Province) AS Info
 JOIN
-    (SELECT Facility.Province, COUNT(Works_At.Employee) AS NumEmployees
-     FROM Facility Left Join Works_At On Works_at.Facility = Facility.name
+    (SELECT Facility.Province, COUNT(Works_at.Employee) AS NumEmployees
+     FROM Facility Left Join Works_at On Works_at.Facility = Facility.name
      GROUP BY Facility.Province) AS EmployeeInfo ON EmployeeInfo.Province = Info.Province
 JOIN
     (SELECT Facility.Province, COUNT(DISTINCT Infections.Person) AS NumInfections
      FROM Facility
-     Left Join Works_At On Works_At.Facility = Facility.Name
+     Left Join Works_at On Works_at.Facility = Facility.Name
      Left Join (
      Select Infection.Person 
      From Infection
      Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL Infection.Quarantine_Period DAY) AND Infection.Date <= CURDATE()) As Infections
-     On Infections.Person = Works_At.Employee
+     On Infections.Person = Works_at.Employee
      GROUP BY Facility.Province) AS InfectionInfo ON InfectionInfo.Province = Info.Province
 JOIN
     (SELECT Facility.Province, SUM(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
@@ -35,18 +35,18 @@ JOIN
 GROUP BY Info.Province
 ORDER BY Info.Province ASC;
 /*
-SELECT Facility.Province, COUNT(Works_At.Employee) AS NumEmployees
-     FROM Facility Left Join Works_At On Works_at.Facility = Facility.name
+SELECT Facility.Province, COUNT(Works_at.Employee) AS NumEmployees
+     FROM Facility Left Join Works_at On Works_at.Facility = Facility.name
      GROUP BY Facility.Province;
 
 SELECT Facility.Province, COUNT(DISTINCT Infections.Person) AS NumInfections
      FROM Facility
-     Left Join Works_At On Works_At.Facility = Facility.Name
+     Left Join Works_at On Works_at.Facility = Facility.Name
      Left Join (
      Select Infection.Person 
      From Infection
      Where Infection.Date > DATE_SUB(CURDATE(), INTERVAL Infection.Quarantine_Period DAY) AND Infection.Date <= CURDATE()) As Infections
-     On Infections.Person = Works_At.Employee
+     On Infections.Person = Works_at.Employee
      GROUP BY Facility.Province;
      
 SELECT Facility.Province, SUM(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS TotalHours
