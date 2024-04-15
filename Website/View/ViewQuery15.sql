@@ -1,21 +1,21 @@
 Select Info.FirstName, Info.LastName, Info.FirstDay, Info.DateOfBirth, Info.EmailAddress, Vaccinations.NumVaccinations, TimeTable.TotalHours, numLivesIn.NumSecondary
 From
-(Select employee.SIN,numSecondary
+(Select Employee.SIN, numSecondary
 From Employee
 Left Join
-(SELECT employee.SIN, COUNT(DISTINCT Lives_in.residence) AS NumSecondary
-FROM employee
-LEFT JOIN Lives_in ON employee.sin = Lives_in.Person
-GROUP BY employee.sin) as NumSecondary On NumSecondary.Sin = Employee.Sin) As numLivesIn
+(SELECT Employee.SIN, COUNT(DISTINCT Lives_in.residence) AS NumSecondary
+FROM Employee
+LEFT JOIN Lives_in ON Employee.sin = Lives_in.Person
+GROUP BY Employee.sin) as NumSecondary On NumSecondary.Sin = Employee.Sin) As numLivesIn
 Join
-(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
-From Employee,Person,Works_At
+(Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_at.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
+From Employee,Person,Works_at
 Where Employee.Role = 'Nurse'
 AND Employee.SIN = Person.SIN
-And Works_At.employee = Person.SIN
-AND Works_At.end_date Is Null
+And Works_at.employee = Person.SIN
+AND Works_at.end_date Is Null
 Group By Person.SIN
-Having Count(Distinct Works_At.Facility) > 1
+Having Count(Distinct Works_at.Facility) > 1
 ) AS Info
 On 
 Info.SIN = numLivesIn.SIN

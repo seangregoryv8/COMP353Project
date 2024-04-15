@@ -915,6 +915,19 @@
 				return form;
 				
 				}
+				else if (sqlFile == 'ViewQuery13.sql') {
+				// Add labels and text boxes to the form
+				addLabelAndTextBox(form, "After", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "Before", "yyyy-mm-dd hh:mm:ss");
+				addLabelAndTextBox(form, "Facility", "Enter text");
+				// You can add more input fields here as needed for each SQL file
+
+				// Append the form to the body
+				place.appendChild(form);
+				
+				return form;
+				
+				}
 				if (sqlFile == 'ViewQuery18.sql') {
 				// Add labels and text boxes to the form
 				addLabelAndTextBox(form, "After", "yyyy-mm-dd hh:mm:ss");

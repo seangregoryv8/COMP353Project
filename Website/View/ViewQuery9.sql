@@ -1,31 +1,31 @@
 -- Query 9
 Select
-    p.FirstName,
-    p.LastName,
-    MIN(wa.Start_date) As WorkStartDate,
-    p.DateOfBirth,
-    p.MedicareCardNumber,
-    p.TelephoneNumber,
-    MIN(pr.Address) AS PrimaryAddress,
-    MIN(pr.City) AS City,
-    MIN(pr.Province) AS Province,
-    MIN(pr.Postal_code) AS PostalCode,
-    p.Citizenship,
-    p.EmailAddress,
-    (select COUNT(*) FROM Lives_in li2 WHERE li2.Person = e.SIN AND li2.Status = 'Secondary') AS NumSecondaryResidences
+    P.FirstName,
+    P.LastName,
+    MIN(WA.Start_date) As WorkStartDate,
+    P.DateOfBirth,
+    P.MedicareCardNumber,
+    P.TelephoneNumber,
+    MIN(PR.Address) AS PrimaryAddress,
+    MIN(PR.City) AS City,
+    MIN(PR.Province) AS Province,
+    MIN(PR.Postal_code) AS PostalCode,
+    P.Citizenship,
+    P.EmailAddress,
+    (select COUNT(*) FROM Lives_in li2 WHERE li2.Person = E.SIN AND li2.Status = 'Secondary') AS NumSecondaryResidences
 
-FROM Employee e
-JOIN Person P on e.SIN = P.SIN
-JOIN Works_at wa on e.SIN = wa.Employee AND wa.End_date IS NULL AND wa.Facility = ? #still working
-JOIN (Select Lives_in.Person, Lives_in.Residence From Lives_in Where Lives_in.Status = 'Primary' Limit 1) as li ON e.SIN = li.Person #get the primary address
-JOIN Residence pr on li.Residence = pr.Address #get the primary address
+FROM Employee E
+JOIN Person P on E.SIN = P.SIN
+JOIN Works_at WA on E.SIN = WA.Employee AND WA.End_date IS NULL AND WA.Facility = ? #still working
+JOIN (Select Lives_in.Person, Lives_in.Residence From Lives_in Where Lives_in.Status = 'Primary' Limit 1) as LI ON E.SIN = LI.Person #get the primary address
+JOIN Residence PR on LI.Residence = PR.Address #get the primary address
 #should have at least a secondary residence
 AND EXISTS (
     SELECT 1
     FROM Lives_in li3
-    WHERE li3.Person = e.SIN AND li3.Status = 'Secondary'
+    WHERE li3.Person = E.SIN AND li3.Status = 'Secondary'
 )
 GROUP BY
-    p.SIN
+    P.SIN
 
-ORDER BY MIN(wa.Start_date) DESC, p.FirstName ASC, p.LastName ASC;
+ORDER BY MIN(WA.Start_date) DESC, P.FirstName ASC, P.LastName ASC;
