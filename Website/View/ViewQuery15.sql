@@ -3,9 +3,9 @@ From
 (Select employee.SIN,numSecondary
 From Employee
 Left Join
-(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+(SELECT employee.SIN, COUNT(DISTINCT Lives_in.residence) AS NumSecondary
 FROM employee
-LEFT JOIN lives_in ON employee.sin = lives_in.Person
+LEFT JOIN Lives_in ON employee.sin = Lives_in.Person
 GROUP BY employee.sin) as NumSecondary On NumSecondary.Sin = Employee.Sin) As numLivesIn
 Join
 (Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress
@@ -60,9 +60,9 @@ Select employee.SIN,numSecondary
 From
 Employee
 Left Join
-(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS NumSecondary
+(SELECT employee.SIN, COUNT(DISTINCT Lives_in.residence) AS NumSecondary
 FROM employee
-LEFT JOIN lives_in ON employee.sin = lives_in.Person
+LEFT JOIN Lives_in ON employee.sin = Lives_in.Person
 GROUP BY employee.sin) as NumSecondary On NumSecondary.Sin = Employee.Sin;
 
 Select Person.SIN, Person.FirstName, Person.LastName, Min(Works_At.Start_Date) as FirstDay, Person.DateOfBirth, Person.EmailAddress, Count(Distinct Works_At.Facility)

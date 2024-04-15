@@ -1033,7 +1033,7 @@ INSERT INTO Works_at (Employee, Facility, Start_date, End_date) VALUES
 ('2221868413', 'BioLab 8979', '2022-7-21', NULL),
 ('0488962295', 'BioPharm 3244', '2023-7-27', NULL);
 
-INSERT INTO lives_in (Residence, Person, Address_Start_Date, End_Date, Status) VALUES
+INSERT INTO Lives_in (Residence, Person, Address_Start_Date, End_Date, Status) VALUES
 ('2655 Hickory Terrace', '7793249250', '2015-6-27', '2018-7-2', 'Secondary'),
 ('3785 Magnolia Way', '7750008493', '2016-3-23', '2018-10-21', 'Secondary'),
 ('2655 Hickory Terrace', '1846896272', '2021-5-9', NULL, 'Primary'),

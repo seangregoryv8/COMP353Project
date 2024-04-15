@@ -1,10 +1,10 @@
 Select Info.FirstName, Info.LastName, Info.Role, numLivesIn.Num
 From
-(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+(SELECT employee.SIN, COUNT(DISTINCT Lives_in.residence) AS Num
 FROM employee
-LEFT JOIN lives_in ON employee.sin = lives_in.Person
+LEFT JOIN Lives_in ON employee.sin = Lives_in.Person
 GROUP BY employee.sin
-Having COUNT(DISTINCT lives_in.residence) > 2) As numLivesIn
+Having COUNT(DISTINCT Lives_in.residence) > 2) As numLivesIn
 Join
 (Select Person.SIN, Person.FirstName, Person.LastName, Employee.Role
 From Employee,Person,Schedule

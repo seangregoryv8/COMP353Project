@@ -12,17 +12,17 @@ Select
     MIN(pr.Postal_code) AS PostalCode,
     p.Citizenship,
     p.EmailAddress,
-    (select COUNT(*) FROM lives_in li2 WHERE li2.Person = e.SIN AND li2.Status = 'Secondary') AS NumSecondaryResidences
+    (select COUNT(*) FROM Lives_in li2 WHERE li2.Person = e.SIN AND li2.Status = 'Secondary') AS NumSecondaryResidences
 
 FROM Employee e
 JOIN Person P on e.SIN = P.SIN
 JOIN Works_at wa on e.SIN = wa.Employee AND wa.End_date IS NULL AND wa.Facility = ? #still working
-JOIN (Select lives_in.Person, lives_in.Residence From lives_in Where lives_in.Status = 'Primary' Limit 1) as li ON e.SIN = li.Person #get the primary address
+JOIN (Select Lives_in.Person, Lives_in.Residence From Lives_in Where Lives_in.Status = 'Primary' Limit 1) as li ON e.SIN = li.Person #get the primary address
 JOIN Residence pr on li.Residence = pr.Address #get the primary address
 #should have at least a secondary residence
 AND EXISTS (
     SELECT 1
-    FROM lives_in li3
+    FROM Lives_in li3
     WHERE li3.Person = e.SIN AND li3.Status = 'Secondary'
 )
 GROUP BY

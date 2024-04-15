@@ -1,9 +1,9 @@
 -- Query 12
 Select Info.FirstName, Info.LastName, Info.Date, Info.Facility, numLivesIn.Num As NumSecondary
 From
-(SELECT employee.SIN, COUNT(DISTINCT lives_in.residence) AS Num
+(SELECT employee.SIN, COUNT(DISTINCT Lives_in.residence) AS Num
 FROM employee
-LEFT JOIN lives_in ON employee.sin = lives_in.Person
+LEFT JOIN Lives_in ON employee.sin = Lives_in.Person
 GROUP BY employee.sin) As numLivesIn
 Left Join
 (Select Person.FirstName, Person.LastName, MAX(Infection.Date) as Date, Works_At.Facility, Infection.Person
